@@ -1,5 +1,5 @@
 ## import data  ----
-if (!exists("cdo_actual_ms")) {
+if (!data_loaded) {
   source("R/get_data.R")
 }
 

@@ -67,7 +67,7 @@ if (investments) {
 
   writeLines(tmp_text, 'index.qmd')
 
-} else if (country == "SES RP3") {
+} else if (country == rp_full) {
     tmp_text <- readLines("_original_files/common_qmd_setup.qmd")
     if (out_format == 'pdf') {
       tmp_text <- str_replace(tmp_text, "file-placeholder", "_original_files/ses_index_pdf.qmd")
@@ -212,7 +212,7 @@ if (out_format == 'web') {
       }
       
       ## SES case
-      if(country == "SES RP3") {
+      if(country == rp_full) {
         sidebar_text <- str_replace(sidebar_text,
                                     '- text: "Compared to Union-wide"',
                                     '# - text: "Compared to Union-wide"')
@@ -263,7 +263,7 @@ if (out_format == 'web') {
   } 
   else {
     ## level 1 ----
-    if (country == "SES RP3") {
+    if (country == rp_full) {
       ### SES case ----
       ### remove nm level 1 block
       for (i in 1:length(tx)) {
@@ -354,7 +354,7 @@ if (out_format == 'web') {
     
     if (state_type != 0) {
       ### SES/luxembourg, remove env-mil ----
-      if (country == "SES RP3" | country == "Luxembourg") {
+      if (country == rp_full | country == "Luxembourg") {
         tx <- str_replace(tx, '- text: "<b>CIV-MIL</b>"', '# - text: "<b>CIV-MIL</b>"')
         tx <- str_replace(tx, 'href: environment.html#civil-military-dimension', '# href: environment.html#civil-military-dimension')
       }
@@ -385,7 +385,7 @@ if (out_format == 'web') {
       ### with terminal zone(s) ----
       
       # add text for the additional tczs and env/cap terminal
-      if (country != "SES RP3") {tx_env <- readLines("_original_files/level2_env_terminal.yml")} else {tx_env = ''}
+      if (country != rp_full) {tx_env <- readLines("_original_files/level2_env_terminal.yml")} else {tx_env = ''}
       tx_cap <- readLines("_original_files/level2_cap_terminal.yml")
       tx_tcz_initial <- readLines("_original_files/level2_cef_tcz_xy.yml")
       tx_tcz <- ''

@@ -1,5 +1,5 @@
 # import data  ----
-if (!exists("statfor_mvt")) {
+if (!data_loaded) {
   source("R/get_data.R")
 } 
 

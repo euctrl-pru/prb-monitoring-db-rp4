@@ -1,5 +1,5 @@
 ```{r cap-level2-text}
-if (country == "SES RP3" | country == "MUAC") {
+if (country == rp_full | country == "MUAC") {
   #we need to define this variables to avoid errors
   cap_er_nsa_2 <- ''
   cap_er_nsa_3 <- ''
@@ -312,7 +312,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 :::
 
 
-`r if (params$country == "SES RP3" | params$country == "MUAC") "::: {.content-hidden}"`
+`r if (params$country == rp_full | params$country == "MUAC") "::: {.content-hidden}"`
 ::: {.callout-note collapse=true}
 
 #### Focus on en route ATFM delay
@@ -348,10 +348,10 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 `r if (params$year_report <= 2022) "::::"`
 
 :::
-`r if (params$country == "SES RP3" | params$country == "MUAC") ":::"`
+`r if (params$country == rp_full | params$country == "MUAC") ":::"`
 
 
-`r if (params$country != "SES RP3") "::: {.content-hidden}"`
+`r if (params$country != rp_full) "::: {.content-hidden}"`
 ### Summary of performance at local level
 
 :::: {layout="[ 20, 60, 20 ]"}
@@ -371,7 +371,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 ::::
 
-`r if (params$country != "SES RP3") ":::"`
+`r if (params$country != rp_full) ":::"`
 
 
 ::: {#container-cap-atco}
@@ -389,25 +389,25 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 ::::: {.chart-container}  
 <!-- for ses there is no graphic per acc -->
-`r if (params$country == "SES RP3") ":::::: {.content-hidden}"`
+`r if (params$country == rp_full) ":::::: {.content-hidden}"`
 ```{r chart_cap_atco_acc}
 #| file: R/chart_level2_cap_atco_acc.R
 #| out.width: "100%"
 ```
-`r if (params$country == "SES RP3") "::::::"`
+`r if (params$country == rp_full) "::::::"`
 
 <!-- so we replace it by thee sector opening hours -->
-`r if (params$country != "SES RP3") ":::::: {.content-hidden}"`
+`r if (params$country != rp_full) ":::::: {.content-hidden}"`
 ```{r chart_cap-sector_opening_ses}
 #| file: R/chart_level2_cap_sector_opening.R
 #| out.width: "100%"
 ```
-`r if (params$country != "SES RP3") "::::::"`
+`r if (params$country != rp_full) "::::::"`
 :::::
 ::::
 
 <!-- for ses this chart is now above, so we hide it here -->
-`r if (params$country == "SES RP3") ":::: {.content-hidden}"`
+`r if (params$country == rp_full) ":::: {.content-hidden}"`
 
 :::: {layout="[ 20, 60, 20 ]"}
 
@@ -421,11 +421,11 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 ```
 :::::
 ::::
-`r if (params$country == "SES RP3") "::::"`
+`r if (params$country == rp_full) "::::"`
 
 :::
 
-`r if (params$country == "SES RP3" | params$country == "MUAC") "::: {.content-hidden}"`
+`r if (params$country == rp_full | params$country == "MUAC") "::: {.content-hidden}"`
 ::: {.callout-note collapse=true}
 
 #### Focus on ATCOs in operations
@@ -436,7 +436,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 ::::
 :::
-`r if (params$country == "SES RP3" | params$country == "MUAC") ":::"`
+`r if (params$country == rp_full | params$country == "MUAC") ":::"`
 `r if (params$country == "Luxembourg") ":::"`
 
 
@@ -467,7 +467,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 ::::
 
 
-`r if (params$country != "SES RP3") ":::: {.content-hidden}"`
+`r if (params$country != rp_full) ":::: {.content-hidden}"`
 ### Summary of performance at local level
 
 :::: {layout="[ 20, 60, 20 ]"}
@@ -487,10 +487,10 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 ::::
 
-`r if (params$country != "SES RP3") "::::"`
+`r if (params$country != rp_full) "::::"`
 
 
-`r if (params$country == "SES RP3") ":::: {.content-hidden}"`
+`r if (params$country == rp_full) ":::: {.content-hidden}"`
 :::: {.callout-note collapse=true}
 
 #### Focus on arrival ATFM delay
@@ -527,7 +527,7 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 ::::
 
 :::: {#container-cap-table-apt-pis}
-```{r table-cap-apt-pis}
+```{r table-cap-apt-pis, eval=!(params$no_tcz == 0 | params$country == rp_full)}
 #| file: R/table_level2_cap_apt_pis.R
 #| out.width: "100%"
 ```
@@ -553,13 +553,13 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 
 :::::
 ::::
-`r if (params$country == "SES RP3") "::::"`
+`r if (params$country == rp_full) "::::"`
 
 `r if (params$no_tcz == 0) ":::"`
 
 
 <!-- we need this graph for ses -->
-`r if (params$country != "SES RP3") "::: {.content-hidden}"`
+`r if (params$country != rp_full) "::: {.content-hidden}"`
 
 :::: {#container-cap-other-ses}
 ### Other performance indicators 
@@ -578,4 +578,4 @@ cap_trm_conc1 <- if_else(cap_trm_conc1 == "NA" | stringr::str_detect(cap_trm_con
 :::::
 
 ::::
-`r if (params$country != "SES RP3") ":::"`
+`r if (params$country != rp_full) ":::"`

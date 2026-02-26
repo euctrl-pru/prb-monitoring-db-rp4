@@ -1,7 +1,7 @@
 ############### Adapted to RP4
 
 ## import data  ----
-  if (!exists("asma_actual_ms")) {
+  if (!data_loaded) {
     source("R/get_data.R")
   } 
   

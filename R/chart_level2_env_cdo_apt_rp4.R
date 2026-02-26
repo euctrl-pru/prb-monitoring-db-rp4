@@ -1,5 +1,5 @@
 ## import data  ----
-if (!exists("cdo_actual_apt")) {
+if (!data_loaded) {
   source("R/get_data.R")
 }
 

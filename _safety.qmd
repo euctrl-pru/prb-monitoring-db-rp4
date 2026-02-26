@@ -1,6 +1,6 @@
 ```{r saf-level2-text}
 # define ranges and import data
-if (params$country == "SES RP3") {
+if (params$country == rp_full) {
   saf_text_ses <- read_xlsx(
     path = here::here(data_folder, "SAF_input_text.xlsx"),
     sheet = "SAF_text",
@@ -211,7 +211,7 @@ saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_
 
 ## Effectiveness of Safety Management ([**EoSM**](`r params$home_address`/about.html#safety---effectiveness-of-safety-management-eosm-kpi1)) (KPI#1)
 
-```{r, eval = params$country != "SES RP3"}
+```{r, eval = params$country != rp_full}
 #| label: chart_saf_eosm
 #| out.width: "100%"
 #| echo: false
@@ -227,7 +227,7 @@ source("R/chart_level1_saf.R")
 ::::::
 
 :::::: {.chart-container}  
-```{r, eval = params$country != "SES RP3"}
+```{r, eval = params$country != rp_full}
 #| echo: false
 mycharts[[1]]
 ```
@@ -236,34 +236,34 @@ mycharts[[1]]
 `r if (params$no_saf_ansps >1) "::::"`
 
 
-`r if (params$country == "SES RP3" | params$no_saf_ansps == 1) ":::: {.content-hidden}"`
+`r if (params$country == rp_full | params$no_saf_ansps == 1) ":::: {.content-hidden}"`
 ::::: {layout="[ 50, 50 ]"}
 
 :::::: {.chart-container}  
-```{r, eval = params$country != "SES RP3"}
+```{r, eval = params$country != rp_full}
 #| echo: false
 mycharts[[1]]
 ```
 :::::: 
 
 :::::: {.chart-container}  
-```{r, eval = (params$country != "SES RP3") & (params$no_saf_ansps > 1)}
+```{r, eval = (params$country != rp_full) & (params$no_saf_ansps > 1)}
 #| echo: false
 mycharts[[2]]
 ```
 :::::: 
 :::::
-`r if (params$country == "SES RP3" | params$no_saf_ansps == 1) "::::"`
+`r if (params$country == rp_full | params$no_saf_ansps == 1) "::::"`
 
 
-`r if (params$country == "SES RP3" | params$no_saf_ansps != 3) ":::: {.content-hidden}"`
+`r if (params$country == rp_full | params$no_saf_ansps != 3) ":::: {.content-hidden}"`
 ::::: {layout="[ 25, 50, 25 ]"}
 
 :::::: {#emptydiv}  
 :::::: 
 
 :::::: {.chart-container}  
-```{r, eval = (params$country != "SES RP3") & (params$no_saf_ansps > 2)}
+```{r, eval = (params$country != rp_full) & (params$no_saf_ansps > 2)}
 #| echo: false
 mycharts[[3]]
 ```
@@ -272,47 +272,47 @@ mycharts[[3]]
 :::::: {#emptydiv}  
 :::::: 
 :::::
-`r if (params$country == "SES RP3" | params$no_saf_ansps != 3) "::::"`
+`r if (params$country == rp_full | params$no_saf_ansps != 3) "::::"`
 
 
-`r if (params$country == "SES RP3" | params$no_saf_ansps != 4) ":::: {.content-hidden}"`
+`r if (params$country == rp_full | params$no_saf_ansps != 4) ":::: {.content-hidden}"`
 ::::: {layout="[ 50, 50 ]"}
 
 :::::: {.chart-container}  
-```{r, eval = (params$country != "SES RP3") & (params$no_saf_ansps > 2)}
+```{r, eval = (params$country != rp_full) & (params$no_saf_ansps > 2)}
 #| echo: false
 mycharts[[3]]
 ```
 :::::: 
 
 :::::: {.chart-container}  
-```{r, eval = (params$country != "SES RP3") & (params$no_saf_ansps > 3)}
+```{r, eval = (params$country != rp_full) & (params$no_saf_ansps > 3)}
 #| echo: false
 mycharts[[4]]
 ```
 :::::: 
 :::::
-`r if (params$country == "SES RP3" | params$no_saf_ansps != 4) "::::"`
+`r if (params$country == rp_full | params$no_saf_ansps != 4) "::::"`
 
 
-`r if (params$country != "SES RP3") ":::: {.content-hidden}"`
+`r if (params$country != rp_full) ":::: {.content-hidden}"`
 ::::: {layout="[ 50, 50 ]"}
 :::::: {.chart-container}  
-```{r chart_level2_saf_eosm_target_ses, eval = params$country == "SES RP3"}
+```{r chart_level2_saf_eosm_target_ses, eval = params$country == rp_full}
 #| file: R/chart_level2_saf_eosm_target_ses.R
 #| out.width: "100%"
 ```
 ::::::
 
 :::::: {.chart-container}  
-```{r chart_saf_ansp_ses, eval = params$country == "SES RP3"}
+```{r chart_saf_ansp_ses, eval = params$country == rp_full}
 #| file: R/chart_level1_saf_ses.R
 #| out.width: "100%"
 ```
 ::::::
 :::::
 
-```{r chart_level2_saf_eosm_ses_allstates, eval= params$country == "SES RP3"}
+```{r chart_level2_saf_eosm_ses_allstates, eval= params$country == rp_full}
 #| file: R/chart_level2_saf_eosm_ses_allstates.R
 #| out.width: "100%"
 ```
@@ -320,21 +320,21 @@ mycharts[[4]]
 ::::: {layout="[ 55, 45 ]"}
 
 :::::: {.chart-container}  
-```{r chart_level2_saf_eosm_count_ses, eval= params$country == "SES RP3"}
+```{r chart_level2_saf_eosm_count_ses, eval= params$country == rp_full}
 #| file: R/chart_level2_saf_eosm_count_ses.R
 #| out.width: "100%"
 ```
 :::::: 
 
 :::::: {.chart-container}  
-```{r chart_level2_saf_maturity_count_ses, eval= params$country == "SES RP3"}
+```{r chart_level2_saf_maturity_count_ses, eval= params$country == rp_full}
 #| file: R/chart_level2_saf_maturity_count_ses.R
 #| out.width: "100%"
 ```
 :::::: 
 :::::
 
-`r if (params$country != "SES RP3") "::::"`
+`r if (params$country != rp_full) "::::"`
 
 
 :::: {.callout-note collapse=true}
@@ -368,17 +368,17 @@ mycharts[[4]]
 :::::
 ::::
 
-`r if (params$country != "SES RP3") ":::: {.content-hidden}"`
-```{r chart_level2_saf_ri_per_state_ses, eval= (params$country == "SES RP3")}
+`r if (params$country != rp_full) ":::: {.content-hidden}"`
+```{r chart_level2_saf_ri_per_state_ses, eval= (params$country == rp_full)}
 #| file: R/chart_level2_saf_ri_per_state_ses.R
 #| out.width: "100%"
 ```
 
-```{r table_level2_saf_ri_apt_ses, eval= (params$country == "SES RP3")}
+```{r table_level2_saf_ri_apt_ses, eval= (params$country == rp_full)}
 #| file: R/table_level2_saf_ri_apt_ses.R
 #| out.width: "100%"
 ```
-`r if (params$country != "SES RP3") "::::"`
+`r if (params$country != rp_full) "::::"`
 
 
 :::: {layout="[ 20, 60, 20 ]"}
@@ -386,7 +386,7 @@ mycharts[[4]]
 :::::
 
 ::::: {.chart-container}  
-```{r table_level2_saf_ri_apt, eval= (params$country != "MUAC") & (params$country != "SES RP3")}
+```{r table_level2_saf_ri_apt, eval= (params$country != "MUAC") & (params$country != rp_full)}
 #| file: R/table_level2_saf_ri_apt.R
 #| out.width: "100%"
 ```
@@ -424,13 +424,13 @@ mycharts[[4]]
 :::::
 ::::
 
-`r if (params$country != "SES RP3") ":::: {.content-hidden}"`
-```{r chart_level2_saf_smi_per_state_ses, eval= (params$country == "SES RP3")}
+`r if (params$country != rp_full) ":::: {.content-hidden}"`
+```{r chart_level2_saf_smi_per_state_ses, eval= (params$country == rp_full)}
 #| file: R/chart_level2_saf_smi_per_state_ses.R
 #| out.width: "100%"
 ```
 
-`r if (params$country != "SES RP3") "::::"`
+`r if (params$country != rp_full) "::::"`
 
 ```{r table_level2_saf_smi_ansp}
 #| file: R/table_level2_saf_smi_ansp.R
@@ -450,7 +450,7 @@ mycharts[[4]]
 
 `r saf_qr_text`
 
-`r if (params$country == "SES RP3") ":::: {.content-hidden}"`
+`r if (params$country == rp_full) ":::: {.content-hidden}"`
 
 ## Use of automated safety data recording system (ASDRS) (PI#3)
 
@@ -459,7 +459,7 @@ mycharts[[4]]
 :::::
 
 ::::: {.chart-container}  
-```{r table_level2_saf_autotools, eval= (params$country != "SES RP3")}
+```{r table_level2_saf_autotools, eval= (params$country != rp_full)}
 #| file: R/table_level2_saf_autotools.R
 #| out.width: "100%"
 ```
@@ -485,7 +485,7 @@ mycharts[[4]]
 
 ::::
 
-`r if (params$country == "SES RP3") "::::"`
+`r if (params$country == rp_full) "::::"`
 
 :::
 

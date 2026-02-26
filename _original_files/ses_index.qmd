@@ -150,7 +150,7 @@ main_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "main", "Table_Findings_m
 
 `r main_conc1`
 
-## Traffic (SES RP3 area)
+## Traffic (`r rp_full` area)
 
 ::: {#container-mvt}
 :::: {#chart-mvt class="mychart"}
@@ -194,7 +194,7 @@ tsu_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "traffic_SUs", "Table_Find
 <!-- empty line to ensure next heading leaves enough space -->
 <div style="height: 1px"></div>
 
-## Safety (SES RP3 area)
+## Safety (`r rp_full` area)
 :::: {#chart-saf class="mychart"}
 ```{r chart-saf}
 #| file: R/chart_level1_saf_ses.R
@@ -216,7 +216,7 @@ saf_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "safety", "Table_Findings_
 <!-- empty line to ensure next heading leaves enough space -->
 <div style="height: 1px"></div>
 
-## Environment (SES RP3 area)
+## Environment (`r rp_full` area)
 
 :::: {#chart-env class="mychart"}
 ```{r chart-env-kea, options = (doclevel=c("level1"))}
@@ -236,7 +236,7 @@ env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Find
 
 ::: {#container-cap style="clear: both"}
 
-## Capacity (SES RP3 area)
+## Capacity (`r rp_full` area)
 <!-- empty line to ensure next heading leaves enough space -->
 <div style="height: 1px"></div>
 
@@ -268,7 +268,7 @@ cap_er_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "ER_capacity", "Table_F
 <!-- empty line to ensure next heading leaves enough space -->
 <div style="height: 1px"></div>
 
-## Cost-efficiency (SES RP3 area)
+## Cost-efficiency (`r rp_full` area)
 
 :::: {#chart-cef class="mychart"}
 ```{r chart-cef}

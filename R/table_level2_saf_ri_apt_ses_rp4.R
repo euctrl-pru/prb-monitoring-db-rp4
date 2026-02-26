@@ -1,16 +1,12 @@
-if (!exists("country") | is.na(country)) {country <- "SES RP3"
+if (!exists("country") | is.na(country)) {country <- rp_full
 source("R/parameters.R")
 }
-
+if (!data_loaded) {
+  source("R/get_data.R")
+}
 
 # import data  ----
-data_raw  <-  read_xlsx(
-  paste0(data_folder, "SAF EoSM.xlsx"),
-  # here("data","hlsr2021_data.xlsx"),
-  sheet = "SPI1c-RI_Airport",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() %>% 
+data_raw  <-  saf_ri_actual_apt %>% 
   select(-rate) %>% 
   rename(
     name = name_apt,

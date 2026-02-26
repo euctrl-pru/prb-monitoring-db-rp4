@@ -5,7 +5,7 @@ cz=c("@@cz_index@@", "@@cz_type@@")
 ez <- as.numeric(cz[[1]])
 cztype <- cz[[2]]
 
-if (country == "SES RP3" | country == "MUAC") {
+if (country == rp_full | country == "MUAC") {
   # to avoid errors when processing the file
   cef_txt_1_4_duc <- ''
   cef_txt_1_4_su <- '' 
@@ -205,19 +205,19 @@ cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_
 :::: {layout="[ 50, 50 ]"}
 
 ::::: {.chart-container}  
-`r if (params$country == "SES RP3" & cztype == "enroute") ":::::: {.content-hidden}"`
+`r if (params$country == rp_full & cztype == "enroute") ":::::: {.content-hidden}"`
 ```{r chart_cef_duc, options = (cz=c("@@cz_index@@", "@@cz_type@@","level2"))}
 #| file: R/chart_level1_cef.R
 #| out.width: "100%"
 ```
-`r if (params$country == "SES RP3" & cztype == "enroute") "::::::"`
+`r if (params$country == rp_full & cztype == "enroute") "::::::"`
 
-`r if (params$country != "SES RP3" | cztype == "terminal") ":::::: {.content-hidden}"`
-```{r chart_cef_duc_er_ses, options = (cz=c("@@cz_index@@", "@@cz_type@@")), eval=(params$country == "SES RP3")}
+`r if (params$country != rp_full | cztype == "terminal") ":::::: {.content-hidden}"`
+```{r chart_cef_duc_er_ses, options = (cz=c("@@cz_index@@", "@@cz_type@@")), eval=(params$country == rp_full)}
 #| file: R/chart_level1_cef_er_ses.R
 #| out.width: "100%"
 ```
-`r if (params$country != "SES RP3" | cztype == "terminal") "::::::"`
+`r if (params$country != rp_full | cztype == "terminal") "::::::"`
 
 :::::
 
@@ -243,13 +243,13 @@ cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_
 #| out.width: "100%"
 ```
 
-`r if (params$country == "SES RP3") ":::::: {.content-hidden}"`
+`r if (params$country == rp_full) ":::::: {.content-hidden}"`
 
 ```{r table-cef-cost-infl, options = (cz=c("@@cz_index@@", "@@cz_type@@"))}
 #| file: R/table_level2_cef_cost_infl.R
 #| out.width: "100%"
 ```
-`r if (params$country == "SES RP3") "::::::"`
+`r if (params$country == rp_full) "::::::"`
 :::::
 ::::
 
@@ -272,7 +272,7 @@ cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_
 :::
 
 
-`r if (params$country != "SES RP3") "::: {.content-hidden}"`
+`r if (params$country != rp_full) "::: {.content-hidden}"`
 ### Summary of performance at local level
 
 :::: {#table-cef-summary}
@@ -281,10 +281,10 @@ cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_
 #| out.width: "100%"
 ```
 ::::
-`r if (params$country != "SES RP3") ":::"`
+`r if (params$country != rp_full) ":::"`
 
 
-`r if (params$country == "SES RP3") "::: {.content-hidden}"`
+`r if (params$country == rp_full) "::: {.content-hidden}"`
 ::: {.callout-note collapse=true}
 
 #### Focus on unit cost
@@ -306,7 +306,7 @@ cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_
 `r if_else(is.na(cef_txt_1_4[my_index_cost_main,1]) == TRUE, cef_txt_1_4_cost_main, pull(cef_txt_1_4[my_index_cost_main,1]))`
 
 :::
-`r if (params$country == "SES RP3") ":::"`
+`r if (params$country == rp_full) ":::"`
 
 
 ::: {#container-cef-aucu}
@@ -347,7 +347,7 @@ cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_
 ::::
 :::
 
-`r if (params$country == "SES RP3") "::: {.content-hidden}"`
+`r if (params$country == rp_full) "::: {.content-hidden}"`
 ::: {.callout-note collapse=true}
 
 #### Focus on AUCU
@@ -355,7 +355,7 @@ cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_
 `r cef_txt_1_9[1,1]`
 
 :::
-`r if (params$country == "SES RP3") ":::"`
+`r if (params$country == rp_full) ":::"`
 
 
 ::: {#container-cef-reg-res}
@@ -396,7 +396,7 @@ cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_
 
 :::
 
-`r if (params$country == "SES RP3") "::: {.content-hidden}"`
+`r if (params$country == rp_full) "::: {.content-hidden}"`
 ::: {.callout-note collapse=true}
 
 #### Focus on regulatory result
@@ -424,5 +424,5 @@ cef_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "cost-efficiency", "Table_
 `r if (params$year_report >= 2022) ":::"`
 
 :::
-`r if (params$country == "SES RP3") ":::"`
+`r if (params$country == rp_full) ":::"`
 

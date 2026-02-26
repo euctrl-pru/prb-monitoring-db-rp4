@@ -1,4 +1,4 @@
-if (!exists("country") | is.na(country)) {country = "SES RP3"
+if (!exists("country") | is.na(country)) {country = rp_full
 source("R/parameters.R")
 }
 
@@ -19,7 +19,7 @@ if (country != "MUAC") {
 }
 
 # import data  ----
-if (country == "SES RP3") {
+if (country == rp_full) {
   ## SES  ----
   data_raw  <-  read_xlsx(
     paste0(data_folder, "SES CEFF.xlsx"),

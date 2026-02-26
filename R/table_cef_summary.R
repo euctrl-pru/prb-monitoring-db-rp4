@@ -12,7 +12,7 @@ cz_table <- read_mytable("Lists.xlsx", "Lists",
 state_table <- state_list |> as_tibble() |> 
   filter(value != "MUAC", 
          value != "Luxembourg", 
-         value != "SES RP3", 
+         value != rp_full, 
          value != "Network Manager") |> 
   select(State = value) |> 
   left_join(cz_table, by = "State")

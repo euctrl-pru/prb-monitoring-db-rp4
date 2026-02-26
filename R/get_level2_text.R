@@ -3,7 +3,7 @@ if (exists("cztype") == FALSE) {cztype = "terminal"}
 
 # safety ----
 # define ranges and import data
-if (country == "SES RP3") {
+if (country == rp_full) {
   saf_text_ses <- read_xlsx(
     path = here::here(data_folder, "SAF_input_text.xlsx"),
     sheet = "SAF_text",
@@ -49,7 +49,7 @@ if (country == "SES RP3") {
   }
   
   # exception for 2024 ses report
-  if(country == 'SES RP3' & year_folder == 2024){
+  if(country == rp_full & year_folder == 2024){
     saf_ri_text <- saf_ri_text %>% 
       str_replace_all(fixed('**RI with Safety Impact by Airport**'),
                       fixed('\\newpage\\\
@@ -220,7 +220,7 @@ if (country == "SES RP3") {
 
 # environment ----
 
-if (country == "SES RP3") {
+if (country == rp_full) {
   #we need to define this variables to avoid errors
   env_apt_2 <- ''
   env_apt_3 <- ''
@@ -362,7 +362,7 @@ if (country == "SES RP3") {
 
 # capacity ----
 
-if (country == "SES RP3" | country == "MUAC") {
+if (country == rp_full | country == "MUAC") {
   #we need to define this variables to avoid errors
   cap_er_nsa_2 <- ''
   cap_er_nsa_3 <- ''
@@ -608,7 +608,7 @@ get_cef_level2_text <- function(cz_index, cz_type) {
   # ez <- as.numeric(cz[[1]])
   # cztype <- cz[[2]]
   
-  if (country == "SES RP3" | country == "MUAC") {
+  if (country == rp_full | country == "MUAC") {
     # to avoid errors when processing the file
     cef_txt_1_4_duc <- ''
     cef_txt_1_4_su <- '' 

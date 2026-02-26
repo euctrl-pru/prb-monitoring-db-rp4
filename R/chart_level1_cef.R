@@ -17,7 +17,7 @@ mycz_name <- if_else(cztype == "terminal",
 doclevel <- cz[[3]]
 
 # import data  ----
-if (country == "SES RP3") {
+if (country == rp_full) {
   ## SES  ----
   data_raw  <-  read_xlsx(
     paste0(data_folder, "SES CEFF.xlsx"),

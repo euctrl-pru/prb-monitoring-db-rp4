@@ -8,7 +8,7 @@ inv_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "investments", "Table_Find
 
 `r inv_conc1`
 
-## Value of the assets for New Investments included in the Performance Plan `r country` | `r if_else(params$country == "SES RP3", "all ANSPs", main_ansp)`
+## Value of the assets for New Investments included in the Performance Plan `r country` | `r if_else(params$country == rp_full, "all ANSPs", main_ansp)`
 
 ### Determined and additional asset value by investment category
 
@@ -65,47 +65,47 @@ inv_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "investments", "Table_Find
 :::
 
 
-`r if (params$country == "SES RP3") "::: {.content-hidden}"`
+`r if (params$country == rp_full) "::: {.content-hidden}"`
 
 ### Asset value for new investments: ANSP compared to Union-wide
 
 ::: {layout="[ 33, 33, 33 ]"}
 :::: {.chart-container}
-```{r chart_invest_av_vs_eu1, eval=(params$country != "SES RP3")}
+```{r chart_invest_av_vs_eu1, eval=(params$country != rp_full)}
 #| file: R/chart_invest_av_vs_eu1.R
 #| out.width: "100%"
 ```
 ::::
 
 :::: {.chart-container}
-```{r chart_invest_av_vs_eu2, eval=(params$country != "SES RP3")}
+```{r chart_invest_av_vs_eu2, eval=(params$country != rp_full)}
 #| file: R/chart_invest_av_vs_eu2.R
 #| out.width: "100%"
 ```
 ::::
 
 :::: {.chart-container}
-```{r chart_invest_av_vs_eu3, eval=(params$country != "SES RP3")}
+```{r chart_invest_av_vs_eu3, eval=(params$country != rp_full)}
 #| file: R/chart_invest_av_vs_eu3.R
 #| out.width: "100%"
 ```
 ::::
 :::
 
-`r if (params$country == "SES RP3") ":::"`
+`r if (params$country == rp_full) ":::"`
 
 
-`r if (params$country != "SES RP3") "::: {.content-hidden}"`
+`r if (params$country != rp_full) "::: {.content-hidden}"`
 
-```{r chart_invest_av_state_type, eval=(params$country == "SES RP3")}
+```{r chart_invest_av_state_type, eval=(params$country == rp_full)}
 #| file: R/chart_invest_av_state_type.R
 #| out.width: "100%"
 ```
 
-`r if (params$country != "SES RP3") ":::"`
+`r if (params$country != rp_full) ":::"`
 
 
-## Costs related to investments included in the Performance Plan `r country` | `r if_else(params$country == "SES RP3", "all ANSPs", main_ansp)`
+## Costs related to investments included in the Performance Plan `r country` | `r if_else(params$country == rp_full, "all ANSPs", main_ansp)`
 
 ### New and existing investments 
 
@@ -149,14 +149,14 @@ table3
 ::::
 :::
 
-`r if (params$country != "SES RP3") "::: {.content-hidden}"`
+`r if (params$country != rp_full) "::: {.content-hidden}"`
 
-```{r chart_invest_cost_state, eval=(params$country == "SES RP3")}
+```{r chart_invest_cost_state, eval=(params$country == rp_full)}
 #| file: R/chart_invest_cost_state.R
 #| out.width: "100%"
 ```
 
-`r if (params$country != "SES RP3") ":::"`
+`r if (params$country != rp_full) ":::"`
 
 
 ### Costs of investments by nature - En route
@@ -183,13 +183,13 @@ table3
 <br>
 
 
-`r if (params$country == "SES RP3") "::: {.content-hidden}"`
+`r if (params$country == rp_full) "::: {.content-hidden}"`
 ::: {layout="[10, 80, 10]"}
 :::: {#empty_div}
 ::::
 
 :::: {.chart-container}  
-```{r chart_invest_difference_cost_er, eval=(params$country != "SES RP3"), options= (cost_type = "en route")}
+```{r chart_invest_difference_cost_er, eval=(params$country != rp_full), options= (cost_type = "en route")}
 #| file: R/chart_invest_difference_cost.R
 #| out.width: "100%"
 ```
@@ -198,23 +198,23 @@ table3
 :::: {#empty_div}
 ::::
 :::
-`r if (params$country == "SES RP3") ":::"`
+`r if (params$country == rp_full) ":::"`
 
 
-`r if (params$country != "SES RP3") "::: {.content-hidden}"`
-```{r chart_invest_difference_cost_country_e, eval=(params$country == "SES RP3"), options= (cost_type = "en route")}
+`r if (params$country != rp_full) "::: {.content-hidden}"`
+```{r chart_invest_difference_cost_country_e, eval=(params$country == rp_full), options= (cost_type = "en route")}
 #| file: R/chart_invest_difference_cost_country.R
 #| out.width: "100%"
 ```
-`r if (params$country != "SES RP3") ":::"`
+`r if (params$country != rp_full) ":::"`
 
 
 
-`r if (params$no_tcz == 0 & params$country != "SES RP3") "::: {.content-hidden}"`
+`r if (params$no_tcz == 0 & params$country != rp_full) "::: {.content-hidden}"`
 
 ### Costs of investments by nature - Terminal
 
-```{r, eval=(params$no_tcz != 0 | params$country == "SES RP3"), options= (cost_type = "terminal")}
+```{r, eval=(params$no_tcz != 0 | params$country == rp_full), options= (cost_type = "terminal")}
 #| label: table_invest_cost_nature_trm
 #| out.width: "100%"
 #| echo: false
@@ -223,12 +223,12 @@ source("R/table_invest_cost_nature.R")
 table1
 ```
 
-```{r, eval=(params$no_tcz != 0 | params$country == "SES RP3")}
+```{r, eval=(params$no_tcz != 0 | params$country == rp_full)}
 #| echo: false
 table2
 ```
 
-```{r, eval=(params$no_tcz != 0 | params$country == "SES RP3")}
+```{r, eval=(params$no_tcz != 0 | params$country == rp_full)}
 #| echo: false
 table3
 ```
@@ -236,13 +236,13 @@ table3
 <br>
 
 
-`r if (params$country == "SES RP3") "::: {.content-hidden}"`
+`r if (params$country == rp_full) "::: {.content-hidden}"`
 ::: {layout="[10, 80, 10]"}
 :::: {#empty_div}
 ::::
 
 :::: {.chart-container}  
-```{r chart_invest_difference_cost_trm, eval=(params$no_tcz != 0 & params$country != "SES RP3"), options= (cost_type = "terminal")}
+```{r chart_invest_difference_cost_trm, eval=(params$no_tcz != 0 & params$country != rp_full), options= (cost_type = "terminal")}
 #| file: R/chart_invest_difference_cost.R
 #| out.width: "100%"
 ```
@@ -251,22 +251,22 @@ table3
 :::: {#empty_div}
 ::::
 :::
-`r if (params$country == "SES RP3") ":::"`
+`r if (params$country == rp_full) ":::"`
 
-`r if (params$no_tcz == 0 & params$country != "SES RP3") ":::"`
+`r if (params$no_tcz == 0 & params$country != rp_full) ":::"`
 
 
-`r if (params$country != "SES RP3") "::: {.content-hidden}"`
-```{r chart_invest_difference_cost_country_t, eval=(params$country == "SES RP3"), options= (cost_type = "terminal")}
+`r if (params$country != rp_full) "::: {.content-hidden}"`
+```{r chart_invest_difference_cost_country_t, eval=(params$country == rp_full), options= (cost_type = "terminal")}
 #| file: R/chart_invest_difference_cost_country.R
 #| out.width: "100%"
 ```
-`r if (params$country != "SES RP3") ":::"`
+`r if (params$country != rp_full) ":::"`
 
 
 
 
-`r if (params$country == "SES RP3") "::: {.content-hidden}"`
+`r if (params$country == rp_full) "::: {.content-hidden}"`
 ### Costs by new major investments
 
 ```{r}
@@ -320,38 +320,38 @@ no_investments <- no_investments
 ::::
 :::
 `r if (no_investments > 6)":::"`
-`r if (params$country == "SES RP3") ":::"`
+`r if (params$country == rp_full) ":::"`
 
 
-## Expected benefit and impact per new major investment `r country` | `r if_else(params$country == "SES RP3", "all ANSPs", main_ansp)`
+## Expected benefit and impact per new major investment `r country` | `r if_else(params$country == rp_full, "all ANSPs", main_ansp)`
 
-`r if (params$country == "SES RP3") "::: {.content-hidden}"`
+`r if (params$country == rp_full) "::: {.content-hidden}"`
 
-```{r table_invest_benefits_kpa, eval=!(params$country == "SES RP3")}
+```{r table_invest_benefits_kpa, eval=!(params$country == rp_full)}
 #| file: R/table_invest_benefits_kpa.R
 #| out.width: "100%"
 ```
 
-```{r table_invest_benefits, eval=!(params$country == "SES RP3")}
+```{r table_invest_benefits, eval=!(params$country == rp_full)}
 #| file: R/table_invest_benefits.R
 #| out.width: "100%"
 ```
 
-`r if (params$country == "SES RP3") ":::"`
+`r if (params$country == rp_full) ":::"`
 
-`r if (params$country != "SES RP3") "::: {.content-hidden}"`
+`r if (params$country != rp_full) "::: {.content-hidden}"`
 
-```{r table_invest_benefits_kpa_ses, eval=(params$country == "SES RP3")}
+```{r table_invest_benefits_kpa_ses, eval=(params$country == rp_full)}
 #| file: R/table_invest_benefits_kpa_ses.R
 #| out.width: "100%"
 ```
 
-```{r table_invest_impact_ses, eval=(params$country == "SES RP3")}
+```{r table_invest_impact_ses, eval=(params$country == rp_full)}
 #| file: R/table_invest_impact_ses.R
 #| out.width: "100%"
 ```
 
-`r if (params$country != "SES RP3") ":::"`
+`r if (params$country != rp_full) ":::"`
 
 
 <br>
@@ -375,19 +375,19 @@ no_investments <- no_investments
 ::::
 :::
 
-`r if (params$country == "SES RP3") "::: {.content-hidden}"`
+`r if (params$country == rp_full) "::: {.content-hidden}"`
 
-```{r table_invest_type, eval=!(params$country == "SES RP3")}
+```{r table_invest_type, eval=!(params$country == rp_full)}
 #| file: R/table_invest_type.R
 #| out.width: "100%"
 ```
 
-`r if (params$country == "SES RP3") ":::"`
+`r if (params$country == rp_full) ":::"`
 
 
-`r if (params$country != "SES RP3") "::: {.content-hidden}"`
+`r if (params$country != rp_full) "::: {.content-hidden}"`
 
-```{r, eval=(params$country == "SES RP3")}
+```{r, eval=(params$country == rp_full)}
 #| label: table_invest_benefit_type_ses
 #| out.width: "100%"
 #| echo: false
@@ -401,7 +401,7 @@ table1
 table2
 ```
 
-`r if (params$country != "SES RP3") ":::"`
+`r if (params$country != rp_full) ":::"`
 
 
 <br>
@@ -437,7 +437,7 @@ table2
 
 <br>
 
-`r if (params$country == "SES RP3") "::: {.content-hidden}"`
+`r if (params$country == rp_full) "::: {.content-hidden}"`
 ::: {layout="[ 50, 0, 50 ]"}
 :::: {.chart-container}  
 ```{r chart_invest_funding_year}
@@ -456,10 +456,10 @@ table2
 ```
 ::::
 :::
-`r if (params$country == "SES RP3") ":::"`
+`r if (params$country == rp_full) ":::"`
 
 
-`r if (params$country != "SES RP3") "::: {.content-hidden}"`
+`r if (params$country != rp_full) "::: {.content-hidden}"`
 ::: {layout="[ 10, 80, 10 ]"}
 
 ::::{#empty_div}
@@ -477,5 +477,5 @@ table2
 
 :::
 
-`r if (params$country != "SES RP3") ":::"`
+`r if (params$country != rp_full) ":::"`
 

@@ -4,13 +4,12 @@ source("R/parameters.R")
 
 
 # import data  ----
-data_raw  <-  read_xlsx(
-  paste0(data_folder, "SAF EoSM.xlsx"),
-  # here("data","hlsr2021_data.xlsx"),
-  sheet = "Automated tools",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+# import data  ----
+if (!data_loaded) {
+  source("R/get_data.R")
+}
+
+data_raw  <- saf_auto_tools_actual
 
 # prepare data ----
 data_prep_pdf <- data_raw %>% 
@@ -45,13 +44,8 @@ table1 <- mygtable(data_prep, myfont)|>
     columns = c(ri, smi)
   )
 
-
-prbcolor <- '#0050A0' 
-prbshading <- '#DDE6F7'
-
 b <- cell_borders(
   sides  = "all",
-  color  = prbcolor,
   weight = '1px',
   style  = "solid"
 )

@@ -14,7 +14,7 @@ mycz_name <- if_else(cztype == "terminal",
                      tcz_list$tcz_name[ez],
                      ecz_list$ecz_name[ez])
 
-if (country == "SES RP3") {
+if (country == rp_full) {
   # SES  ----
   ## import data  ----
   data_raw  <-  read_xlsx(

@@ -4,16 +4,14 @@ source("R/parameters.R")
 
 
 # import data  ----
-data_raw  <-  read_xlsx(
-  paste0(data_folder, "SAF EoSM.xlsx"),
-  # here("data","hlsr2021_data.xlsx"),
-  sheet = "SPI1d-SMI_ANSPs",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+if (!data_loaded) {
+  source("R/get_data.R")
+}
+
+data_raw  <- saf_smi_actual_apt
 
 # process data ----
-if (country != "SES RP3") {
+if (country != rp_full) {
   myentity_order <- data_raw %>% 
     filter(state == .env$country) %>% 
     group_by(entity) %>% 
@@ -82,7 +80,7 @@ data_prep <- data_calc %>%
     )
   ) 
 
-if (country =="SES RP3") {
+if (country == rp_full) {
   data_prep <- data_prep %>% 
   rename(
     State = myentity

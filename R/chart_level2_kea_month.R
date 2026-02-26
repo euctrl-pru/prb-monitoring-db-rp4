@@ -1,6 +1,9 @@
-############### state level adapted to RP4, not NM or SES
+############### state level adapted to RP4, not NM
 
-if (!exists("country") | is.na(country)) {country = "SES RP4"}
+if (!exists("country") | is.na(country)) {country = rp_full}
+if (!data_loaded) {
+  source("R/get_data.R")
+}
 
 if (country == "Network Manager") {
   # NM case ----
@@ -21,34 +24,20 @@ if (country == "Network Manager") {
     ) %>% 
     select(year, target, actual)
   
-} else if (country == "SES RP4") {
+} else if (country == rp_full) {
   # SES case ----
   ## import data  ----
-  data_raw_target  <-  read_xlsx(
-    paste0(data_folder, "SES file.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_KEA Targets",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() |> 
-    mutate(entity_name = "SES RP4")
+  data_raw_target  <-  kea_target_ses %>% 
+    mutate(kea_target = kea_reference_value_percent/100,
+           state = rp_full)
   
-  data_raw_actual  <-  read_xlsx(
-    paste0(data_folder, "SES file.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_HFE MM",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() |> 
-    mutate(entity_name = "SES RP4")
-    
+  data_raw_actual  <-  kea_actual_mm_ses %>% 
+    mutate(value = hfe_kpi_percent/100,
+           state = rp_full)
+
 } else  {
   # State case ----
   ## import data  ----
-  if (!exists("kea_target")) {
-    source("R/get_data.R")
-  }
-  
   data_raw_target <- kea_target
   data_raw_actual <- kea_actual_mm
 

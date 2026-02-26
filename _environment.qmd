@@ -1,5 +1,5 @@
 ```{r env-level2-text}
-if (country == "SES RP3") {
+if (country == rp_full) {
   #we need to define this variables to avoid errors
   env_apt_2 <- ''
   env_apt_3 <- ''
@@ -224,7 +224,7 @@ env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Find
 `r if (params$country == "Luxembourg") ":::"`
 
 
-`r if (params$country == "SES RP3") "::: {.content-hidden}"`
+`r if (params$country == rp_full) "::: {.content-hidden}"`
 
 `r if (params$no_tcz == 0) "::: {.content-hidden}"`
 
@@ -240,7 +240,7 @@ env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Find
 :::::
 
 ::::: {.chart-container}  
-```{r chart-axot-asma-country}
+```{r chart-axot-asma-country, eval = (params$country != rp_full)}
 #| file: R/chart_level2_env_axot_asma_country.R
 #| out.width: "100%"
 ```
@@ -315,7 +315,7 @@ env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Find
 
 :::: {#table-env-apt-pis}
 
-```{r table-env-apt-pis}
+```{r table-env-apt-pis, eval=!(params$no_tcz == 0 | params$country == rp_full)}
 #| file: R/table_level2_env_apt_pis.R
 #| out.width: "100%"
 ```
@@ -400,10 +400,10 @@ env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Find
 
 :::
 `r if (params$country == "Luxembourg") ":::"`
-`r if (params$country == "SES RP3") ":::"`
+`r if (params$country == rp_full) ":::"`
 
 
-`r if (params$country != "SES RP3") "::: {.content-hidden}"`
+`r if (params$country != rp_full) "::: {.content-hidden}"`
 ### Summary of performance at local level
 
 :::: {layout="[ 20, 60, 20 ]"}
@@ -423,4 +423,4 @@ env_conc1 <- get_prb_conclusions("PRB_findings.xlsx", "environment", "Table_Find
 
 ::::
 
-`r if (params$country != "SES RP3") ":::"`
+`r if (params$country != rp_full) ":::"`

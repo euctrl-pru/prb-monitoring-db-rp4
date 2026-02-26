@@ -1,18 +1,10 @@
+if (!data_loaded) {
+  source("R/get_data.R")
+}
 
 # import data  ----
-data_raw_maturity  <-  read_xlsx(
-  paste0(data_folder, "SAF EoSM.xlsx"),
-  sheet = "A>P",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
-
-data_raw_eosm  <-  read_xlsx(
-  paste0(data_folder, "SAF EoSM.xlsx"),
-  sheet = "EoSM",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+data_raw_maturity  <-  saf_maturity
+data_raw_eosm  <-  saf_eosm
 
 # prepare data ----
 

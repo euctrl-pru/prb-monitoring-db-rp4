@@ -4,16 +4,14 @@ source("R/parameters.R")
 
 
 # import data  ----
-data_raw  <-  read_xlsx(
-  paste0(data_folder, "SAF EoSM.xlsx"),
-  # here("data","hlsr2021_data.xlsx"),
-  sheet = "SPI1d-SMI_ANSPs",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+if (!data_loaded) {
+  source("R/get_data.R")
+}
+
+data_raw  <- saf_smi_actual_apt
 
 # process data ----
-if (country != "SES RP3") {
+if (country != rp_full) {
   myentity_order <- data_raw %>% 
     filter(state == .env$country) %>% 
     group_by(entity) %>% 
@@ -60,17 +58,15 @@ data_prep <- data_calc %>%
   select(
     myentity,
     year,
-    "Flight hours" = flight_hours,
-    "Number of SMIs" = smi,
+    # "Flight hours" = flight_hours,
+    # "Number of SMIs" = smi,
     "Rate of SMI per 100,000 flight hours" = rate_per_100_000,
-    "% variation in rate of SMIs" = variation
+    "% variation in rate of SMIs" = variation,
+    NULL
   ) %>% 
-  pivot_wider(names_from = "year", values_from = c(3:6)) %>% 
+  pivot_wider(names_from = "year", values_from = c(3:4)) %>% 
   mutate(
     myentity = factor(myentity, levels = myentity_order$myentity),
-    myentity = case_when(
-      country == 'Ireland' & year_report < 2023 ~ rep('IAA', nrow(myentity_order)),
-      .default = myentity)
   ) %>% 
   arrange(myentity) %>% 
   mutate(
@@ -78,60 +74,40 @@ data_prep <- data_calc %>%
   ) %>% 
   relocate(
     "#", .before = 1
+  ) %>% 
+  mutate(
+    across(
+      (3:7),
+      ~ format(round(.x, 0), big.mark = ",", nsmall = 0)
+    ),
+    across(
+      (8:12),
+      ~ if_else(is.na(.x), NA_character_,
+        paste0(if_else(.x >0, "+", ""), format(round(.x * 100, 0), big.mark = ",", nsmall = 0),"%")
+      ))
+    
   ) 
+    
 
-# %>%
-#   mutate(across(
-#     .cols = matches("^Flight hours_\\d{4}$|^#$"),
-#     .fns = ~ sprintf(
-#       "<span style='white-space:nowrap;'>%s</span>",
-#       format(round(as.numeric(.),0), big.mark = ",", scientific = FALSE)
-#     )
-#   ))
-
+if (country ==rp_full) {
+  data_prep <- data_prep %>% 
+    rename(
+      State = myentity
+    )
+} else {
+  data_prep <- data_prep %>% 
+    rename(
+      ANSP = myentity
+    )
+}
 
 # plot table ----
-table1 <-mygtable(data_prep, myfont*0.8) %>% 
+table1 <-mygtable(data_prep, myfont*0.9) %>% 
   tab_spanner_delim(
     delim = "_"
-  ) |> 
-  cols_label(
-    myentity = if_else(country =="SES RP3", "State", "ANSP")
-  ) %>% 
-  tab_header(
-    title = md("**Rate of SMI with ANS contribution per 100,000 flight hours**")
-  ) %>% 
-  # tab_style(
-  #   style = cell_text(size = px(myfont*0.8)),  
-  #   locations = cells_body(columns = c(1,3:7))
-  # ) %>% 
-  # fmt_markdown(columns = c(1,3:7)) %>% 
-  fmt_number(
-    columns = c(3:12),  # Specify the columns to format
-    decimals = 0,  # Number of decimal places
-    use_seps = TRUE  # Use thousands separator
-  ) %>%  
-  fmt_number(
-    columns = c(13:17),  # Specify the columns to format
-    decimals = 1,  # Number of decimal places
-  ) %>%  
-  fmt(
-    columns = 18:22,
-    fns = function(x) {
-      dplyr::case_when(
-        x > 0 ~ paste0("+", scales::percent(x, accuracy = 1)),
-        TRUE ~ scales::percent(x, accuracy = 1)
-      )
-    }
-  )
-
+  ) 
   
 
-# create latex table
-if (knitr::is_latex_output()) {
-  table_level2_saf_smi_ansp <- table1 %>% 
-    mylatex(NA) 
-  
-} else {
+if (!knitr::is_latex_output()) {
   table1
 }

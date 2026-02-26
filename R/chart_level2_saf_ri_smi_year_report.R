@@ -1,26 +1,28 @@
+############### state level adapted to RP4, not SES
+
 if (!exists("country") | is.na(country)) {country <- "Poland"
 source("R/parameters.R")
 }
 
-if (!exists("safindicator")) {safindicator <- "smi"}
+if (!exists("safindicator")) {safindicator <- "ri"}
 
 
 # import data  ----
 if (safindicator == "ri") {
   ## ri ----
-  if (country != "SES RP3"){
+  if (country != rp_full){
     ## state ----
-    data_raw  <-  read_xlsx(
-      paste0(data_folder, "SAF EoSM.xlsx"),
-      # here("data","hlsr2021_data.xlsx"),
-      sheet = "RI - occurrences",
-      range = cell_limits(c(1, 1), c(NA, NA))) %>%
-      as_tibble() %>% 
-      clean_names() %>% 
+    
+    if (!data_loaded) {
+      source("R/get_data.R")
+    }
+    
+    data_raw  <-  saf_ri_actual %>% 
       mutate(
         main_indicator = number_of_ri,
         main_indicator_ans = number_of_ri_with_ans_contribution
       )
+    
   } else {
     ## ses ----
     data_raw  <-  read_xlsx(
@@ -38,34 +40,31 @@ if (safindicator == "ri") {
   
 } else if (safindicator == "smi") {
   ## smi ----
-  if (country != "SES RP3"){
+  if (country != rp_full){
     ## state ----
-      data_raw  <-  read_xlsx(
-        paste0(data_folder, "SAF EoSM.xlsx"),
-        sheet = "SMI - occurrences",
-        range = cell_limits(c(1, 1), c(NA, NA))) %>%
-        as_tibble() %>% 
-        clean_names() %>% 
+    data_raw  <-  saf_smi_actual %>% 
         mutate(
           main_indicator = number_of_smi,
           main_indicator_ans = number_of_smi_with_ans_contribution
         )
+    
   } else {
+    
     data_raw  <-  read_xlsx(
       paste0(data_folder, "SES file.xlsx"),
       # here("data","hlsr2021_data.xlsx"),
-      sheet = "SMI SES variation",
+      sheet = "RI SES variation",
       range = cell_limits(c(1, 1), c(NA, NA))) %>%
       as_tibble() %>% 
       clean_names() %>% 
       mutate(
-        field = str_remove_all(field, " SMI")
-      )    
+        field = str_remove_all(field, " RI")
+      )
   }
 }
 
 # process data  ----
-mylabels <- c(
+c_labels <- c(
   paste0("Number of ", toupper(safindicator),"&nbsp;&nbsp;\nin the MS&nbsp;&nbsp;"),
   paste0(
     "Rate of ", 
@@ -83,7 +82,7 @@ mylabels <- c(
 )
 
 ## state ----
-if (country != "SES RP3"){
+if (country != rp_full){
   data_calc <- data_raw %>% 
     filter(state == .env$country) %>% 
     arrange(year) %>% 
@@ -118,10 +117,10 @@ if (country != "SES RP3"){
     pivot_longer(cols = everything(), names_to = "ylabel", values_to = "mymetric") %>% 
     mutate(
       ylabel = case_when(
-        ylabel == "main_indicator" ~ mylabels[[1]],
-        ylabel == "rate_per_100_000" ~ mylabels[[2]],
-        ylabel == "main_indicator_ans" ~ mylabels[[3]],
-        ylabel == "rate_per_100_000_with_ans_contribution" ~ mylabels[[4]]
+        ylabel == "main_indicator" ~ c_labels[[1]],
+        ylabel == "rate_per_100_000" ~ c_labels[[2]],
+        ylabel == "main_indicator_ans" ~ c_labels[[3]],
+        ylabel == "rate_per_100_000_with_ans_contribution" ~ c_labels[[4]]
       ),
       mylabel = as.character(round(mymetric,2 ))
     )
@@ -141,7 +140,7 @@ if (country != "SES RP3"){
       mymetric = if_else(mymetric == 10^8, 0, mymetric)
     )
   
-  mylocal_factor = c(
+  c_factor = c(
     "rate_ans_variation_perc",
     "ans_variation_perc",
     "rate_variation_perc",
@@ -156,10 +155,10 @@ if (country != "SES RP3"){
     select(field, value) %>% 
     mutate(
       ylabel = case_when(
-        field == "Number of in the MS" ~ mylabels[[1]],
-        field == "Rate of" ~ mylabels[[2]],
-        field == "Number of with ANS contribution" ~ mylabels[[3]],
-        field == "Rate of with ANS contribution" ~ mylabels[[4]]
+        field == "Number of in the MS" ~ c_labels[[1]],
+        field == "Rate of" ~ c_labels[[2]],
+        field == "Number of with ANS contribution" ~ c_labels[[3]],
+        field == "Rate of with ANS contribution" ~ c_labels[[4]]
       ),
       mylabel = as.character(round(value,2 ))
     ) %>% 
@@ -178,7 +177,7 @@ if (country != "SES RP3"){
       mylabel = paste0(if_else(mymetric>=0, "+", ""),as.character(round(mymetric,1 )), "%")
     )
   
-  mylocal_factor = c(
+  c_factor = c(
     "Rate of with ANS contribution",
     "Number of with ANS contribution",
     "Rate of",
@@ -190,20 +189,20 @@ if (country != "SES RP3"){
 
 # plot charts  ----
 if (knitr::is_latex_output()) {
-  local_xaxis_tickfont_size <- myfont-3  
-  local_textfont_size <- myfont-2  
+  c_xaxis_tickfont_size <- myfont-3  
+  c_textfont_size <- myfont-2  
 } else {
-  local_xaxis_tickfont_size <- myfont-1
-  local_textfont_size <- myfont
+  c_xaxis_tickfont_size <- myfont-1
+  c_textfont_size <- myfont
 }
 
 p1 <- myhbarc2(df = data_prep1,
                suffix = "",
                local_factor = c(
-                 mylabels[[4]],
-                 mylabels[[3]],
-                 mylabels[[2]],
-                 mylabels[[1]],
+                 c_labels[[4]],
+                 c_labels[[3]],
+                 c_labels[[2]],
+                 c_labels[[1]],
                  NULL
                ),
                hovertemplate = paste0('%{x:,.1f}<extra></extra>'),         
@@ -211,9 +210,9 @@ p1 <- myhbarc2(df = data_prep1,
                mybarcolor_neg = 'transparent',
                
                textposition = "outside",
-               textfont_size = local_textfont_size,
+               textfont_size = c_textfont_size,
                
-               xaxis_tickfont_size =  local_xaxis_tickfont_size,
+               xaxis_tickfont_size =  c_xaxis_tickfont_size,
                yaxis_tickfont_size = myfont -2,
                
                title_text = "",
@@ -223,18 +222,18 @@ p1 <- myhbarc2(df = data_prep1,
 
 p2 <- myhbarc2(df = data_prep2,
                suffix = "%",
-               local_factor = mylocal_factor,
+               local_factor = c_factor,
                hovertemplate = paste0('%{x:,.1f}%<extra></extra>'),         
                hovermode = "closest",
-               mybarcolor_pos = '#FFC000',
+               mybarcolor_pos = PRBActualColor,
                mybarcolor_neg = '#92D050',
                
                textposition = "outside",
-               textfont_size = local_textfont_size,
+               textfont_size = c_textfont_size,
                
                xaxis_ticksuffix = "%",
                xaxis_tickangle = 0,
-               xaxis_tickfont_size =  local_xaxis_tickfont_size,
+               xaxis_tickfont_size =  c_xaxis_tickfont_size,
                yaxis_showticklabels = FALSE,
                
                title_text = paste0(year_report, " vs ",year_report-1) ,
@@ -246,7 +245,7 @@ p2 <- myhbarc2(df = data_prep2,
                margin = list(t= 40, r = 50, l = 0)
 )
 
-if (year_report == 2020) {
+if (year_report == rp_min_year) {
   p1
 } else {
   subplot(p1, p2, nrows = 1, shareY = FALSE, titleX = TRUE, titleY = TRUE, widths = c(0.50, 0.50), margin = 0.10) %>% 

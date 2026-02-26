@@ -1,8 +1,15 @@
 # rp parameters ----
-rp <- "SES RP4"
+rp <- 4
+rp_full <- paste0("SES RP", rp)
+rp_summary_year <- paste0('rp', rp)
 rp_years <- c(2025, 2026, 2027, 2028, 2029)
 rp_min_year <- min(rp_years)
 rp_max_year <- max(rp_years)
+
+# source data folders ----
+data_folder <- 'G:/HQ/dgof-pru/Data/SES Monitoring Dashboard/RP4/data_for_web/'
+data_folder_a2 <- paste0(data_folder, "monitoring_files/", year_report, "/")
+
 
 # set site parameters ----
 site_dir <- here("_site")
@@ -45,8 +52,10 @@ PRBTargetColor <- '#FF0000'
 PRBActualColor <- '#FFC000'
 PRBPlannedColor <- '#5B9BD5'
 
+PRBSecondBlue <- '#0070C0'
+
 ### trace parameters
-mycolors = c('#FFC000')
+mycolors <- PRBActualColor
 
 mytextangle <- 0
 mytextposition <- "outside"

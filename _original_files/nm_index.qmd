@@ -10,7 +10,7 @@
 
 *`r pp_version`*
 
-## Safety (Network Manager - SES RP3 area)
+## Safety (Network Manager - `r rp_full` area)
 
 ::: {#container-saf1}
 :::: {#chart-eosm class="mychart"}
@@ -53,7 +53,7 @@ saf_conc2 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_over", "NM_fin
 <!-- empty line to ensure next heading leaves enough space -->
 <div style="height: 1px"></div>
 
-## Environment (Network Manager - SES RP3 area)
+## Environment (Network Manager - `r rp_full` area)
 
 :::: {#chart-env class="mychart"}
 ```{r chart-env-kea, options = (doclevel=c("level1"))}
@@ -73,7 +73,7 @@ env_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_KEP", "NM_find
 
 ::: {#container-cap style="clear: both"}
 
-## Capacity (Network Manager - SES RP3 area)
+## Capacity (Network Manager - `r rp_full` area)
 <!-- empty line to ensure next heading leaves enough space -->
 <div style="height: 1px"></div>
 
@@ -111,7 +111,7 @@ cap_er_conc1 <- get_prb_conclusions("NM findings.xlsx", "NM_findings_CAP", "NM_f
 <!-- empty line to ensure next heading leaves enough space -->
 <div style="height: 1px"></div>
 
-## Cost-efficiency (Network Manager - SES RP3 area)
+## Cost-efficiency (Network Manager - `r rp_full` area)
 
 :::: {#chart-cef class="mychart"}
 ```{r chart-cef}

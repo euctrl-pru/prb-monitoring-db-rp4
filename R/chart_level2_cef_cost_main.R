@@ -1,4 +1,4 @@
-if (!exists("country") | is.na(country)) {country <- "SES RP3"
+if (!exists("country") | is.na(country)) {country <- rp_full
 source("R/parameters.R")
 }
 
@@ -18,7 +18,7 @@ mycz_name <- if_else(cztype == "terminal",
                      ecz_list$ecz_name[ez])
 
 # import data  ----
-if (country == "SES RP3") {
+if (country == rp_full) {
   ## SES  ----
   data_raw  <-  read_xlsx(
     paste0(data_folder, "SES CEFF.xlsx"),
@@ -124,13 +124,13 @@ range_min <- if_else(range_min >0, 0, range_min)
 range_max <- ceiling(max(data_prep$mymetric, na.rm = TRUE)/10^myroundup) * 10^myroundup + 10^myroundup/2
 
 # chart parameters ----
-mychart_title <- paste0(if_else(country == "SES RP3", 
+mychart_title <- paste0(if_else(country == rp_full, 
                          "Costs by nature for main ANSPs - ",
                          paste0("Costs by nature - ", main_ansp," ")
                          ),
                         if_else(year_report == 2020 | year_report == 2021, "2020-2021", as.character(year_report))
                         )
-mytitle_y <- if_else(country == "SES RP3", 0.99, 0.99)
+mytitle_y <- if_else(country == rp_full, 0.99, 0.99)
 myaxis_title <- "Costs (M€<sub>2017</sub>)"
 mybarcolor_pos <- '#A5A5A5'
 mybarcolor_neg <- '#A5A5A5'

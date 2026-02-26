@@ -1,14 +1,10 @@
-if (exists("country") == FALSE) {country <- "SES RP3"}
-
-# source("R/parameters.R")
+if (exists("country") == FALSE) {country <- rp_full}
+if (!data_loaded) {
+  source("R/get_data.R")
+}
 
 # import data  ----
-data_raw  <-  read_xlsx(
-  paste0(data_folder, "SES file.xlsx"),
-  sheet = "EoSM target #ANSPs",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+data_raw  <-  saf_eosm_ansp_ses
 
 # process data  ----
 mylabels <- c(
@@ -76,7 +72,7 @@ if (knitr::is_latex_output()) {
 # plot chart ----
 myplot <- mybarchart2(data_prep, 
                       height = local_height,
-                      colors = c('#585858',  '#FFC000', '#00B0F0', '#196AB4'),
+                      colors = c('#585858',  PRBActualColor, '#00B0F0', '#196AB4'),
                       local_factor = c("A",
                                        "B",
                                        'C', 
@@ -149,7 +145,7 @@ myplot <- mybarchart2(data_prep,
     type = "scatter",
     mode = "markers",
     name = "B",
-    marker = list(color = '#FFC000',
+    marker = list(color = PRBActualColor,
                   symbol = "square",
                   size = 11),
     # showlegend = TRUE,

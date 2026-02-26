@@ -139,7 +139,7 @@ table1 <- mygtable(data_prep1, myfont) %>%
   ) %>%
   fmt_number(
     columns = 2:7,   
-    decimals = if_else(country == "SES RP3", 1, 2),
+    decimals = if_else(country == rp_full, 1, 2),
     use_seps = TRUE,
     sep_mark = ",",
     dec_mark = "."
@@ -209,7 +209,7 @@ table2 <- mygtable(data_prep2, myfont) %>%
   ) %>%
   fmt_number(
     columns = 2:7,   
-    decimals = if_else(country == "SES RP3", 1, 2),
+    decimals = if_else(country == rp_full, 1, 2),
     use_seps = TRUE,
     sep_mark = ",",
     dec_mark = "."

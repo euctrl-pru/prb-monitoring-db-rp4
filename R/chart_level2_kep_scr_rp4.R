@@ -1,34 +1,20 @@
-############### state level adapted to RP4, not NM or SES
+if (!data_loaded) {
+  source("R/get_data.R")
+}
 
 # import data  ----
-if (country == "SES RP4"){
+if (country == rp_full){
   ## SES case ----
-  data_raw_kep  <-  read_xlsx(
-    paste0(data_folder, "SES file.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_KEP",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() |> 
-    #so it has the same structure as the state case
-    mutate(entity_name = "SES RP3") 
+  data_raw_kep  <-  kep_actual_ses %>% 
+    mutate(value = kep_value_percent/100,
+           state = rp_full)
 
-  data_raw_scr  <-  read_xlsx(
-    paste0(data_folder, "SES file.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_SCR",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names()  |> 
-    #so it has the same structure as the state case
-    mutate(entity_name = "SES RP3") 
+  data_raw_scr  <-  scr_actual_ses %>% 
+    mutate(value = scr_value,
+           state = rp_full)
     
 } else  {
   ## State case ----
-  if (!exists("kep_actual")) {
-    source("R/get_data.R")
-  }
-  
   data_raw_kep <- kep_actual
   data_raw_scr <- scr_actual
 }

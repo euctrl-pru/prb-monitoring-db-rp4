@@ -1,39 +1,41 @@
+if (!data_loaded) {
+  source("R/get_data.R")
+}
+
 # import data  ----
 state_table <- state_list |> as_tibble() |> 
   filter(value != "MUAC", 
-         value != "SES RP3", 
+         value != rp_full, 
          value != "Network Manager") |> 
   select(State = value) |> 
   arrange(State)
 
-data_raw_target  <-  read_xlsx(
-  paste0(data_folder, "CAP dataset master.xlsx"),
-  # here("data","hlsr2021_data.xlsx"),
-  sheet = "terminal delay targets",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+data_raw_target  <- cap_trm_target
+  # 
+  # read_xlsx(
+  # paste0(data_folder, "cap_actuals.xlsx"),
+  # # here("data","hlsr2021_data.xlsx"),
+  # sheet = "terminal delay targets",
+  # range = cell_limits(c(1, 1), c(NA, NA))) %>%
+  # as_tibble() %>% 
+  # clean_names() 
 
-data_raw_actual  <-  read_xlsx(
-  paste0(data_folder, "CAP dataset master.xlsx"),
-  sheet = "Avg terminal ATFM delay",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+data_raw_actual  <-  cap_trm_atfm_actual
 
 # prepare data ----
 data_prep_target <- data_raw_target %>% 
   filter(year == .env$year_report) |> 
   select(
     State = state,
-    Target = x332_state_arr_delay_target
+    Target = delay_target
   ) %>% 
   filter(!is.na(Target))
   
   
 data_prep_actual <- data_raw_actual %>% 
   filter(year == .env$year_report) %>% 
-  mutate(average_delay = if_else  (is.na(average_delay) == TRUE, 0, average_delay)) |> 
+  mutate(average_delay = if_else  (is.na(average_delay_per_flight) == TRUE, 0, 
+                                   round(average_delay_per_flight, 2))) |> 
   select(
     State = state,
     Actual = average_delay
@@ -52,7 +54,9 @@ data_prep <- data_prep_target %>%
                                 "<span style='color:red; font-size:0.8rem;'>&nbsp;&nbsp;&#10008;</span>")
                         )
          
-         )
+         ),
+    Target = format(round(Target, 2), nsmall = 2)
+    
     )
 
 data_prep_pdf <- data_prep_target |> 
@@ -60,7 +64,6 @@ data_prep_pdf <- data_prep_target |>
   left_join(data_prep_actual, by = "State") |> 
   mutate(
     Actual = format(round(Actual, 2), nsmall = 2),
-    Target = format(round(Target, 2), nsmall = 2),
     "_" = if_else(Actual <= Target,1,0)
   )
 

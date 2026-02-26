@@ -84,7 +84,7 @@ website:
         text: NM View
       - text: "Investments"
         menu:
-          - text: "SES RP3"
+          - text: "SES RP4"
             href: home_address/investments/rp3/ses-rp3
           - text: "---"
           - text: "Austria"

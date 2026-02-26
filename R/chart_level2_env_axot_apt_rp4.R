@@ -1,5 +1,5 @@
 ## import data  ----
-if (!exists("axot_actual_apt")) {
+if (!data_loaded) {
   source("R/get_data.R")
 }
 

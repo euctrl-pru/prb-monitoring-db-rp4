@@ -1,4 +1,4 @@
-if (!exists("country") | is.na(country)) {country <- "SES RP3"
+if (!exists("country") | is.na(country)) {country <- rp_full
 source("R/parameters.R")
 }
 
@@ -17,7 +17,7 @@ mycz_name <- if_else(cztype == "terminal",
                      tcz_list$tcz_name[ez],
                      ecz_list$ecz_name[ez])
 
-if (country == "SES RP3") {
+if (country == rp_full) {
   # SES  ----
   ## import data & prep ----
   data_raw  <-  read_xlsx(
@@ -93,7 +93,7 @@ if (knitr::is_latex_output()) {
 mychart_title <- paste0("Net result from ", 
                         if_else(cztype == 'terminal', 'terminal', 'en route'),
                         " activity - ", 
-                        if_else(country == "SES RP3", "Main ANSPs ", paste0(main_ansp," ")),
+                        if_else(country == rp_full, "Main ANSPs ", paste0(main_ansp," ")),
                         if_else(year_report == 2021 | year_report == 2020, "2020-2021", as.character(year_report))
                         )
 mytitle_y <- 0.99

@@ -14,7 +14,7 @@ mycz_name <- if_else(cztype == "terminal",
                      tcz_list$tcz_name[ez],
                      ecz_list$ecz_name[ez])
 
-if (country == "SES RP3") {
+if (country == rp_full) {
   # SES  ----
   ## import data  ----
   data_raw  <-  read_xlsx(
@@ -105,7 +105,7 @@ if (country == "SES RP3") {
 
 # chart parameters ----
 mysuffix <- ""
-mydecimals <- if_else(country == "SES RP3", 0, 1)
+mydecimals <- if_else(country == rp_full, 0, 1)
 
 ### trace parameters
 mycolors = c( '#8497B0')

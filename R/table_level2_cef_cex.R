@@ -1,4 +1,4 @@
-if (!exists("country") | is.na(country)) {country = "SES RP3"
+if (!exists("country") | is.na(country)) {country = rp_full
 source("R/parameters.R")
 }
 
@@ -17,7 +17,7 @@ mycz_name <- if_else(cztype == "terminal",
                      tcz_list$tcz_name[ez],
                      ecz_list$ecz_name[ez])
 
-if (country == "SES RP3") {
+if (country == rp_full) {
   # SES  ----
   ## import data  ----
   data_raw  <-  read_xlsx(
@@ -143,7 +143,7 @@ if (country == "SES RP3") {
     select(xlabel, mymetric, myothermetric)
 }      
 
-local_decimals <- if_else(country == "SES RP3", 0, 1)
+local_decimals <- if_else(country == rp_full, 0, 1)
 
 # pdf table ----
 data_prep_pdf <- data_prep %>% 

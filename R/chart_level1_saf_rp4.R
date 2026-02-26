@@ -1,22 +1,13 @@
 if (!exists("saf_ansp_index")) {saf_ansp_index = 1}
 
 # import data  ----
-data_raw_maturity  <-  read_xlsx(
-  paste0(data_folder, "SAF EoSM.xlsx"),
-  sheet = "A>P",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+if (!data_loaded) {
+  source("R/get_data.R")
+}
 
-data_raw_eosm  <-  read_xlsx(
-  paste0(data_folder, "SAF EoSM.xlsx"),
-  sheet = "EoSM",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
 
 # prepare data ----
-data_prep_eosm <- data_raw_eosm %>% 
+data_prep_eosm <- saf_eosm %>% 
   filter(
     ms == country,
   ) %>% 
@@ -27,7 +18,7 @@ data_prep_eosm <- data_raw_eosm %>%
     entity_name, year
   )
 
-data_prep_maturity <- data_raw_maturity %>% 
+data_prep_maturity <- saf_maturity %>% 
   filter(
     ms == country
     ) %>% 
@@ -85,7 +76,7 @@ myc <-  function(width = NA, height, fontsize = myfont, margin = 70, ansp_name =
       type = 'scatter',
       mode = "markers",
       name = "EoSM score",
-      marker = list (color = '#FFC000',
+      marker = list (color = PRBActualColor,
                      symbol = "diamond",
                      size = 11),
       hovertemplate = paste0('EoSM score %{y}<extra></extra>'),
@@ -102,7 +93,7 @@ myc <-  function(width = NA, height, fontsize = myfont, margin = 70, ansp_name =
       type = 'scatter',
       mode = "line",
       name = "Target other MOs",
-      line = list (color = '#FF0000', width = 3, dash = 'solid'),
+      line = list (color = PRBTargetColor, width = 3, dash = 'solid'),
       hoverinfo = 'none',
       showlegend = F
     ) %>%
@@ -115,7 +106,7 @@ myc <-  function(width = NA, height, fontsize = myfont, margin = 70, ansp_name =
       type = 'scatter',
       mode = "line",
       name = "Target risk mgt",
-      line = list (color = '#FF0000', width = 3, dash = 'solid'),
+      line = list (color = PRBTargetColor, width = 3, dash = 'solid'),
       # hovertemplate = paste0('%{x}'),
       hoverinfo = 'none',
       showlegend = F
@@ -123,7 +114,7 @@ myc <-  function(width = NA, height, fontsize = myfont, margin = 70, ansp_name =
     add_trace (
                inherit = FALSE,
                # data = data_prep_eosm,
-               x = 2024.3,
+               x = rp_max_year+0.3,
                y = 60,
                yaxis = "y1",
                type = 'scatter',
@@ -159,7 +150,7 @@ myc <-  function(width = NA, height, fontsize = myfont, margin = 70, ansp_name =
                      xanchor = "right",
                      align = "right",
                      # textangle = -90,
-                     font = list(color = '#FF0000', size = fontsize)
+                     font = list(color = PRBTargetColor, size = fontsize)
     ) %>% 
     config( responsive = TRUE,
             displaylogo = FALSE,
@@ -168,9 +159,7 @@ myc <-  function(width = NA, height, fontsize = myfont, margin = 70, ansp_name =
     ) %>% 
     layout(
       font = list(family = "Roboto"),
-      title = list(text=paste0("EoSM - ", if_else(ansp_name == 'Airnav Ireland' & year_report <2023, 
-                                                  'IAA',
-                                                  ansp_name)),
+      title = list(text=paste0("EoSM - ", ansp_name ),
                    y = mytitle_y, 
                    x = mytitle_x, 
                    xanchor = mytitle_xanchor, 
@@ -236,21 +225,15 @@ myc <-  function(width = NA, height, fontsize = myfont, margin = 70, ansp_name =
 }
 
 if (knitr::is_latex_output()) {
-  myc(ansp_name = if_else(saf_ansps[[saf_ansp_index]] == 'IAA',
-                          'Airnav Ireland',
-                          saf_ansps[[saf_ansp_index]]), 
+  myc(ansp_name = saf_ansps[[saf_ansp_index]], 
       height = 290,
       fontsize = 12.5)
 
   } else {
     chart_params <- as_tibble(saf_ansps) %>% 
       rename(ansp_name = value) %>% 
-      mutate(height = 320,
-             ansp_name = if_else(ansp_name == 'IAA',
-                                 'Airnav Ireland',
-                                 ansp_name))
+      mutate(height = 320)
 
     mycharts <- pmap(chart_params, myc)
 }
-
 

@@ -1,14 +1,10 @@
-if (exists("country") == FALSE) {country <- "SES RP3"}
-
-# source("R/parameters.R")
+if (exists("country") == FALSE) {country <- rp_full}
+if (!data_loaded) {
+  source("R/get_data.R")
+}
 
 # import data  ----
-data_raw  <-  read_xlsx(
-  paste0(data_folder, "SES file.xlsx"),
-  sheet = "EoSM interdipendency #ANSPs",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+data_raw  <-  saf_eosm_interdep_ses
 
 # process data  ----
 data_prep <- data_raw %>% 

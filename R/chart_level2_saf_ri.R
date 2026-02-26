@@ -1,9 +1,11 @@
-if (!exists("country") | is.na(country)) {country = "SES RP3"
+############### state level adapted to RP4, not SES
+
+if (!exists("country") | is.na(country)) {country = rp_full
 source("R/parameters.R")
 }
 
 # import data  ----
-if (country == "SES RP3"){
+if (country == rp_full){
   ## SES case ----
   data_raw  <-  read_xlsx(
     paste0(data_folder, "SES file.xlsx"),
@@ -12,17 +14,16 @@ if (country == "SES RP3"){
     range = cell_limits(c(1, 1), c(NA, 5))) %>%
     as_tibble() %>% 
     clean_names() |> 
-    mutate(state = "SES RP3")
+    mutate(state = rp_full)
     
 } else  {
   ## State case ----
-  data_raw  <-  read_xlsx(
-    paste0(data_folder, "SAF EoSM.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "RI - occurrences",
-    range = cell_limits(c(1, 1), c(NA, 6))) %>%
-    as_tibble() %>% 
-    clean_names() 
+  
+  if (!data_loaded) {
+    source("R/get_data.R")
+  }
+  
+  data_raw  <-  saf_ri_actual
 }
 
 # prepare data ----
@@ -37,51 +38,39 @@ data_prep <- data_raw %>%
          type = if_else(type == "rate_per_100_000",
                         "Rate of RI",
                         "EU Wide Average"),
-         mytextposition = "top center",
+         textposition = "top center",
          linedash = if_else(type == "Rate of RI",
                             "solid",
-                            if_else(country == "SES RP3",
+                            if_else(country == rp_full,
                                     "solid",
                                     "dot")
                             )
          ) |> 
-  select(xlabel, type, mymetric, mytextposition, linedash) |> 
+  select(xlabel, type, mymetric, textposition, linedash) |> 
   #otherwise the lindash column does not work
   arrange(desc(linedash))
 
 
 # chart parameters ----
-mysuffix <- ""
-mydecimals <- 2
+c_suffix <- ""
+c_decimals <- 2
 
 ### trace parameters
-mycolors = c('#00B0F0', '#00B0F0' )
+local_color <- '#00B0F0'
+c_colors = c(local_color, local_color)
+
 ###set up order of traces
-myfactor <- c("Rate of RI", "EU Wide Average")
+c_factor <- c("Rate of RI", "EU Wide Average")
 
-myhovertemplate <- paste0('%{y:,.', mydecimals, 'f}', mysuffix)
-
-mytextangle <- 0
-mytextfont_color <- 'black'
-mytextfont_size <- myfont
+c_hovertemplate <- paste0('%{y:,.', c_decimals, 'f}', c_suffix)
 
 #### title
-mytitle_text <-  paste0("RIs per 100,000 movements")
-mytitle_y <- 0.99
-
-#### xaxis
+c_title_text <-  paste0("RIs per 100,000 movements")
 
 #### yaxis
-myyaxis_title <- "RIs per 100,000 movements"
-myyaxis_ticksuffix <- ""
-myyaxis_tickformat <- ".1f"
+c_yaxis_title <- "RIs per 100,000 movements"
+c_yaxis_tickformat <- ".1f"
 
-#### legend
-mylegend_x <- 0.5
-mylegend_xanchor <- 'center'
-
-#### margin
-mylocalmargin <- mymargin
 
 # plot chart ----
 ##I had to do it this way because when there are NA values the dash doesn't work
@@ -89,32 +78,31 @@ data_prep_s1 <- data_prep |> filter(type == "EU Wide Average")
 data_prep_s2 <- data_prep |> filter(type == "Rate of RI") |> 
   mutate(myothermetric = round(mymetric, mydecimals))
 
+p1 <- mylinechart2(data_prep_s1, 
+                      height = myheight,
+                      colors = c_colors,
+                      local_factor = c_factor,
+                      suffix = c_suffix,
+                      decimals = c_decimals,
 
-p1 <- mylinechart(data_prep_s1, mywidth, myheight, myfont, mylocalmargin, mydecimals) |> 
-  layout(yaxis = list(rangemode = "tozero"),
-         xaxis = list(range = c(2019.5, 2024.5)))
+                      hovertemplate = c_hovertemplate,
+                      
+                      title_text = c_title_text,
+                      
+                      yaxis_title = c_yaxis_title,
+                      yaxis_ticksuffix = c_suffix,
+                      yaxis_tickformat = c_yaxis_tickformat
+) %>% 
+    layout(yaxis = list(rangemode = "tozero"),
+           xaxis = list(range = c(rp_min_year-0.5, rp_max_year+0.5)))
 
-## additional target trace
-myat_name <- "Rate of RI"
-myat_mode <- "line+markers"
-myat_yaxis <- "y1"
-myat_symbol <- NA
-myat_marker_color <- '#00B0F0'
-myat_line_color <- '#00B0F0'
-myat_line_width <- mylinewidth
-myat_showlegend <- T
+p1 %>%  add_line_trace2(., data_prep_s2,
+                        name = "Rate of RI",
+                        textfontcolor = "black",
+                        markercolor = local_color,
+                        linecolor = local_color
+                        
+                        ) |> 
+    layout(legend=list(
+      traceorder= "reversed"))
 
-myat_textbold <- FALSE
-myat_textangle <- 0
-myat_textposition <- 'top'
-myat_textfont_color <- 'black'
-myat_textfont_size <- myfont
-
-p1 %>%  add_line_trace(., data_prep_s2) |> 
-  layout(legend=list(
-    traceorder= "reversed"))
-
-
-
-
-  

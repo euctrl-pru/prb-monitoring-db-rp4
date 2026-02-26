@@ -1,46 +1,25 @@
-############### state level adapted to RP4, not NM or SES
-
-if (!exists("country") | is.na(country)) {country = "SES RP3"}
+if (!exists("country") | is.na(country)) {country = rp_full}
+if (!data_loaded) {
+  source("R/get_data.R")
+}
 
 # import data  ---- 
-if (country == "SES RP4"){
+if (country == rp_full){
   ## SES case ----
-  data_raw_kep  <-  read_xlsx(
-    paste0(data_folder, "SES file.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_KEP MM",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() |> 
-    #so it has the same structure as the state case
-    mutate(entity_name = "SES RP4") 
+  data_raw_kep  <- kep_actual_mm_ses %>% 
+    mutate(value = kep_value_percent/100,
+           state = rp_full)
   
-  data_raw_scr  <-  read_xlsx(
-    paste0(data_folder, "SES file.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_SCR MM",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() |> 
-    #so it has the same structure as the state case
-    mutate(entity_name = "SES RP4") 
+  data_raw_scr  <- scr_actual_mm_ses %>% 
+    mutate(value = scr_value,
+           state = rp_full)
   
-  data_raw_kea  <-  read_xlsx(
-    paste0(data_folder, "SES file.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_HFE MM",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() |> 
-    #so it has the same structure as the state case
-    mutate(entity_name = "SES RP3") 
+  data_raw_kea  <-  kea_actual_mm_ses %>% 
+    mutate(value = hfe_kpi_percent/100,
+           state = rp_full)
 
 } else  {
   ## State case ----
-  if (!exists("kep_actual_mm")) {
-    source("R/get_data.R")
-  }
-  
   data_raw_kea <- kea_actual_mm
   data_raw_kep <- kep_actual_mm
   data_raw_scr <- scr_actual_mm

@@ -1,77 +1,80 @@
+if (!data_loaded) {
+  source("R/get_data.R")
+}
 
 # import data  ----
-data_raw  <-  read_xlsx(
-  paste0(data_folder, "SES file.xlsx"),
-  sheet = "SES_EoSM",
-  range = cell_limits(c(1, 1), c(NA, 6))) %>%
-  as_tibble() %>% 
-  clean_names() %>% 
-  mutate(management_objectives = str_replace_all(management_objectives, 'Other Mos' , 'Other MOs'))
-
+data_raw  <-  saf_eosm_ses
 
 data_prep <- data_raw %>% 
   filter(year_report == .env$year_report) %>% 
-  select(-year_report) %>% 
+  select(-year_report, -state) %>% 
+  group_by(year, status) %>% 
+  summarise(number_of_ansps = min(number_of_ans_ps, na.rm = TRUE)) %>%
   mutate(
-    management_objectives = paste(management_objectives, str_to_lower(status)),
+    number_of_ansps = if_else(status == "Actual" & year > .env$year_report,
+                              NA,
+                              number_of_ansps),
     mytextpos = case_when(
-      management_objectives == 'Other MOs planned' ~ "top center",
-      TRUE ~ 'bottom center'
+      # status == 'Planned' ~ "bottom center",
+      TRUE ~ 'right'
     ),
-  ) 
+    dash = if_else(status == "Planned", "dot", "solid"),
+    status = paste0(
+      "No of ANSPs on or above targets (", tolower(status), ")"
+    )
+  ) %>% 
+  arrange(status, year)
 
-data_prep_actual <- data_prep %>% 
-  filter(status == 'Actual') %>% 
-  mutate(number_of_ans_ps = case_when(
-    year > year_report ~ NA,
-    .default = number_of_ans_ps
-  ))
-
-data_prep_planned <- data_prep %>% 
-  filter(status == 'Planned')
 
 # chart ----
 ## set parameters for chart ----
-mycolors <-  c('#FFC000', '#FFC000','#5B9BD5', '#5B9BD5')
+mycolors <-  c(PRBPlannedColor, PRBActualColor)
 
 ## define chart function ----
 myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
   plot_ly(
     width = mywidth,
     height = myheight,
-    data = data_prep_planned,
+    data = filter(data_prep, status == "No of ANSPs on or above targets (planned)"),
     x = ~ year,
-    y = ~ number_of_ans_ps,
+    y = ~ number_of_ansps,
     yaxis = "y1",
     cliponaxis = FALSE,
     yaxis = "y1",
-    type = 'scatter',  mode = 'lines+markers',
-    line = list(width = mylinewidth, dash = 'dot'),
-    marker = list(size = mylinewidth * 3),
-    color = ~ management_objectives,
-    colors = mycolors,
-    opacity = 1,
-    text = ~ number_of_ans_ps,
+    type = 'scatter',  mode = 'line',
+    line = list(width = mylinewidth, dash = ~ dash, color = mycolors[[2]]),
+    marker = list(size = mylinewidth * 3, color = mycolors[[2]]),
+    # color = ~ status,
+    # colors = mycolors[[1]],
+    # opacity = 1,
+    name = ~ status,
+    text = ~ number_of_ansps,
     textposition = ~ mytextpos,
     textfont = list(color = 'black', size = myfont),
     hovertemplate = paste0('%{xother} %{y:.0f}'),
     showlegend = T
-  ) %>% 
+  ) %>%
     add_trace(
-      data = data_prep_actual,
+      data = filter(data_prep, status == "No of ANSPs on or above targets (actual)"),
       x = ~ year,
-      y = ~ number_of_ans_ps,
+      y = ~ number_of_ansps,
       yaxis = "y1",
       cliponaxis = FALSE,
       yaxis = "y1",
-      type = 'scatter',  mode = 'lines',
-      line = list(width = mylinewidth, dash = 'solid'),
-      color = ~ management_objectives,
-      colors = mycolors,
-      opacity = 1,
+      type = 'scatter',  mode = 'line',
+      name = ~ status,
+      line = list(width = mylinewidth, dash = ~ dash, color = mycolors[[1]]),
+      marker = list(size = mylinewidth * 3, color = mycolors[[1]]),
+      # color = ~ status,
+      # colors = mycolors[[1]],
+      # opacity = 1,
+      text = ~ number_of_ansps,
+      textposition = ~ mytextpos,
+      textfont = list(color = 'black', size = myfont),
       hovertemplate = paste0('%{xother} %{y:.0f}'),
       showlegend = T
-    ) %>%
+      
+    ) %>% 
     config( responsive = TRUE,
                     displaylogo = FALSE,
                     displayModeBar = F
@@ -100,7 +103,7 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
                    zeroline = TRUE,
                    tickfont = list(size = myfont)
       ),
-      yaxis = list(title = "No of ANSPs achieving\nEoSM targets",
+      yaxis = list(title = "Number of ANSPs achieving\nEoSM targets",
                    # gridcolor = 'rgb(255,255,255)',
                    showgrid = TRUE,
                    showline = FALSE,
@@ -116,10 +119,11 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
       # showlegend = FALSE
       legend = list(
         orientation = 'h', 
-        xanchor = "left",
-        x = if_else(knitr::is_latex_output(),-0.15,-0.05), 
+        xanchor = "center",
+        x = 0.5, 
         y =-0.1,
-        font = list(size = if_else(knitr::is_latex_output(),myfont-4,myfont-1.5))
+        traceorder = "reversed",
+        font = list(size = myfont-1)
       ),
       margin = mymargin
       
@@ -128,9 +132,5 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
 }
 
 ## plot chart ----
-myc(mywidth, 
-    if_else(knitr::is_latex_output(),myheight+10,myheight+30), 
-    myfont, 
-    mylinewidth, 
-    mymargin)
+myc(mywidth, myheight+30, myfont, 3, mymargin)
 

@@ -929,13 +929,13 @@ if (exists("env_apt_3") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt
 if (exists("env_apt_4") == FALSE) {''} else {cat(quarto_paragraph_breaks(env_apt_4))}
 ```
 
-```{r table_level2_env_apt_pis, eval=(params$no_tcz != 0)}
+```{r table_level2_env_apt_pis, eval=!(params$no_tcz == 0 | params$country == rp_full)}
 #| file: R/table_level2_env_apt_pis.R
 #| include: false
 ```
 
 
-``` {r, eval=(params$no_tcz != 0), include=(params$no_tcz != 0)}
+``` {r, eval=!(params$no_tcz == 0 | params$country == rp_full), include=(!(params$no_tcz == 0 | params$country == rp_full)}
 #| echo: false
 #| results: asis
  

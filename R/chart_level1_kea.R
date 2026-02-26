@@ -1,6 +1,9 @@
-############### state level adapted to RP4, not NM or SES
+############### state level adapted to RP4, also SES , not NM
 
 if (!exists("doclevel")) {doclevel = "level1"}
+if (!data_loaded) {
+  source("R/get_data.R")
+}
  
 if (country == "Network Manager") {
   # NM case ----
@@ -33,32 +36,18 @@ if (country == "Network Manager") {
     mutate(myothermetric = round(nm_target * 100, 2),
            type = "Target")
   
-} else if (country == "SES RP4") {
+} else if (country == rp_full) {
   # SES case ----
-  data_raw_target  <-  read_xlsx(
-    paste0(data_folder, "SES file.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_KEA Targets",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() |> 
-    mutate(entity_name = "SES RP3")
+  data_raw_target  <-  kea_target_ses %>% 
+    mutate(kea_target = kea_reference_value_percent/100,
+           state = rp_full)
   
-  data_raw_actual  <-  read_xlsx(
-    paste0(data_folder, "SES file.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "Table_HFE",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() |> 
-    mutate(entity_name = "SES RP4")
+  data_raw_actual  <-  kea_actual_ses %>% 
+    mutate(value = hfe_kpi_percent/100,
+           state = rp_full)
   
 } else  {
   # State case ----
-  if (!exists("kea_target")) {
-    source("R/get_data.R")
-  }
-  
   data_raw_target <- kea_target
   data_raw_actual <- kea_actual
 }

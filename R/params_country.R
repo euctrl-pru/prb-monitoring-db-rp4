@@ -115,17 +115,17 @@ if (year_folder == "rp4") {
     pull()
   
   tsu_rp_ses <- context_data_rp %>% 
-    filter(state == "SES RP4") %>% 
+    filter(state == rp_full) %>% 
     select(ts_us) %>% 
     pull()
   
   ert_costs_rp_ses <- context_data_rp %>% 
-    filter(state == "SES RP4") %>% 
+    filter(state == rp_full) %>% 
     select(ert_costs) %>% 
     pull()
   
   trm_costs_rp_ses <- context_data_rp %>% 
-    filter(state == "SES RP4") %>% 
+    filter(state == rp_full) %>% 
     select(trm_costs) %>% 
     pull()
   
@@ -182,7 +182,7 @@ if(nrow(other_met)>0) {
 }
 
 # get level 2 data files (not needed for SES or NM) ----
-if (country != "Network Manager" & country != "SES RP4" & country != "Home") {
+if (country != "Network Manager" & country != rp_full & country != "Home") {
 
 ## get ceff file ----
 if (country != "MUAC") {

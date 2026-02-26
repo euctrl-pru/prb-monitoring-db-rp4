@@ -72,7 +72,7 @@ mybargap <- 0.25
 mybarmode <- 'group'
 
 #### title
-mytitle_text <- paste0("En route unit costs - SES RP3")
+mytitle_text <- paste0("En route unit costs - ", rp_full)
 mytitle_y <- 0.99
 
 #### xaxis

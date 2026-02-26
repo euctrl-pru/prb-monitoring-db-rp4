@@ -1,26 +1,21 @@
+if (!data_loaded) {
+  source("R/get_data.R")
+}
+
 ## import data  ----
-if (country == 'SES RP3') {
-  data_raw  <-  read_xlsx(
-    paste0(data_folder, "SES file.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "ATCOs",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() |> 
+if (country == rp_full) {
+  data_raw  <-  cap_atco_acc_ses |> 
     #so it has the same columns as the State case
     mutate(ansp = "ansp",
-           state = "SES RP3",
+           state = rp_full,
            acc = "ZZZZ")
     
 } else {
+  data_raw_planned  <- cap_atco_acc_planned
+  data_raw_actual  <- cap_atco_acc_actual
   
-  data_raw  <-  read_xlsx(
-    paste0(data_folder, "CAP dataset master.xlsx"),
-    # here("data","hlsr2021_data.xlsx"),
-    sheet = "ATCOs",
-    range = cell_limits(c(1, 1), c(NA, NA))) %>%
-    as_tibble() %>% 
-    clean_names() 
+  data_raw <- data_raw_planned %>% 
+    left_join (data_raw_actual, by = c("state", "year", "acc"))
   
 }
 
@@ -39,7 +34,7 @@ data_prep_acc <- data_raw |>
 
 data_prep_ansp <- data_prep_acc %>% group_by(type, year) %>% 
   summarise(value = sum(value)) %>% 
-  mutate(acc = if_else(country == "SES RP3", "SES RP3", main_ansp)) %>% ungroup() 
+  mutate(acc = if_else(country == rp_full, rp_full, main_ansp)) %>% ungroup() 
 
 
 data_for_chart <- rbind(data_prep_ansp, data_prep_acc) %>% 
@@ -56,25 +51,18 @@ acc_list_for_chart <- unique(data_for_chart$acc)
 
 # chart ----
 ## set parameters for chart ----
-mycolors <-  c('#FFC000','#5B9BD5')
+c_colors = c(PRBActualColor, PRBPlannedColor)
 
-mytitle <- paste0("ATCOs in operation",
-                  if_else(country != "SES RP3",
+c_title <- paste0("ATCOs in operation",
+                  if_else(country != rp_full,
                           paste0(" - ", main_ansp), ""))
 
-# if (knitr::is_latex_output()) {
-#   mytitle <- paste0("ATCOs in OPS")
-#   mytitle_pos <- 0.99
-# } else {
-#   mytitle <- paste0("ATCOs in OPS")
-#   mytitle_pos <- 0.99
-# }
 
 ## define chart function ----
-myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
+myc <- function (width = mywidth, height = myheight, font = myfont, linewidth = mylinewidth, margin = mymargin) {
   myplot <- plot_ly( 
-    width = mywidth,
-    height = myheight,
+    width = width,
+    height = height,
   )
   for (i in 1:length(acc_list_for_chart)) {
     df <- data_for_chart %>% filter(acc == acc_list_for_chart[i])
@@ -87,10 +75,10 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
         cliponaxis = FALSE,
         yaxis = "y1",
         type = 'scatter',  mode = 'lines+markers',
-        line = list(width = mylinewidth, dash = 'solid'),
-        marker = list(size = mylinewidth * 3),
+        line = list(width = linewidth, dash = 'solid'),
+        marker = list(size = linewidth * 3),
         color = ~ type,
-        colors = mycolors,
+        colors = c_colors,
         opacity = 1,
         visible = ifelse(i == 1, TRUE, FALSE),  # Set the initial visibility
         # visible = c(rep(TRUE, 2), rep(FALSE, length(acc_list_for_chart)*2 - 2)),  # Set the initial visibility
@@ -120,7 +108,7 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
     yanchor = "top",
     x = -0.2,
     y = 1.2,
-    font = list(family = "Arial", color="black", size=myfont),
+    font = list(family = "Arial", color="black", size=font),
     pad = 0,
     bgcolor = 'white', 
     bordercolor = '#e0e0e0', 
@@ -150,7 +138,7 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
     layout(
       # updatemenus = updatemenus,  # in the end we don't use the menu
       font = list(family = "Roboto"),
-      title = list(text = mytitle,
+      title = list(text = c_title,
                    y = mytitle_y, 
                    x = mytitle_x, 
                    xanchor = mytitle_xanchor, 
@@ -169,7 +157,7 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
                    # tickcolor = 'rgb(127,127,127)',
                    # ticks = 'outside',
                    zeroline = TRUE,
-                   tickfont = list(size = myfont)
+                   tickfont = list(size = font)
       ),
       yaxis = list(title = "ATCOs in OPS (FTEs)",
                    # gridcolor = 'rgb(255,255,255)',
@@ -184,7 +172,7 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
                    # ticks = 'outside',
                    zeroline = TRUE,
                    zerolinecolor = 'rgb(240,240,240)',
-                   titlefont = list(size = myfont), tickfont = list(size = myfont)
+                   titlefont = list(size = font), tickfont = list(size = font)
       ),
       # showlegend = FALSE
       legend = list(
@@ -192,14 +180,14 @@ myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
         xanchor = "center",
         x = 0.5, 
         y =-0.1,
-        font = list(size = myfont)
+        font = list(size = font)
       ),
-      margin = mymargin
+      margin = margin
     )
   myplot
 }
 
 ## plot chart ----
-myc(mywidth, myheight, myfont, mylinewidth, mymargin)
+myc()
 
 

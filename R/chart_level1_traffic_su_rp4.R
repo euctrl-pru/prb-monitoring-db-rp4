@@ -1,58 +1,34 @@
-############### still not adapted to RP4
-
-
 # import data  ----
-data_raw  <-  read_xlsx(
-  paste0(data_folder, "STATFOR_forecast_en-route_TSU.xlsx"),
-  sheet = "data",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+if (!data_loaded) {
+  source("R/get_data.R")
+} 
 
-data_raw_rts  <- read_xlsx(
-  paste0(data_folder, "CEFF dataset master.xlsx"),
-  sheet = "Enroute_T1",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names()
-
-data_raw_rts_ses  <- read_xlsx(
-  paste0(data_folder, "SES CEFF.xlsx"),
-  sheet = "SES_ERT_all",
-  range = cell_limits(c(1, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
-
-data_raw_planned  <-  read_xlsx(
-  paste0(data_folder, "targets.xlsx"),
-  sheet = "IFR_MVTS",
-  range = cell_limits(c(3, 1), c(NA, NA))) %>%
-  as_tibble() %>% 
-  clean_names() 
+data_raw <- statfor_tsu
+data_raw_planned <- traffic_target
+data_raw_rts <- ceff_t1_ert_ecz
 
 # prepare data ----
 
 ## rts data
-data_prep_rts_ses <- data_raw_rts_ses |> 
-  mutate(x5_4_total_su = su_cz) |> 
-  select(year, status, x5_4_total_su)
-
+data_prep_rts_ses <- data_raw_rts |> 
+  select(year, status, x5_4_total_su) %>% 
+  group_by (year, status) %>% 
+  summarise (x5_4_total_su = sum(x5_4_total_su, na.rm = TRUE), .groups = "drop" )
+  
 data_prep_rts <- data_raw_rts |> 
-  filter(entity_code == ecz_list$ecz_id[1],
-         year != 20202021) |> 
+  filter(entity_code == ecz_list$ecz_id[1]) |> 
   select(year, status, x5_4_total_su)
 
 if (country == "Spain") {
   data_canarias_rts <- data_raw_rts |> 
-    filter(entity_code == ecz_list$ecz_id[2],
-           year != 20202021) |> 
+    filter(entity_code == ecz_list$ecz_id[2]) |> 
     select(year, status, x5_4_total_su) 
     
   data_prep_rts <- data_prep_rts |> 
     rbind(data_canarias_rts) |> 
     group_by(year, status) |> 
     summarise(x5_4_total_su = sum(x5_4_total_su, na.rm = TRUE)) 
-} else if (country == "SES RP3") {
+} else if (country == rp_full) {
   
   data_prep_rts <- data_prep_rts_ses
 } 
@@ -61,17 +37,17 @@ if (country == "Spain") {
 max_actual_year <- as.numeric(substrRight(forecast, 4))-1
 
 data_spain <- data_raw %>% 
-  filter(tz_id %like% "Spain") %>% 
+  filter(str_detect(tz_id, "Spain") & tz_id != "Spain") %>% 
   group_by(forecast_id, forecast_name, rank, year) %>% 
-  summarise(tsu = sum(tsu)) %>% ungroup() %>% 
+  summarise(tsu = sum(tsu), .groups = "drop") %>% 
   mutate(tz_id = "Spain") %>% 
   relocate(tz_id, .before = year)
 
 data_prep <- rbind(data_raw, data_spain) %>% 
   filter(
     tz_id == statfor_zone, 
-    year < 2025,
-    year >= 2019
+    year <= rp_max_year,
+    year >= rp_min_year-1
   ) %>% 
   mutate(rank = paste0(rank, ' forecast'))
 
@@ -97,7 +73,7 @@ data_prep_actual_rts <- data_prep_rts |>
     ) |> 
   select(year, rank, tsu)
 
-## but we need 2019 from statfor
+## but we need the base year from statfor
 data_prep_actual_statfor <-  data_prep %>%
   filter(
     forecast_id == max(forecast_id),
@@ -111,7 +87,7 @@ data_prep_actual_statfor <-  data_prep %>%
     # TRUE ~ NA
     # )
   ) |> 
-  filter(year == 2019) |> 
+  filter(year == rp_min_year-1) |> 
   select(year, rank, tsu)
 
 ## merge actual tables
@@ -119,17 +95,17 @@ data_prep_actual <- data_prep_actual_rts |> rbind(data_prep_actual_statfor) |>
   arrange(year)
 
 data_prep_planned <- data_raw_planned %>% 
-  filter(state == country,
-         status == 'D',
-         year > 2020) %>% 
+  filter(x121_ecz_name == country,
+         # status == 'D',
+         year >= rp_min_year) %>% 
   select(state, year, x121_ecz_su)  %>% 
   group_by(year) %>% summarise (tsu = sum(x121_ecz_su, na.rm=TRUE)) %>% 
   mutate(rank = 'Determined')
 
-if (country == 'SES RP3') {
+if (country == rp_full) {
   data_prep_planned <- data_raw_planned %>% 
     filter(status == 'D',
-           year > 2020) %>% 
+           year >= rp_min_year) %>% 
     select(state, year, x121_ecz_su)  %>% 
     group_by(year) %>% summarise (tsu = sum(x121_ecz_su, na.rm=TRUE)) %>% 
     mutate(rank = 'Determined')
@@ -137,27 +113,27 @@ if (country == 'SES RP3') {
 
 # chart ----
 ## set parameters for chart ----
-  mycolors <-  c('#1969B4','#044598', '#229FDD')
+  c_colors <-  c('#1969B4','#044598', '#229FDD')
   
   if (knitr::is_latex_output()) {
-    mytitle <- paste0("En route service units - ", forecast, " -\n",
+    c_title <- paste0("En route service units - ", forecast, " -\n",
                       if_else(country == "Spain",
                               country, ecz_list$ecz_name[1]))
-    mytitle_y <- 0.95
-    mylocalmargin = list (t = 40, l = 0)
-    mylegend_x <- -0.1
+    c_title_y <- 0.95
+    c_margin = list (t = 40, l = 0)
+    c_legend_x <- -0.1
   } else {
-    mytitle <- paste0("En route service units - ", forecast, " - ", 
+    c_title <- paste0("En route service units - ", forecast, " - ", 
                       if_else(country == "Spain", 
                               country, ecz_list$ecz_name[1]))
-    mylegend_x <- 0
+    c_legend_x <- 0
   }
 
 ## define chart function ----
-  myc <- function (mywidth, myheight, myfont, mylinewidth, mymargin) {
+  myc <- function (width = mywidth, height = myheight, font = myfont, linewidth = mylinewidth, margin = mymargin) {
     plot_ly(
-      width = mywidth,
-      height = myheight,
+      width = width,
+      height = height,
       data = data_prep_forecast,
     x = ~ year,
     y = ~ round(tsu/1000,0),
@@ -165,10 +141,10 @@ if (country == 'SES RP3') {
     cliponaxis = FALSE,
     yaxis = "y1",
     type = 'scatter',  mode = 'lines+markers',
-    line = list(width = mylinewidth, dash = 'dash'),
-    marker = list(size = mylinewidth * 3),
+    line = list(width = linewidth, dash = 'dash'),
+    marker = list(size = linewidth * 3),
     color = ~ rank,
-    colors = mycolors,
+    colors = c_colors,
     opacity = 1,
     showlegend = T
   ) %>% 
@@ -181,8 +157,8 @@ if (country == 'SES RP3') {
       cliponaxis = FALSE,
       yaxis = "y1",
       type = 'scatter',  mode = 'lines+markers',
-      line = list(width = mylinewidth, dash = 'solid', color = '#5B9BD5'),
-      marker = list(size = mylinewidth * 3, color = '#5B9BD5'),
+      line = list(width = linewidth, dash = 'solid', color = PRBPlannedColor),
+      marker = list(size = linewidth * 3, color = PRBPlannedColor),
       color = ~ rank,
       opacity = 1,
       showlegend = T
@@ -196,8 +172,8 @@ if (country == 'SES RP3') {
      cliponaxis = FALSE,
      yaxis = "y1",
      type = 'scatter',  mode = 'markers',
-     line = list(width = mylinewidth, dash = 'solid', color = '#FFC000'),
-     marker = list(size = mylinewidth * 3, color = '#FFC000'),
+     line = list(width = linewidth, dash = 'solid', color = PRBActualColor),
+     marker = list(size = linewidth * 3, color = PRBActualColor),
      color = ~ rank,
      opacity = 1,
      showlegend = T
@@ -209,8 +185,8 @@ if (country == 'SES RP3') {
     ) %>% 
     layout(
       font = list(family = "Roboto"),
-      title = list(text = mytitle,
-                   y = mytitle_y, 
+      title = list(text = c_title,
+                   y = c_title_y, 
                    x = mytitle_x, 
                    xanchor = mytitle_xanchor, 
                    yanchor = mytitle_yanchor,
@@ -251,11 +227,11 @@ if (country == 'SES RP3') {
         y = -0.1,
         font = list(size = myfont)
         ),
-      margin = mymargin
+      margin = margin
       
       
     )
   }
   
 ## plot chart ----
-  myc(mywidth, myheight+20, myfont, mylinewidth, mymargin)
+  myc(mywidth, myheight+20, myfont, mylinewidth, c_margin)
