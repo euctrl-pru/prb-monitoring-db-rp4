@@ -14,12 +14,8 @@ data_pre_prep <- data_assets |>
       c(
         "New major investment",
         "New major investments",
-        "Other new investments",
-        "Other new investment",
         "Additional new major investment",
-        "Additional new major investments",
-        "Additional other new investment",
-        "Additional other new investments"
+        "Additional new major investments"
       ) &
       ansp_type == "Main"
   ) |>
@@ -179,7 +175,7 @@ myplot <- mybarchart2(
   title_text = "",
   title_y = 0.99,
 
-  yaxis_title = paste0("Asset value for new investments for RP", rp, " (%)"),
+  yaxis_title = paste0("Asset value for new investments\nfor RP", rp, " (%)"),
   yaxis_ticksuffix = "%",
   yaxis_tickformat = ".0f",
   yaxis_titlefont_size = myfont - 1,

@@ -3,17 +3,31 @@ if (exists("country") == FALSE) {
 }
 
 # import data  ----
-if (!exists("data_cost")) {
+if (!exists("data_costs")) {
   source("R/get_investment_data.R")
 }
 
 
 # process data  ----
-data_prep <- data_costs |>
-  filter(
-    member_state == .env$country,
-    ansp_type == "Main"
-  ) |>
+data_calc_all <- data_costs |>
+  filter(ansp_type == "Main") |>
+  select(
+    member_state,
+    type_of_investment,
+    contains('20'),
+    -contains("wacc")
+  )
+
+if (country != rp_full) {
+  data_calc_filtered <- data_calc_all |>
+    filter(
+      member_state == .env$country
+    )
+} else {
+  data_calc_filtered <- data_calc_all
+}
+
+data_prep <- data_calc_filtered |>
   select(xlabel = type_of_investment, contains("20"), -contains("wacc")) |>
   group_by(xlabel) |>
   summarise(
@@ -41,10 +55,10 @@ data_prep <- data_costs |>
   mutate(
     xlabel = case_when(
       xlabel == 'New major investment' ~ 'New major inv.\nfrom RP4',
-      xlabel == 'Other new investments' ~ 'Other new inv.\nfrom RP4',
-      xlabel == 'Major investments from RP3' ~ 'Major inv.\nfrom RP3',
+      xlabel == 'Other new investment' ~ 'Other new inv.\nfrom RP4',
+      xlabel == 'Major investment from RP3' ~ 'Major inv.\nfrom RP3',
       xlabel ==
-        'Existing investments from previous RPs' ~ 'Existing inv.\nfrom prev. RPs',
+        'Existing investment from previous RPs' ~ 'Existing inv.\nfrom prev. RPs',
       .default = xlabel
     ),
     xlabel = factor(

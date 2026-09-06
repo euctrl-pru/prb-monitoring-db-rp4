@@ -11,12 +11,26 @@ if (!exists("data_costs")) {
 # process data  ----
 rp_years <- as.integer(rp_years)
 
-data_prep <- data_costs |>
-  filter(
-    member_state == .env$country,
-    ansp_type == "Main"
-  ) |>
-  select(contains("20"), -contains("wacc")) |>
+data_calc_all <- data_costs |>
+  filter(ansp_type == "Main") |>
+  select(
+    member_state,
+    category = type_of_investment,
+    contains('20'),
+    -contains("wacc")
+  )
+
+if (country != rp_full) {
+  data_calc_filtered <- data_calc_all |>
+    filter(
+      member_state == .env$country
+    )
+} else {
+  data_calc_filtered <- data_calc_all
+}
+
+
+data_prep <- data_calc_filtered |>
   summarise(
     across(
       where(is.numeric),
@@ -43,7 +57,7 @@ data_prep <- data_costs |>
 # chart ----
 ## chart parameters ----
 local_suffix <- ""
-local_decimals <- 1
+local_decimals <- if_else(country == rp_full, 0, 1)
 
 ###set up order of traces
 local_hovertemplate <- paste0('%{y:,.', local_decimals, 'f}', local_suffix)

@@ -18,7 +18,7 @@ replace_headings(path, character(0))
 ``` 
 
 
-## Value of the assets for New Investments included in the Performance Plan `r country` | `r if_else(params$country == params$rp_full, "all ANSPs", main_ansp)` and comparison with Union-wide
+## Value of the assets for New Investments included in the Performance Plan `r country` | `r if_else(params$country == params$rp_full, "all ANSPs", paste0(main_ansp, " and comparison with Union-wide"))` 
 
 ### Determined and additional asset value by investment category
 
@@ -30,10 +30,15 @@ replace_headings(path, character(0))
 #| out.width: "100%"
 ```
 
+`r if (params$country == params$rp_full) ":::: {.content-hidden}"`
+
 ```{r table_invest_av_vs_eu2, eval=(params$country != params$rp_full)}
 #| file: R/table_invest_av_vs_eu2.R
 #| out.width: "100%"
 ```
+
+`r if (params$country == params$rp_full) "::::"`
+
 ::::
 
 :::: {.chart-container}
@@ -79,6 +84,16 @@ replace_headings(path, character(0))
 ```
 ::::
 :::
+
+`r if (params$country != params$rp_full) "::: {.content-hidden}"`
+
+```{r chart_invest_av_state_type, eval=(params$country == params$rp_full)}
+#| file: R/chart_invest_av_state_type.R
+#| out.width: "100%"
+```
+
+`r if (params$country != params$rp_full) ":::"`
+
 
 ## Costs related to investments included in the Performance Plan `r country` | `r if_else(params$country == params$rp_full, "all ANSPs", main_ansp)`
 
@@ -126,9 +141,13 @@ table3
 
 `r if (params$country != params$rp_full) "::: {.content-hidden}"`
 
+[Placehoder for chart - missing total costs]
+
 ```{r chart_invest_cost_state, eval=(params$country == params$rp_full)}
-#| file: R/chart_invest_cost_state.R
-#| out.width: "100%"
+
+# <!-- #| file: R/chart_invest_cost_state.R -->
+# <!-- #| out.width: "100%" -->
+
 ```
 
 `r if (params$country != params$rp_full) ":::"`
@@ -174,10 +193,14 @@ table3
 `r if (params$country == params$rp_full) ":::"`
 
 `r if (params$country != params$rp_full) "::: {.content-hidden}"`
+
 ```{r chart_invest_difference_cost_country_e, eval=(params$country == params$rp_full), options= (cost_type = "en route")}
-#| file: R/chart_invest_difference_cost_country.R
-#| out.width: "100%"
+
+# <!-- #| file: R/chart_invest_difference_cost_country.R -->
+# <!-- #| out.width: "100%" -->
+
 ```
+
 `r if (params$country != params$rp_full) ":::"`
 
 
@@ -236,8 +259,10 @@ if(table_exists) {
 
 `r if (params$country != params$rp_full) "::: {.content-hidden}"`
 ```{r chart_invest_difference_cost_country_t, eval=(params$country == params$rp_full), options= (cost_type = "terminal")}
-#| file: R/chart_invest_difference_cost_country.R
-#| out.width: "100%"
+
+# <!-- #| file: R/chart_invest_difference_cost_country.R -->
+# <!-- #| out.width: "100%" -->
+
 ```
 `r if (params$country != params$rp_full) ":::"`
 

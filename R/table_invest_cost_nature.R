@@ -4,21 +4,32 @@ if (exists("country") == FALSE) {
 }
 
 if (!exists("cost_type")) {
-  cost_type <- "terminal"
+  cost_type <- "en route"
 }
 
 # import data  ----
-if (!exists("data_cost_rt")) {
+if (!exists("data_costs_rt")) {
   source("R/get_investment_data.R")
 }
 
 # process data  ----
-data_calc <- data_costs_rt |>
+data_calc_all <- data_costs_rt |>
   filter(
-    member_state == .env$country &
-      tolower(en_route_terminal) == cost_type &
+    tolower(en_route_terminal) == cost_type &
       ansp_type == "Main"
-  ) |>
+  )
+
+if (country != rp_full) {
+  data_calc_filtered <- data_calc_all |>
+    filter(
+      member_state == .env$country
+    )
+} else {
+  data_calc_filtered <- data_calc_all
+}
+
+
+data_calc <- data_calc_filtered |>
   select(category = cost_details, contains('20')) |>
   mutate(
     category = str_remove(category, "^3\\.\\d{2}\\s+")

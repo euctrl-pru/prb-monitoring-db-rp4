@@ -9,9 +9,25 @@ if (!exists("data_costs")) {
 }
 
 # process data  ----
-data_calc <- data_costs |>
-  filter(member_state == .env$country, ansp_type == "Main") |>
-  select(category = type_of_investment, contains('20'), -contains("wacc")) |>
+data_calc_all <- data_costs |>
+  filter(ansp_type == "Main") |>
+  select(
+    member_state,
+    category = type_of_investment,
+    contains('20'),
+    -contains("wacc")
+  )
+
+if (country != rp_full) {
+  data_calc_filtered <- data_calc_all |>
+    filter(
+      member_state == .env$country
+    )
+} else {
+  data_calc_filtered <- data_calc_all
+}
+
+data_calc <- data_calc_filtered |>
   group_by(category) |>
   summarise(
     across(where(is.numeric), ~ sum(.x, na.rm = TRUE) / 10^6),

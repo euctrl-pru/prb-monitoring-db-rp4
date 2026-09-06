@@ -9,14 +9,36 @@ if (!exists("data_assets")) {
 }
 
 # process data  ----
-data_prep <- data_assets %>%
-  filter(member_state == .env$country & ansp_type == "Main") %>%
+data_calc <- data_assets %>%
+  filter(
+    type_of_investment %in%
+      c(
+        "New major investment",
+        "New major investments",
+        "Additional new major investment",
+        "Additional new major investments"
+      ) &
+      ansp_type == "Main"
+  ) |>
   group_by(member_state) |>
   summarise(
     en_route_asset_value = sum(en_route_asset_value, na.rm = TRUE),
     terminal_asset_value = sum(terminal_asset_value, na.rm = TRUE),
-  ) |>
-  ungroup() |>
+    .groups = "drop"
+  )
+
+if (country != rp_full) {
+  data_pre_prep <- data_calc |>
+    filter(member_state == .env$country)
+} else {
+  data_pre_prep <- data_calc |>
+    summarise(
+      en_route_asset_value = sum(en_route_asset_value, na.rm = TRUE),
+      terminal_asset_value = sum(terminal_asset_value, na.rm = TRUE)
+    )
+}
+
+data_prep <- data_pre_prep |>
   mutate(
     total_value_of_the_asset_nominal_euros = en_route_asset_value +
       terminal_asset_value,
@@ -34,7 +56,7 @@ data_prep <- data_assets %>%
     enroute_share,
     terminal_share,
     NULL
-  ) %>%
+  ) |>
   gather() %>%
   mutate(
     type = case_when(

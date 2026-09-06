@@ -8,18 +8,14 @@ if (!exists("data_assets")) {
 }
 
 # process data  ----
-data_pre_prep <- data_assets |>
+data_calc <- data_assets |>
   filter(
     type_of_investment %in%
       c(
         "New major investment",
         "New major investments",
-        "Other new investments",
-        "Other new investment",
         "Additional new major investment",
-        "Additional new major investments",
-        "Additional other new investment",
-        "Additional other new investments"
+        "Additional new major investments"
       ) &
       ansp_type == "Main"
   ) |>
@@ -38,18 +34,6 @@ data_pre_prep <- data_assets |>
   mutate(
     across(-c(member_state, unknown), ~ replace_na(.x, "0")),
     across(-c(member_state, unknown), ~ as.numeric(.x)),
-  ) |>
-  select(
-    member_state,
-    value_of_the_assets,
-    new_atm_system,
-    overhaul_of_existing_atm_system,
-    other_atm,
-    cns,
-    infrastructure,
-    ancillary,
-    other,
-    unknown
   ) |>
   pivot_longer(
     -c(member_state, value_of_the_assets),
@@ -75,8 +59,22 @@ data_pre_prep <- data_assets |>
     )
   )
 
+if (country != rp_full) {
+  data_pre_prep <- data_calc |>
+    filter(member_state == .env$country)
+} else {
+  data_pre_prep <- data_calc |>
+    group_by(type) |>
+    summarise(
+      value = sum(value, na.rm = TRUE),
+      .groups = "drop"
+    ) |>
+    mutate(
+      member_state = rp_full
+    )
+}
+
 data_prep <- data_pre_prep |>
-  filter(member_state == .env$country) |>
   mutate(
     share = value / sum(value, na.rm = TRUE),
     type = factor(

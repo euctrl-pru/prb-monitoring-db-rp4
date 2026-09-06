@@ -3,38 +3,75 @@ if (exists("country") == FALSE) {
 }
 
 # import data  ----
-if (!exists("data_cost_inv")) {
+if (!exists("data_assets")) {
   source("R/get_investment_data.R")
 }
 
 
 # process data  ----
-data_prep1 <- data_investments_type_state %>%
-  pivot_longer(-state, names_to = "type", values_to = "value") %>%
+data_pre_prep <- data_assets |>
+  filter(
+    type_of_investment %in%
+      c(
+        "New major investment",
+        "New major investments",
+        "Other new investments",
+        "Other new investment",
+        "Additional new major investment",
+        "Additional new major investments",
+        "Additional other new investment",
+        "Additional other new investments"
+      ) &
+      ansp_type == "Main"
+  ) |>
   mutate(
-    mymetric = value / 10^6,
     type = case_when(
-      type ==
-        "new_major_investment_including_additional" ~ "New and additional major investments",
-      type == "other_new_investment" ~ "Other new investments"
+      type_of_investment ==
+        "New major investments" ~ "New and additional major investments",
+      type_of_investment ==
+        "New major investment" ~ "New and additional major investments",
+      type_of_investment ==
+        "Additional new major investments" ~ "New and additional major investments",
+      type_of_investment ==
+        "Additional new major investment" ~ "New and additional major investments",
+      type_of_investment == "Other new investments" ~ "Other new investments",
+      type_of_investment == "Other new investment" ~ "Other new investments",
+      type_of_investment ==
+        "Additional other new investment" ~ "Other new investments",
+      type_of_investment ==
+        "Additional other new investments" ~ "Other new investments",
+      .default = type_of_investment
     )
-  ) %>%
+  ) |>
+  group_by(member_state, type) |>
+  summarise(
+    mymetric = sum(value_of_the_assets, na.rm = TRUE) / 10^6,
+    .groups = "drop"
+  ) |>
   select(
-    xlabel = state,
+    xlabel = member_state,
     type,
     mymetric
   )
 
-data_prep_total <- data_prep1 %>%
-  group_by(xlabel) %>%
-  summarise(mymetric = sum(mymetric, na.rm = TRUE)) %>%
-  arrange(desc(mymetric)) %>%
-  select(xlabel) %>%
+data_prep_sort <- data_pre_prep |>
+  group_by(xlabel) |>
+  summarise(
+    mymetric = sum(mymetric, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  arrange(
+    desc(mymetric)
+  ) |>
+  select(
+    xlabel
+  ) |>
   pull()
 
-data_prep <- data_prep1 %>%
-  mutate(xlabel = factor(xlabel, levels = data_prep_total))
-
+data_prep <- data_pre_prep |>
+  mutate(
+    xlabel = factor(xlabel, levels = data_prep_sort)
+  )
 
 # chart ----
 ## chart parameters ----

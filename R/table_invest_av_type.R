@@ -9,7 +9,7 @@ if (!exists("data_assets")) {
 }
 
 # process data  ----
-data_pre_prep <- data_assets |>
+data_calc <- data_assets |>
   filter(
     type_of_investment %in%
       c(
@@ -52,12 +52,26 @@ data_pre_prep <- data_assets |>
   mutate(
     value = value_of_the_assets / 10^6
   ) |>
-  ungroup() |>
-  filter(member_state == .env$country) |>
-  select(
-    type = type_of_investment,
-    value
-  )
+  ungroup()
+
+if (country != rp_full) {
+  data_pre_prep <- data_calc |>
+    filter(member_state == .env$country) |>
+    select(
+      type = type_of_investment,
+      value
+    )
+} else {
+  data_pre_prep <- data_calc |>
+    group_by(type_of_investment) |>
+    summarise(
+      value = sum(value, na.rm = TRUE),
+      .groups = "drop"
+    ) |>
+    rename(
+      type = type_of_investment
+    )
+}
 
 total_asset_value <- data_pre_prep |>
   summarise(value = sum(value, na.rm = TRUE)) |>
