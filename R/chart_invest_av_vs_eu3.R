@@ -88,102 +88,102 @@ data_prep_ansp <- data_pre_prep |>
   ) |>
   select(xlabel, type, mymetric)
 
+if (nrow(data_prep_ansp) != 0) {
+  data_prep <- rbind(data_prep_ansp, data_prep_uw) %>%
+    mutate(xlabel = factor(xlabel, levels = c("ANSP", "Union-wide")))
 
-data_prep <- rbind(data_prep_ansp, data_prep_uw) %>%
-  mutate(xlabel = factor(xlabel, levels = c("ANSP", "Union-wide")))
+  # chart ----
+  ## chart parameters ----
+  local_suffix <- "%"
+  local_decimals <- 0
 
+  ###set up order of traces
+  local_hovertemplate <- paste0('%{y:,.', local_decimals, 'f}', local_suffix)
 
-# chart ----
-## chart parameters ----
-local_suffix <- "%"
-local_decimals <- 0
+  #### legend
+  if (knitr::is_latex_output()) {
+    local_legend_y <- mylegend_y
+    local_legend_x <- -0.18
+    local_legend_xanchor <- 'left'
+    local_legend_fontsize <- myfont - 1
+  } else {
+    local_legend_y <- -0.12
+    local_legend_x <- -0.1
+    local_legend_xanchor <- 'left'
+    local_legend_fontsize <- myfont - 1
+  }
 
-###set up order of traces
-local_hovertemplate <- paste0('%{y:,.', local_decimals, 'f}', local_suffix)
+  # plot chart ----
+  myplot <- mybarchart2(
+    data_prep,
+    height = myheight + 20,
+    colors = c(
+      '#044598',
+      '#22A0DD',
+      '#58595B',
+      '#FFF000',
+      '#7030A0',
+      '#2E8B57',
+      '#F28E2B',
+      '#D62728'
+    ),
+    # colors = c('#044598', '#22A0DD', '#58595B', '#FFF000', '#7030A0'),
+    local_factor = c(
+      "New ATM system",
+      "Overhaul of existing\nATM system",
+      "Other ATM",
+      "CNS",
+      "Infrastructure",
+      "Ancillary",
+      "Other",
+      "Unknown"
+    ),
+    shape = c(
+      "",
+      "/",
+      "",
+      "/",
+      "",
+      "/",
+      "",
+      "/",
+      "",
+      "/",
+      "",
+      "/",
+      "",
+      "/",
+      "",
+      "/"
+    ),
 
-#### legend
-if (knitr::is_latex_output()) {
-  local_legend_y <- mylegend_y
-  local_legend_x <- -0.18
-  local_legend_xanchor <- 'left'
-  local_legend_fontsize <- myfont - 1
-} else {
-  local_legend_y <- -0.12
-  local_legend_x <- -0.1
-  local_legend_xanchor <- 'left'
-  local_legend_fontsize <- myfont - 1
+    suffix = local_suffix,
+    decimals = local_decimals,
+
+    hovertemplate = local_hovertemplate,
+    hovermode = "x unified",
+
+    textangle = 0,
+    textposition = "inside",
+    textfont_color = 'black',
+    insidetextanchor = 'middle',
+
+    bargap = 0.25,
+    barmode = 'stack',
+
+    title_text = "",
+    title_y = 0.99,
+
+    yaxis_title = paste0("Asset value for new investments\nfor RP", rp, " (%)"),
+    yaxis_ticksuffix = "%",
+    yaxis_tickformat = ".0f",
+    yaxis_titlefont_size = myfont - 1,
+
+    legend_y = local_legend_y,
+    legend_x = local_legend_x,
+    legend_xanchor = local_legend_xanchor,
+    legend_fontsize = local_legend_fontsize
+  )
+
+  myplot
 }
-
-# plot chart ----
-myplot <- mybarchart2(
-  data_prep,
-  height = myheight + 20,
-  colors = c(
-    '#044598',
-    '#22A0DD',
-    '#58595B',
-    '#FFF000',
-    '#7030A0',
-    '#2E8B57',
-    '#F28E2B',
-    '#D62728'
-  ),
-  # colors = c('#044598', '#22A0DD', '#58595B', '#FFF000', '#7030A0'),
-  local_factor = c(
-    "New ATM system",
-    "Overhaul of existing\nATM system",
-    "Other ATM",
-    "CNS",
-    "Infrastructure",
-    "Ancillary",
-    "Other",
-    "Unknown"
-  ),
-  shape = c(
-    "",
-    "/",
-    "",
-    "/",
-    "",
-    "/",
-    "",
-    "/",
-    "",
-    "/",
-    "",
-    "/",
-    "",
-    "/",
-    "",
-    "/"
-  ),
-
-  suffix = local_suffix,
-  decimals = local_decimals,
-
-  hovertemplate = local_hovertemplate,
-  hovermode = "x unified",
-
-  textangle = 0,
-  textposition = "inside",
-  textfont_color = 'black',
-  insidetextanchor = 'middle',
-
-  bargap = 0.25,
-  barmode = 'stack',
-
-  title_text = "",
-  title_y = 0.99,
-
-  yaxis_title = paste0("Asset value for new investments\nfor RP", rp, " (%)"),
-  yaxis_ticksuffix = "%",
-  yaxis_tickformat = ".0f",
-  yaxis_titlefont_size = myfont - 1,
-
-  legend_y = local_legend_y,
-  legend_x = local_legend_x,
-  legend_xanchor = local_legend_xanchor,
-  legend_fontsize = local_legend_fontsize
-)
-
-myplot
