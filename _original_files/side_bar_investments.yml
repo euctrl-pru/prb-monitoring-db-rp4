@@ -14,8 +14,6 @@
             href: index.html#determined-asset-value-en-route-and-terminal
           - text: "By type"
             href: index.html#determined-asset-value-by-type-of-investment
-          - text: "Compared to Union-wide"
-            href: index.html#asset-value-for-new-investments-ansp-compared-to-union-wide
       - text: "---"
       - text: "<b>Costs</b>"
         href: index.html#costs-related-to-investments-included-in-the-performance-plan_countryansp
@@ -28,6 +26,10 @@
             href: index.html#costs-of-investments-by-nature---terminal
           - text: "New major investments"
             href: index.html#costs-by-new-major-investments
+          - text: "CP1 and ATM Functionality"
+            href: index.html#costs-by-common-project-one-cp1-atm-functionality-af
+          - text: "Strategic Deployment Objective"
+            href: index.html#costs-by-strategic-deployment-objective-sdo
       - text: "---"
       - text: "<b>Expected benefit and impact</b>"
         href: index.html#expected-benefit-and-impact-per-new-major-investment_countryansp
