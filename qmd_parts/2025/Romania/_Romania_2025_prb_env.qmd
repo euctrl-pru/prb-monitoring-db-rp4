@@ -1,0 +1,14 @@
+## PRB1.4. Environment
+
+-   Romania registered a KEA performance of 3.70%. Their target of 3.54% was not achieved and Romania did not contribute positively to Union-wide performance. The NSA states the main reasons for not meeting the target are outside the control of the ANSP and are largely driven by inefficient flight routings as a result of geopolitical instability.
+
+-   KEP and KES improved marginally in comparison with 2024. The improvement in KES shows that Romania has improved the element of horizontal flight efficiency that is under its control.
+
+-   VFE of the actual en route trajectory was at 78.03%, which was better than the average Union-wide performance.
+
+-   The average time in level flight during descent deteriorated marginally and during climb deteriorated compared to 2024.
+
+-   Additional taxi-out time was 4.02 min/flight which was stable compared to 2024, and additional taxi-in time was 1.77 min/flight, which deteriorated compared to 1.62 min/flight in 2024.
+
+-   Additional time in the arrival sequencing and metering area deteriorated marginally to 2.57 min/flight.
+

@@ -1,0 +1,8 @@
+## PRB1.3. Safety
+
+-   In 2025, HASP achieved the planned maturity levels set out in its performance plan for all five components of the EoSM.
+
+-   The rate of runway incursions (RI) was 0.69 and equal to the RIs with ANS contribution, with both indicators below the Union-wide average. Compared to 2024, rate of RIs has decreased at both levels.
+
+-   The rate of separation minima infringements (SMIs) at State level was 8.25 and equal to the SMIs at ANSP level. Both indicators were above the Union-wide average. When comparing to 2024, rate of SMIs has decreased at both State and ANSP level.
+

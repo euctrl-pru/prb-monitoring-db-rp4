@@ -1,0 +1,12 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Greece was 22.91€2022, -0.3% lower than the determined unit cost (22.99€2022). The terminal 2025 actual unit cost was 149.54€2022, +1.0% higher than the determined unit cost (148.00€2022).
+
+-   The en route 2025 actual service units (8.2M) were -0.7% lower than the determined service units (8.3M).
+
+-   The en route 2025 actual total costs were -2.1M€2022 (-1.1%) lower than determined. This is mainly due to lower other operating costs for all entities (-2.7M€2022, or -8.1%). The NSA noted that it is mainly due to payments of HASP that were incurred on a cash basis, lower operational, training and travel expenses for MET, and a more efficient utilization of assets by NSA SAR. This was partially compensated by higher staff costs than planned for the NSA SAR (+1.1M€2022, or +37.0%), due to new laws for Hellenic Air Force Staff and Cost Guard.
+
+-   For the timely implementation of the investment plan, the NSA reports that *[\"a decision at ministerial level was taken in collaboration with the Commission and EASA, in order to map an action plan for monitoring the investment plan with reporting every six weeks.\"]{.mark}* However, HASP spent 1.7M€2022 in 2025 related to costs of investments for both en route and terminal charging zones, -12.9% less than determined (2.0M€2022). According to the NSA, this reduction is due to a delay in the implementation of projects expected to be put into operation in 2026 instead of 2025.
+
+-   The en route actual unit cost incurred by users in 2025 was 25.86€ (+3.5% above the 2025 DUC), while the terminal actual unit cost incurred by users was 160.05€ (-1.1% below the 2025 DUC). The difference between the AUCU and the DUC for the en route charging zone is mainly driven by the investment costs in cost exempt from cost sharing.
+

@@ -1,0 +1,14 @@
+## PRB1.5. Capacity
+
+-   Austria registered 0.39 minutes of average en route ATFM delay per flight during 2025, which has been adjusted to 0.41 during the post-ops adjustment process, thus not achieving the local target value of 0.28. Delays in Austria decreased by -0.07 minutes per flight year-on-year. Delays were highest in June, July and August, mostly driven by weather and staffing issues.
+
+-   The share of delayed flights with delays longer than 15 minutes in Austria decreased by -8 percentage points compared to 2024.
+
+-   Austria did not provide information on the actual number of ATCOs in OPS.
+
+-   The yearly total of sector opening hours in Vienna ACC was 60,294, showing a -3% decrease compared to 2024.
+
+-   Vienna ACC registered 20.63 IFR movements per sector opening hour in 2025, 16% above the 2024 level.
+
+-   Austria registered an average airport arrival ATFM delay of 0.66 minutes per flight in 2025, thus not achieving the local target of 0.53 minutes. Compared to 2024, average arrival ATFM delays in Austria were -0.08 minutes per flight lower in 2025. The main drivers of delays were weather, accounting for 0.60 minutes per flight of the total delays, and ATC staffing, responsible for 0.05 minutes per flight.
+

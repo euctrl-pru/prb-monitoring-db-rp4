@@ -1,0 +1,12 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Czech Republic was 57.70€2022, -0.8% lower than the determined unit cost (58.16€2022). The terminal 2025 actual unit cost was 244.91€2022, -5.7% lower than the determined unit cost (259.65€2022).
+
+-   The en route 2025 actual service units (2.5M) were in line with the determined service units (2.5M).
+
+-   The en route 2025 actual total costs were -1.2M€2022 (-0.8%) lower than determined. This is mainly due to lower depreciation for ANS CR (-2.8M€2022, or -11.7%). The NSA explained that this decrease is due to the postponement of some of the system upgrades. This was partially compensated by higher staff costs than planned for ANS CR (+1.0M€2022, or +1.3%), due to compensation for inflation.
+
+-   ANS CR spent 32.7M€2022 in 2025 related to costs of investments for both en route and terminal charging zones, -8.8% less than determined (35.9M€2022). According to the NSA, it is mainly due to the postponement of some investments and reprioritization of the investment plan after deciding to join other ANSPs for the procurement of an up-to-date ATM system.
+
+-   The en route actual unit cost incurred by users in 2025 was 64.06€ (-0.6% below the 2025 DUC), while the terminal actual unit cost incurred by users was 174.71€ (-39.8% below the 2025 DUC). The difference between the AUCU and the DUC for the terminal charging zone is mainly driven by the application of lower unit rate.
+

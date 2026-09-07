@@ -1,0 +1,14 @@
+## PRB1.4. Environment
+
+-   Finland registered a KEA performance of 3.71%. Their target of 3.38% was not achieved and Finland did not contribute positively to Union-wide performance. The NSA states the main reason for not meeting the target was because of airspace closures caused by Russia's war of aggression against Ukraine, which has shifted traffic flows from Russia to Kaliningrad.
+
+-   KEP and KES degraded in comparison with 2024 showing that Finland's environmental performance deteriorated in 2025.
+
+-   The average time in level flight during descent degraded marginally, and during climb improved compared to 2024.
+
+-   VFE of the actual trajectory was at 68.21%, which was worse than the Union-wide average.
+
+-   Additional taxi-out time was 3.23 min/flight which improved compared to 2024, and additional taxi-in time was 1.07 min/flight which also improved compared to 2024.
+
+-   Additional time in the arrival sequencing and metering area was 2.61 min/flight, which degraded marginally compared to 2024.
+

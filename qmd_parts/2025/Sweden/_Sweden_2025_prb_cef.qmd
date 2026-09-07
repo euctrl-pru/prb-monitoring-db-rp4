@@ -1,0 +1,12 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Sweden was 65.68€2022, -3.6% lower than the determined unit cost (68.17€2022). The terminal 2025 actual unit cost was 141.85€2022, -2.6% lower than the determined unit cost (145.65€2022).
+
+-   The en route 2025 actual service units (2.9M) were -5.6% lower than the determined service units (3.0M).
+
+-   The en route 2025 actual total costs were -18.7M€2022 (-9.0%) lower than determined. This is mainly due to lower staff costs for LFV (-17.9M€2022, or -18.4%). According to the NSA, this decrease was primarily due to a one-off effect on pension costs following an increase in interest rates, which reduced pension debt, as well as delayed recruitment.
+
+-   LFV spent 16.9M€2022 in 2025 related to costs of investments for both en route and terminal charging zones, +2.1% more than determined (16.5M€2022). This increase is mainly due to a higher share of financing through equity than planned, which is more costly than debt financing.
+
+-   The en route actual unit cost incurred by users in 2025 was 67.09€ (-5.5% below the 2025 DUC), while the terminal actual unit cost incurred by users was 144.08€ (-6.6% below the 2025 DUC). The difference between the AUCU and the DUC for the en route and terminal charging zones is mainly driven by pension costs in cost exempt from cost sharing.
+

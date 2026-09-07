@@ -1,0 +1,16 @@
+## PRB1.4. Environment
+
+-   France registered a KEA performance of 3.31%. Their local breakdown value of 2.87% was not achieved. The performance of France contributed to FABEC not achieving the local target of 2.89% and, therefore, France did not contribute positively to Union-wide performance. The NSA states the main reasons for not meeting the target is the high traffic levels, ATFM delays during the Summer and traffic volatility. Remedial measures to improve KEA focus on increasing capacity and implementing the projects listed in the ERNIP.
+
+-   Both KEP and KES remained stable in comparison with 2024 with only a minor degradation in both indicators.
+
+-   VFE of the actual en route trajectory was at 79.4%, which was better than the average Union-wide performance.
+
+-   The average time in level flight during descent and climb were both stable compared to 2024, with minor variations in performance compared to 2024.
+
+-   Additional taxi-out time was 3.7 min/flight which deteriorated from 3.32 min/flight in 2024, and additional taxi-in time was 1.89 min/flight which deteriorated marginally compared to 1.83 min/flight in 2024.
+
+-   Additional time in the arrival sequencing and metering area deteriorated to 2.84 min/flight from 2.7 min/flight in 2024.
+
+-   Additional taxi out time data for Marseille airport has not been reported for 2025 despite being subject to monitoring as per the Regulation.
+

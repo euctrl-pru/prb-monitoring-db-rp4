@@ -1,0 +1,12 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of France was 61.90€2022, -0.9% lower than the determined unit cost (62.46€2022). The terminal zone 1 2025 actual unit cost was 102.08€2022, +3.8% higher than the determined unit cost (98.30€2022), while the terminal zone 2 2025 actual unit cost was 389.76€2022, +2.9% higher than the determined unit cost (378.63€2022).
+
+-   The en route 2025 actual service units (23.6M) were +3.2% higher than the determined service units (22.8M).
+
+-   The en route 2025 actual total costs were +32.5M€2022 (+2.3%) higher than determined. The higher costs are mainly driven by higher other operating costs (+18.2M€2022, or +6.0%) and depreciation (+17.9M€2022, or +11.7%) for DSNA. The NSA explains that these increases reflect higher costs for maintaining legacy systems due to higher inflation, rising costs of investments, and the catch-up of delayed RP3 amortisation.
+
+-   DSNA spent 237.8M€2022 in 2025 related to costs of investments for both en route and terminal charging zones, +4.0% more than determined (228.5M€2022). According to the NSA, this increase is mainly due to the catch-up of delayed RP3 amortisation.
+
+-   The en route actual unit cost incurred by users in 2025 was 65.75€ (-2.5% below the 2025 DUC). The terminal actual unit cost incurred by users was 187.78€ (+76.7% above the 2025 DUC) for the terminal zone 1, and 221.13€ (-46.4% below the 2025 DUC) for the terminal zone 2. The difference between the AUCU and the DUC for the terminal charging zones is mainly driven by cross-financing.
+

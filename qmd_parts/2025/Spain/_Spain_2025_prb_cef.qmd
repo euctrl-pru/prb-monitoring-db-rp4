@@ -1,0 +1,14 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Spain Continental was 50.92€2022, -7.6% lower than the determined unit cost (55.10€2022). The en route 2025 actual unit cost of Spain Canarias was 48.65€2022, -7.6% lower than the determined unit cost (52.63€2022). The terminal 2025 actual unit cost of Spain was 100.81€2022, -15.1% lower than the determined unit cost (118.70€2022).
+
+-   The en route 2025 actual service units of Spain Continental (14.2M) were +3.9% higher than the determined service units (13.6M). The en route 2025 actual service units of Spain Canarias (2.3M) were +5.1% higher than the determined service units (2.2M).
+
+-   The en route 2025 actual total costs of Spain Continental were -29.8M€2022 (-4.0%) lower than determined with all cost categories registering lower-than-planned costs, except cost of capital. This is mainly due to lower staff costs (-22.5M€2022, or -5.1%) and lower other operating costs (-6.2M€2022, or -10.7%) for ENAIRE. According to the NSA, the decrease in staff costs is mainly due to significantly lower-than-planned expenses in "other staff related benefits". The decrease in other operating costs reflects a more efficient use of resources, resulting in lower spending on services, communications, insurance and energy.
+
+-   The en route 2025 actual total costs of Spain Canarias were -3.3M€2022 (-2.8%) lower than determined with all cost categories registering lower-than-planned costs. This is mainly due to lower staff costs for ENAIRE (-1.6M€2022, or -2.5%) and lower depreciation for EA (-1.1M€2022, or -41.8%). The NSA explained that the decrease in staff costs of ENAIRE is mainly due to significantly lower-than-planned expenses in "other staff related benefits". The decrease in depreciation costs of EA is mainly due to lower investments than planned.
+
+-   ENAIRE spent 169.4M€2022 in 2025 related to costs of investments for both en route and terminal charging zones, in line with the determined (169.3M€2022).
+
+-   The en route Spain Continental actual unit cost incurred by users in 2025 was 54.79€ (-6.3% below the 2025 DUC), while the en route Spain Canarias actual unit cost incurred by users in 2025 was 45.72€ (-18.4% below the 2025 DUC). The terminal actual unit cost incurred by users in 2025 was 15.80€ (-87.6% below the 2025 DUC). The difference between the AUCU and the DUC for Spain Continental and for the terminal charging zone is mainly driven by other revenues. The difference between the AUCU and the DUC for Spain Canarias is mainly driven by cross-financing.
+

@@ -1,0 +1,10 @@
+## PRB1.3. Safety
+
+-   In 2025, ENAV achieved the planned maturity levels set out in its performance plan for all five components of the EoSM. In more detail, ENAV exceeded the planned maturity level in the area of Safety Culture.
+
+-   Italy has not submitted the EoSM questionnaire of ITAF.
+
+-   The rate of runway incursions (RI) was 3.27 at airport level, higher than the Union-wide average, and higher than the rate of RIs in 2024. The rate of RIs with ANS contribution was 0.97, just above the Union-wide average, and higher compared to 2024.
+
+-   The rate of separation minima infringements (SMIs) at State level was 19.41, and at ANSP level 8.66. Both indicators were above the Union-wide average. Compared to 2024, rate of SMIs has increased at both State level and ANSP level.
+

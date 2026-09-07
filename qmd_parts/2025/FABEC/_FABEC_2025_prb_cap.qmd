@@ -1,0 +1,8 @@
+## PRB1.5. Capacity
+
+-   FABEC registered 1.67 minutes of average en route ATFM delay per flight during 2025, thus not achieving the local target value of 0.63. Delays in FABEC decreased by -0.01 minutes per flight year-on-year.
+
+-   The shortfall is attributable to Germany and France; the other FABEC States (and MUAC) met their local target.
+
+-   Delays were highest in June, July and August, mostly driven by ATC capacity and weather.
+

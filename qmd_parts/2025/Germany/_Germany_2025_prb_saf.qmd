@@ -1,0 +1,12 @@
+## PRB1.3. Safety
+
+-   In 2025, DFS achieved the planned maturity levels set out in its performance plan for all five components of the EoSM.
+
+-   The rate of runway incursions (RI) was 3.69 at airport level, higher than the Union-wide average.
+
+-   The rate of RIs with ANS contribution was 0.74, lower than the Union-wide average.
+
+-   The rate of separation minima infringements (SMIs) at State level was 1.82, and at ANSP level 2.00. Both indicators were below the Union-wide average. Compared to 2024, rate of SMI has increased at State level.
+
+-   In 2024, Germany reported 0 runway incursions and 0 SMIs at ANSP level.
+

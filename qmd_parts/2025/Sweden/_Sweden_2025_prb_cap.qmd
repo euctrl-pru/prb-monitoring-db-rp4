@@ -1,0 +1,12 @@
+## PRB1.5. Capacity
+
+-   Sweden registered 0.02 minutes of average en route ATFM delay per flight during 2025, which remained 0.02 after the post-ops adjustment process, thus achieving the local target value of 0.18. Delays in Sweden increased by 0.01 minutes per flight year-on-year.
+
+-   The actual number of ATCOs in OPS for 2025 was 253 FTEs, 11 FTEs above the planned level. Both Malmo and Stockholm ACCs recorded more ATCOs than planned.
+
+-   The yearly total of sector opening hours in Malmo ACC was 37,623, showing a -23% decrease compared to 2024. The yearly total of sector opening hours in Stockholm ACC was 28,519, showing a -3% decrease compared to 2024.
+
+-   Malmo ACC registered 12.39 IFR movements per sector opening hour in 2025, which is 12% above the 2024 level. Stockholm ACC registered 10.31 IFR movements per sector opening hour in 2025, -2% below the 2024 level.
+
+-   Sweden registered an average airport arrival ATFM delay of 0.01 minutes per flight in 2025, thus achieving the local target of 0.35 minutes. Compared to 2024, average arrival ATFM delays in Sweden were -0.06 minutes per flight lower in 2025.
+

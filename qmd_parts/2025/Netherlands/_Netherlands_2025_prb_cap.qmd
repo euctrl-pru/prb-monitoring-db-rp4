@@ -1,0 +1,18 @@
+## PRB1.5. Capacity
+
+-   Netherlands registered 0.13 minutes of average en route ATFM delay per flight during 2025, which has been adjusted to 0.14 during the post-ops adjustment process, thus achieving the local target value of 0.16. Delays in Netherlands increased by 0.06 minutes per flight year-on-year.
+
+-   Delays were highest in June, August and September, mostly driven by other non-ATC causes but with notable contributions from weather and ATC capacity.
+
+-   The share of delayed flights with delays longer than 15 minutes in Netherlands increased by 6 percentage points compared to 2024 and was lower than 2019 values.
+
+-   The number of ATCOs in OPS is 79 FTEs in Amsterdam ACC, being below the 2025 plan by -2 FTEs.
+
+-   The yearly total of sector opening hours in Amsterdam ACC was 39,701, showing a -1% decrease compared to 2024.
+
+-   Amsterdam ACC registered 14.00 IFR movements per sector opening hour in 2025, 1% above the level recorded in 2024.
+
+-   Netherlands registered an average airport arrival ATFM delay of 4.44 minutes per flight in 2025, thus not achieving the local target of 2.2 minutes. Compared to 2024, average arrival ATFM delays in Netherlands were 0.94 minutes per flight higher in 2025.
+
+-   The main drivers of delays were weather, accounting for 2.35 of the total delays, and other non-ATC causes, responsible for 2.09.
+

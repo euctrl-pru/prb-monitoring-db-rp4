@@ -1,0 +1,14 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Latvia was 39.02€2022, -4.4% lower than the determined unit cost (40.80€2022). Latvia does not have a terminal charging zone.
+
+-   The en route 2025 actual service units (0.62M) were -2.5% lower than the determined service units (0.63M).
+
+-   The en route 2025 actual total costs were -1.7M€2022 (-6.7%) lower than determined with all cost categories registering lower-than-planned costs, except cost of capital. This is mainly due to lower other operating costs (-0.7M€2022, or -17.5%) and staff costs (-0.6M€2022, or -4.6%) for LGS. The NSA explained that it is mainly due to lower than planned maintenance and repair costs, and staffing level.
+
+-   LGS costs of investments were 4.6M€2022 in 2025, -7.3% less than determined (5.0M€2022). According to the NSA, the deviation is mainly due to timing effects, as some assets were commissioned later than planned, including due to acceptance and certification procedures.
+
+-   The en route actual unit cost incurred by users in 2025 was 43.16€ (-3.3% below the 2025 DUC). The difference between the AUCU and the DUC is mainly driven by other revenues.
+
+-   The en route regulatory result for LGS amounted to +2.4M€, or 9.7% of the 2025 revenue. This may indicate that the airspace users are charged for costs which have not materialised in 2025.
+

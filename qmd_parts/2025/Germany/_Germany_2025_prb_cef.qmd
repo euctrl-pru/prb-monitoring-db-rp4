@@ -1,0 +1,14 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Germany was 71.56€2022, -0.4% lower than the determined unit cost (71.87€2022). The terminal 2025 actual unit cost was 249.50€2022, -1.6% lower than the determined unit cost (253.46€2022).
+
+-   The en route 2025 actual service units (14.9M) were +0.9% higher than the determined service units (14.8M).
+
+-   The en route 2025 actual total costs were slightly higher than determined (+4.6M€2022, or+0.4%). This was mainly driven by negative exceptional items for DFS that were included in the determined costs so that this amount would not be charged to airspace users, as it related to unspent depreciation costs from RP2 and was therefore not included in the actual costs (+10.3M€2022). It was also driven by higher other operating costs (+7.1M€2022, or +6.8%) than planned due to additional costs for IT-security and bad debt losses. This was partially compensated by lower depreciation (-7.1M€2022, or -11.4%) than planned, which the NSA attributed to changes in projects and product management.
+
+-   A deviation from the criteria to achieve capacity targets was considered justified for Germany. Actual costs for the measures necessary to achieve those targets were lower than determined (-14.1M€2022, or -28.1%), mainly due to lower staff costs (-12.2M€2022, or -42.2%) than planned.
+
+-   DFS spent 90.7M€2022 in 2025 related to costs of investments for both en route and terminal charging zones, -18.0% less than determined (110.6M€2022). According to the NSA, this reduction was mainly due to "interest income from temporarily invested fixed deposits" and changes in some projects.
+
+-   The en route actual unit cost incurred by users in 2025 was 77.90€ (-0.7% below the 2025 DUC), while the terminal actual unit cost incurred by users was 260.38€ (-6.1% below the 2025 DUC). The difference between the AUCU and the DUC for the terminal charging zone is mainly driven by the application of lower unit rate.
+

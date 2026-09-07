@@ -1,0 +1,14 @@
+## PRB1.4. Environment
+
+-   Switzerland registered a KEA performance of 4.14% compared to its local breakdown value of 4.34%. Whilst the FABEC local target was not achieved, Switzerland contributed positively towards Union-wide performance. The NSA noted that performance slightly decreased in 2025 compared to 2024 due to increased traffic which is the main factor for a deterioration of flight trajectories.
+
+-   KEP and KES remained stable compared with 2024.
+
+-   VFE of the actual trajectory was at 75.3%, which was worse than the Union-wide average.
+
+-   The average time in level flight during descent remained stable and during climb deteriorated marginally compared to 2024.
+
+-   Additional taxi-out time was 3.49 min/flight and additional taxi-in time was 1.39 min/flight. Both deteriorated marginally compared with 2024.
+
+-   Additional time in the arrival sequencing and metering area remained stable at 3.41 min/flight.
+

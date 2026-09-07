@@ -1,0 +1,14 @@
+## PRB1.5. Capacity
+
+-   Slovenia registered 0.10 minutes of average en route ATFM delay per flight during 2025, which remained 0.10 after the post-ops adjustment process, thus achieving the local target value of 0.17. Delays in Slovenia increased by 0.05 minutes per flight year-on-year.
+
+-   Delays were highest in June to September, mostly driven by non-ATC causes (in June) and weather (all months).
+
+-   The share of delayed flights with delays longer than 15 minutes in Slovenia decreased by -6 percentage points compared to 2024 and was lower than 2019 values.
+
+-   The number of ATCOs in OPS is 67 being above the 2025 plan in Ljubljana ACC by 1 FTE.
+
+-   The yearly total of sector opening hours in Ljubljana ACC was 21,069, showing a 1% increase compared to 2024. Sector opening hours are 10% above 2024 levels.
+
+-   Ljubljana ACC registered 22.42 IFR movements per one sector opening hour in 2025, being 10% above 2024.
+

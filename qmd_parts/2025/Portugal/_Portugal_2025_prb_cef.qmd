@@ -1,0 +1,12 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Portugal was 33.44€2022, -9.5% lower than the determined unit cost (36.94€2022). The terminal 2025 actual unit cost was 133.14€2022, -7.4% lower than the determined unit cost (143.72€2022).
+
+-   The en route 2025 actual service units (4.9M) were +3.2% higher than the determined service units (4.7M).
+
+-   The en route 2025 actual total costs were -11.5M€2022 (-6.6%) lower than determined with all cost categories registering lower-than-planned costs, except depreciation. This is mainly due to lower staff costs for NAV Portugal (-10.0M€2022, or -8.9%). The NSA explained that this decrease is partly driven by favourable financial market conditions, which had a positive impact on the defined benefit pension fund.
+
+-   NAV Portugal spent 25.3M€2022 in 2025 related to costs of investments for both en route and terminal charging zones, -3.9% less than determined (26.3M€2022). According to the NSA, this reduction is due to a smaller asset base.
+
+-   The en route actual unit cost incurred by users in 2025 was 37.68€ (-5.5% below the 2025 DUC), while the terminal actual unit cost incurred by users was 151.68€ (-3.0% below the 2025 DUC). The difference between the AUCU and the DUC for the en route and terminal charging zones is mainly driven by pension costs in cost exempt from cost sharing.
+

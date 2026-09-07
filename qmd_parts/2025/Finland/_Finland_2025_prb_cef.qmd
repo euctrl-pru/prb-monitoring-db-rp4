@@ -1,0 +1,14 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Finland was 69.25€2022, +14.9% higher than the determined unit cost (60.29€2022). The terminal 2025 actual unit cost was 168.61€2022, -6.0% lower than the determined unit cost (179.35€2022).
+
+-   The en route 2025 actual service units (0.7M) were -16.9% lower than the determined service units (0.8M).
+
+-   The en route 2025 actual total costs were -2.2M€2022 (-4.5%) lower than determined with all cost categories registering lower-than-planned costs, except cost of capital. This is mainly due to lower staff costs for Fintraffic ANS (-1.4M€2022, or -6.4%). According to the NSA, this was due to lower than planned personnel fund contributions and performance bonuses, as well as lower staff numbers and smaller salary increases than expected.
+
+-   Fintraffic ANS spent 6.7M€2022 in 2025 related to costs of investments for both en route and terminal charging zones, -14.9% less than determined (7.9M€2022). According to the NSA, this reduction is mainly attributable to delays in investments, due to limited internal resources and system suppliers constraints.
+
+-   The en route actual unit cost incurred by users in 2025 was 69.76€ (+9.2% above the 2025 DUC), while the terminal actual unit cost incurred by users was 183.19€ (-4.8% below the 2025 DUC). The difference between the AUCU and the DUC for the en route charging zone is driven by the traffic adjustments, while for the terminal charging zone it is mainly driven by pension costs in cost exempt from cost sharing.
+
+-   
+

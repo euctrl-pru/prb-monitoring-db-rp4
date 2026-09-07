@@ -1,0 +1,18 @@
+## PRB1.5. Capacity
+
+-   Spain registered 0.99 minutes of average en route ATFM delay per flight during 2025, which has been adjusted to 0.95 during the post-ops adjustment process, thus not achieving the local target value of 0.38. Delays in Spain decreased by -0.05 minutes per flight year-on-year.
+
+-   Delays were highest in July and August, mostly driven by ATC capacity and weather.
+
+-   The share of delayed flights with delays longer than 15 minutes in Spain decreased by -3 percentage points compared to 2024 and was lower than 2019 values.
+
+-   The actual number of ATCOs in OPS in Spain was 1,306 FTEs, -1.7% or -23 FTEs below the planned level. The actual number of ATCOs in OPS was below the planned number for all five ACCs: 181 FTEs in Canarias ACC, -1 FTE below the plan; 373 FTEs in Barcelona ACC, -8 FTEs below the plan; 449 FTEs in Madrid ACC, -8 FTEs below the plan; 141 in Palma ACC, -2 FTEs below the plan; and 162 in Sevilla ACC, -5 FTE below the plan.
+
+-   All Spanish ACCs recorded a number of sector opening hours in 2025 above the level recorded in 2024. In Barcelona ACC sector opening hours were 113,168, showing a year-on-year increase of 72%, while in Canarias ACC the value nearly doubled compared to 2024 (56,485 sector hours, +91% compared to 2024). For Madrid (105.322), Palma (36.778) and Sevilla (47.953) ACCs the number of sector opening hours increased respectively by +9%, +3% and +10% compared to 2024.
+
+-   Despite increase in IFR movements, as a result of the increases in the number of sector opening hours the number of IFR movements per one sector opening hour decreased for all ACCs in 2025: Barcelona ACC registered 9.87 IFR movements per sector opening hour, -45% below the 2024 level; Canarias ACC registered 7.67 IFR movements per sector opening hour, -45% below the 2024 level; Madrid ACC registered 12.63 IFR movements per sector opening hour, -4% below the 2024 level; Palma ACC registered 10.23 IFR movements per sector opening hour, -1% below 2024 levels; and Sevilla ACC registered 11,86 IFR movements per sector opening hour, -3% below the 2024.
+
+-   Spain registered an average airport arrival ATFM delay of 0.93 minutes per flight in 2025, thus not achieving the local target of 0.6 minutes. Compared to 2024, average arrival ATFM delays in Spain were -0.16 minutes per flight lower in 2025.
+
+-   The main drivers of delays were weather, accounting for 0.65 of total delays, and other non-ATC causes, responsible for 0.18.
+

@@ -1,0 +1,12 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Norway was 52.83€2022, -1.9% lower than the determined unit cost (53.87€2022). The terminal 2025 actual unit cost was 217.89€2022, -4.1% lower than the determined unit cost (227.27€2022).
+
+-   The en route 2025 actual service units (2.5M) were in line with the determined service units (2.5M).
+
+-   The en route 2025 actual total costs were -2.7M€2022 (-2.1%) lower than determined. This is mainly due to lower staff costs for Avinor ANS (-2.7M€2022, or -3.3%). The NSA explained that it is attributable to unforeseen changes in pension costs due to changes in the defined benefits pension scheme and the assumptions underlying pension costs.
+
+-   Avinor ANS spent 36.5M€2022 in 2025 related to costs of investments for both en route and terminal charging zones, +1.0% more than determined (36.1M€2022). According to the NSA, it is mainly due to a higher WACC than planned.
+
+-   The en route actual unit cost incurred by users in 2025 was 49.73€ (-1.1% below the 2025 DUC), while the terminal actual unit cost incurred by users was 212.68€ (-1.1% below the 2025 DUC). The difference between the AUCU and the DUC for the en route and terminal charging zones is mainly driven by pension costs in cost cost exempt from cost sharing.
+

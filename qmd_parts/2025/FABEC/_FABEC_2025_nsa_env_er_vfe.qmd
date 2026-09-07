@@ -2,7 +2,9 @@
 
 ### What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?
 
-The NSAs are monitoring the performance by using the SES dashboards \[[link](https://www.sesperformance.eu/dataportal/vis/2025/)\].
+The NSAs are monitoring the performance by using the SES dashboards
+
+\[[link](https://www.sesperformance.eu/dataportal/vis/2025/)\].
 
 Direct coordination between NSAs and ANSPs is done regularly and ad-hoc when required. The FABEC Performance Management Group also provides additional reports to the FABEC Financial and Performance Committee (FPC) where required.
 

@@ -1,0 +1,10 @@
+## PRB1.3. Safety
+
+-   In 2025, ANS CR achieved the planned maturity levels set out in its performance plan for all five components of the EoSM.
+
+-   On airport level, rate of runway incursions was 2.80, which was higher than Union-wide average. The rate of runway incursions has decreased compared to 2024 at airport level.
+
+-   In 2025, Czech Republic reported 0 runway incursions (RI) with ANS contribution, compared to 2024 when 1 RI with ANS contribution was reported (rate of 0.75 in 2024).
+
+-   The rate of separation minima infringements (SMIs) at State level was 6.72, and at ANSP level 2.94. Both indicators were below the Union-wide average. When comparing to 2024, the rate of separation minima infringements has increased at both State level and at ANSP level.
+

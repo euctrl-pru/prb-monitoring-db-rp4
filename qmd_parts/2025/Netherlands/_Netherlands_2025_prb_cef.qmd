@@ -1,0 +1,14 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of the Netherlands was 106.12€2022, +3.7% higher than the determined unit cost (102.29€2022). The terminal 2025 actual unit cost was 224.05€2022,
+
+-2.8% lower than the determined unit cost (230.40€2022).
+
+-   The en route 2025 actual service units (2.9M) were -5.3% lower than the determined service units (3.1M).
+
+-   The en route 2025 actual total costs were -5.6M€2022 (-1.8%) lower than determined. This is mainly due to lower staff costs for LVNL (-6.0M€2022, or -4.2%). The NSA explained that the decrease in staff costs is mainly attributable to a higher number of vacancies at LVNL and greater than expected employee attrition.
+
+-   LVNL spent 33.7M€2022 in 2025 related to costs of investments for both en route and terminal charging zones, +2.9% more than determined (32.8M€2022). According to the NSA, this is mainly due to the need to prolong the lease of additional communication lines for contingency backup purposes in one project.
+
+-   The en route actual unit cost incurred by users in 2025 was 114.37 € (+2.9% above the 2025 DUC), while the terminal actual unit cost incurred by users was 251.39€ (in line with the 2025 DUC). The difference between the AUCU and the DUC for the en route charging zone is mainly driven by the traffic risk sharing adjustment.
+

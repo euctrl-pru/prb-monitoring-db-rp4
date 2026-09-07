@@ -1,0 +1,14 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Ireland was 26.64€2022, -6.5% lower than the determined unit cost (28.49€2022). The terminal 2025 actual unit cost was 151.50€2022, -1.9% lower than the determined unit cost (154.47€2022).
+
+-   The en route 2025 actual service units (5.2M) were in line with the determined service units (5.2M).
+
+-   The en route 2025 actual total costs were -9.8M€2022 (-6.6%) lower than determined, with all cost categories registering lower-than-planned costs, except exceptional items. This decrease is mainly driven by the costs of AirNav Ireland. The largest difference for AirNav Ireland was in staff costs (-4.0M€2022, or -5.2%). The NSA attributed this decrease to the timing of recruitment and the 2025 pension in payment.
+
+-   A deviation from the criteria to achieve capacity targets was considered justified for Ireland. Actual costs for the measures necessary to achieve those targets were lower than determined (-5.4M€2022, or -41.9%), mainly due to lower staff costs (-4.7M€2022, or -51.8%) than planned.
+
+-   AirNav Ireland spent 16.3M€2022 in 2025 related to costs of investments for both en route and terminal charging zones, -19.4% less than determined (20.2M€2022). According to the NSA, this reduction is due to delays in project completions reflecting a shortfall in technical and operational resources.
+
+-   The en route actual unit cost incurred by users in 2025 was 28.89€ (-5.2% below the 2025 DUC), while the terminal actual unit cost incurred by users was 156.50€ (-4.3% below the 2025 DUC). The difference between the AUCU and the DUC is mainly driven by the investment costs in cost exempt from cost sharing for both terminal and en route charging zones, as well as financial incentives for the en route charging zone.
+

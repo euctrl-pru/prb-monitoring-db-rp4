@@ -1,0 +1,8 @@
+## PRB1.3. Safety
+
+-   In 2025, LVNL achieved the planned maturity levels set out in its performance plan for three out of five components of the EoSM. The components where LVNL missed the planned levels were Safety Policy and Objectives and Safety Promotion.
+
+-   The rate of runway incursions (RI) was 6.98 at airport level, higher than the Union-wide average. The rate of RIs with ANS contribution was 1.74, higher than the Union-wide average. In 2024, the Netherlands reported 0 runway incursions.
+
+-   The rate of separation minima infringements (SMIs) at State level was 13.42, and at ANSP level 15.17. Both indicators were significantly above the Union-wide average. At ANSP level, rate of SMIs has decreased compared to 2024.
+

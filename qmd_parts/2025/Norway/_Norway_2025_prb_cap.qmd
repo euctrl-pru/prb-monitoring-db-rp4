@@ -1,0 +1,16 @@
+## PRB1.5. Capacity
+
+-   Norway registered 0.04 minutes of average en route ATFM delay per flight during 2025, which remained 0.04 after the post-ops adjustment process, thus achieving the local target value of 0.16. Delays in Norway remained stable year-on-year.
+
+-   Delays were highest in July, mostly driven by ATC capacity.
+
+-   The share of delayed flights with delays longer than 15 minutes in Norway decreased by -8 percentage points compared to 2024 and was lower than 2019 values.
+
+-   Overall, the actual number of ATCOs in OPS across the three ACCs in Norway is in line with the plan. Specifically, for Bodo ACC the number of ATCOs in OPS was 46 FTE, in line with the plan. For Oslo ACC this was 44 FTE, 2 below the plan, and for Stavanger 35 FTE, 3 FTE above the plan.
+
+-   The yearly total of sector opening hours was 32,717 in Bodo ACC, 24,944 in Oslo ACC, and 18,828 in Stavanger ACC. For all three ACCs, this represented a significant increase compared to 2024 (+35%, +10% and +15% respectively).
+
+-   Norway registered an average airport arrival ATFM delay of 0.13 minutes per flight in 2025, thus achieving the local target of 0.5 minutes. Compared to 2024, average arrival ATFM delays in Norway were -0.13 minutes per flight lower in 2025.
+
+-   The main drivers of delays were weather, accounting for 0.11 of the total delays, and ATC staffing, responsible for 0.01.
+

@@ -1,0 +1,12 @@
+## PRB1.5. Capacity
+
+-   MUAC registered 0.28 minutes of average en route ATFM delay per flight during 2025, which remained 0.28 after the post-ops adjustment process, thus achieving the local target value of 0.31. Delays in MUAC increased by 0.10 minutes per flight year-on-year.
+
+-   Delays were highest in July, mostly driven by weather but with notable contributions from ATC capacity and non-ATC causes.
+
+-   The number of ATCOs in OPS is 302 being below the 2025 plan by -5 FTE.
+
+-   The yearly total of sector opening hours in MUAC was 66,069, showing a -2% decrease compared to 2024.
+
+-   MUAC registered 27.69 IFR movements per sector opening hour in 2025, +4% above the 2024 level.
+

@@ -1,0 +1,16 @@
+## PRB1.5. Capacity
+
+-   Belgium registered 0.08 minutes of average en route ATFM delay per flight during 2025, which remained 0.08 after the post-ops adjustment process, thus achieving the local target value of 0.22. Delays in Belgium remained stable year-on-year. Delays were highest in January and October due to disruptions (technical issues and industrial action), and in June and July, mostly driven by weather.
+
+-   The share of delayed flights with delays longer than 15 minutes in Belgium decreased by -2 percentage points compared to 2024
+
+-   The number of ATCOs in OPS is 88, being below the 2025 plan in Brussels ACC by -8 FTE.
+
+-   The yearly total of sector opening hours in Brussels ACC was 28,234, showing a -1% decrease compared to 2024.
+
+-   Brussels ACC registered 21.48 IFR movements per sector opening hour in 2025, 6% above the 2024 level.
+
+-   Belgium registered an average airport arrival ATFM delay of 0.77 minutes per flight in 2025, thus achieving the local target of 1.5 minutes. Compared to 2024, average arrival ATFM delays in Belgium were 0.49 minutes per flight higher in 2025.
+
+-   The main drivers of delays were other non-ATC causes, accounting for 0.48 of the total delays, and weather, responsible for 0.27.
+

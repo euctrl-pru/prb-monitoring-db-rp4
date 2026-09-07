@@ -1,0 +1,16 @@
+## PRB1.5. Capacity
+
+-   Czech Republic registered 0.09 minutes of average en route ATFM delay per flight during 2025, which has been adjusted to 0.08 during the post-ops adjustment process, thus achieving the local target value of 0.19. Delays in Czech Republic decreased by -0.05 minutes per flight year-on-year. Delays were highest in June, July and August, mostly driven by weather and ATC capacity.
+
+-   The share of delayed flights with delays longer than 15 minutes in Czech Republic decreased by -11 percentage points compared to 2024.
+
+-   The number of ATCOs in OPS is 138, being below the 2025 plan in Prague ACC by -2 FTE.
+
+-   The yearly total of sector opening hours in Prague ACC was 53,537, showing a 18% increase compared to 2024.
+
+-   Prague ACC registered 14.34 IFR movements per sector opening hour in 2025. This is -9% below the ratio recorded in 2024.
+
+-   Czech Republic registered an average airport arrival ATFM delay of 0.56 minutes per flight in 2025, thus not achieving the local target of 0.4 minutes. Compared to 2024, average arrival ATFM delays in Czech Republic were 0.41 minutes per flight higher in 2025.
+
+-   The main driver of delays was weather, accounting for 0.53 of the total delays.
+

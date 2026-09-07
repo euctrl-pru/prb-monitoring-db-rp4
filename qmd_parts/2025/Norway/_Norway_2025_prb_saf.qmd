@@ -1,0 +1,10 @@
+## PRB1.3. Safety
+
+-   In 2025, Avinor ANS achieved the planned maturity levels set out in its performance plan for four out of five components of the EoSM. Avinor ANS missed the planned levels in the area of Safety Risk Management.
+
+-   In 2025, Saerco achieved the planned maturity levels set out in its performance plan for all five components of the EoSM.
+
+-   The rate of runway incursions (RI) was 4.13 at airport level, higher than the Union-wide average, and higher than the rate of RIs in 2024. The rate of RIs with ANS contribution was 0.92, slightly lower than the Union-wide average, and lower than the rate of RIs with ANS contribution when comparing to 2024.
+
+-   The rate of separation minima infringements (SMIs) at State level was 16.27, and at ANSP level 4.99. The rate at State level was higher than the Union-wide average while the rate at ANSP level lower. When comparing to 2024, the rate of SMIs has increased at State level and decreased at ANSP level.
+

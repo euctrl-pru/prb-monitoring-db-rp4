@@ -1,0 +1,12 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Slovakia was 67.35€2022, +15.5% higher than the determined unit cost (58.29€2022). Slovakia does not have a terminal charging zone.
+
+-   The en route 2025 actual service units (1.2M) were -8.4% lower than the determined service units (1.3M).
+
+-   The en route 2025 actual total costs were +4.4M€2022 (+5.8%) higher than determined. This is mainly due to higher other operating costs for LPS SR (+4.0M€2022, or +65.5%). According to the NSA, this rise was necessary to maintain the required level of safety, retain qualified personnel and ensure continued service provision.
+
+-   LPS SR costs of investments were 10.4M€2022 in 2025, -3.3% less than determined (10.8M€2022). According to the NSA, it is mainly due to the postponement of some investments.
+
+-   The en route actual unit cost incurred by users in 2025 was 70.51€ (+5.6% above the 2025 DUC). The difference between the AUCU and the DUC is mainly driven by the traffic risk sharing adjustment.
+

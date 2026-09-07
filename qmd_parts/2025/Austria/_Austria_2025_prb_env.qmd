@@ -1,0 +1,14 @@
+## PRB1.4. Environment
+
+-   Austria registered a KEA performance of 1.99% compared to its target of 2.09% and contributed positively towards achieving the Union-wide target. The NSA states that the target was achieved despite a challenging target and the substantially increased traffic.
+
+-   KEP and KES improved in comparison with 2024. The KES result shows that Austria has improved the element of horizontal flight efficiency that is under its control.
+
+-   VFE of the actual trajectory was at 77.0%, which was better than the Union-wide average.
+
+-   The average time in level flight during descent and climb were both stable compared to 2024, with a slight increase during the descent.
+
+-   Additional taxi-out time was 2.57 min/flight which improved marginally compared to 2024, and additional taxi-in time was 1.54 min/flight degraded compared to 1.41 min/flight in 2024.
+
+-   Additional time in the arrival sequencing and metering area remained stable at 2.80 min/flight.
+

@@ -1,0 +1,8 @@
+## PRB1.3. Safety
+
+-   In 2025, MATS achieved the planned maturity levels set out in its performance plan for all five components of the EoSM.
+
+-   The rate of runway incursions (RI) was 9.64 and equal to the RIs with ANS contribution, with both indicators significantly higher than the Union-wide average. Compared to 2024, rate of RIs has decreased at airport level but increased at airport level with ATS/CNS contribution.
+
+-   The rate of separation minima infringements (SMIs) at State level was 3.00 and equal to the SMIs with ATS/CNS contribution, with both indicators lower than the Union-wide average. The rate of SMIs has increased slightly at both State level and ANSP level when comparing to 2024.
+

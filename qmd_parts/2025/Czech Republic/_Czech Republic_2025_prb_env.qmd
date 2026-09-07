@@ -1,0 +1,14 @@
+## PRB1.4. Environment
+
+-   The Czech Republic registered a KEA performance of 2.45% compared to its target of 2.54% and contributed positively towards achieving the Union-wide target. The NSA states the main reason for meeting the target is implementation of FRA, and CP1 projects, despite changes in traffic patterns at Praha (Prague) FIR (decrease of long-haul flights) negatively impacting the achievability of this KPI.
+
+-   Both KEP and KES remained stable compared to 2024.
+
+-   VFE of the actual trajectory was at 77.86%, which was better than the Union-wide average.
+
+-   The average time in level flight during descent and climb were both stable compared to 2024.
+
+-   Additional taxi-out time was 3.03 min/flight which degraded compared to 2024, and additional taxi-in time was 1.33 min/flight, which improved compared to 2024.
+
+-   Additional time in the arrival sequencing and metering area was 2.80 min/flight, which degraded compared to 2024.
+

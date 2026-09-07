@@ -1,0 +1,18 @@
+## PRB1.5. Capacity
+
+-   France registered 1.90 minutes of average en route ATFM delay per flight during 2025, which has been adjusted to 1.89 during the post-ops adjustment process, thus not achieving the local target value of 0.44. Delays in France increased by 0.50 minutes per flight year-on-year.
+
+-   Delays were highest in July, with significant delays also recorded in May, June, August and September, mostly driven by ATC capacity and staffing as well as weather and disruptions.
+
+-   The share of delayed flights with delays longer than 15 minutes in France decreased by -1 percentage points compared to 2024 and was lower than 2019 values.
+
+-   Overall, the 2025 actual number of ATCOs in OPS across the five French ACCs is 1,379, which is 6% above the planned level (i.e. 1,299) by. The increase in the number of ATCOs, compared to the plan, was shared across all ACCs, with Bordeaux ACC increasing by 12 FTE, Brest ACC by 7 FTE, Marseille ACC by 35 FTE, Paris ACC by 21 FTE and Reims ACC by 5 FTE.
+
+-   The yearly total number of sector opening hours in France in 2025 was 380,264, -10% below the total sector opening hours recorded in 2024. Brest and Marseille ACCs were the main contributors to this reduction (-29% and -17% respectively). Bordeaux and Reims ACCs recorded a number of sector opening hours only slightly lower than 2024 (-2% and -1% respectively). Paris ACC was the only ACC recording an increase in sector opening hours compared to 2024 (+7%).
+
+-   Brest and Reims ACCs recorded the highest ratio of IFR movements per sector opening hour in France in 2025, at 18.95 and 16.56 movements per sector opening hour respectively. Bordeaux, Marseille and Paris ACCs registered similar levels of IFR movements per sector opening hour, at 13.66, 13.44 and 13.69 respectively. In relative terms, IFR movements per sector opening hour increased significantly year-on-year for Brest and Marseille (+48% and +25%), while for the other three ACCs these remained relatively stable.
+
+-   France registered an average airport arrival ATFM delay of 1.02 minutes per flight in 2025, thus not achieving the local target of 0.65 minutes. Compared to 2024, average arrival ATFM delays in France were 0.39 minutes per flight higher in 2025.
+
+-   The main drivers of delays were ATC capacity, accounting for 0.33 of the total delays, and weather, responsible for 0.30.
+

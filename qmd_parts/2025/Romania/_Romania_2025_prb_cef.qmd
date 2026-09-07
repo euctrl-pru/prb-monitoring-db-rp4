@@ -1,0 +1,12 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Romania was 38.83€2022, +1.4% higher than the determined unit cost (38.29€2022). The terminal zone 1 2025 actual unit cost was 315.02€2022, +0.8% higher than the determined unit cost (312.66€2022), while the terminal zone 2 2025 actual unit cost was 531.81€2022, +21.5% higher than the determined unit cost (437.69€2022), and the terminal zone 3 2025 actual unit cost was 579.28€2022, +18.0% higher than the determined unit cost (490.87€2022).
+
+-   The en route 2025 actual service units (7.0M) were +2.6% higher than the determined service units (6.8M).
+
+-   The en route 2025 actual total costs were +10.6M€2022 (+4.1%) higher than determined. This is mainly due to higher staff costs (+8.3M€2022, or +4.1%) and other operating costs (+3.1M€2022, or +17.3%) for ROMATSA. According to the NSA, the rise in staff costs is mainly attributable to revaluation of defined-benefit pension obligation, inflation adjustments to gross wages, and performance bonuses. The increase in other operating costs is mainly due to higher inflation and the exchange rate developments.
+
+-   ROMATSA spent 21.4M€2022 in 2025 related to costs of investments for both en route and terminal charging zones, -0.9% less than determined (21.6M€2022). According to the NSA, it is mainly due to changes in the implementation timetable and delays in commissioning some investments.
+
+-   The en route actual unit cost incurred by users in 2025 was 46.57€ (+5.4% above the 2025 DUC). The terminal actual unit cost incurred by users was 363.80€ (in line with the 2025 DUC) for the terminal zone 1, 536.76€ (+4.7% above the 2025 DUC) for the terminal zone 2, and 600.37€ (+5.4% above the 2025 DUC) for the terminal zone 3. The difference between the AUCU and the DUC for the en route charging zone is mainly driven by pension costs in cost exempt from cost sharing. The difference between the AUCU and the DUC for the terminal charging zones is mainly driven by the adjustment for inflation.
+

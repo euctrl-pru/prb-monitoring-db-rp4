@@ -1,0 +1,18 @@
+## PRB1.5. Capacity
+
+-   Greece registered 0.90 minutes of average en route ATFM delay per flight during 2025, which has been adjusted to 0.89 during the post-ops adjustment process, thus not achieving the local target value of 0.34. Delays in Greece decreased by -0.08 minutes per flight year-on-year.
+
+-   Delays were highest in June and August, mostly driven by ATC staffing.
+
+-   The share of delayed flights with delays longer than 15 minutes in Greece decreased by -5 percentage points compared to 2024 and was lower than 2019 values.
+
+-   The number of ATCOs in OPS in Athens ACC is 177 being below the 2025 plan by -23 FTE. Greece did not report ATCO figures for Makedonia ACC.
+
+-   The yearly total of sector opening hours in Athens and Makedonia ACCs was 58,255, showing a 4% increase compared to 2024.
+
+-   Athens and Makedonia ACCs registered 18.84 IFR movements per one sector opening hour in 2025, being 3% above 2024 levels.
+
+-   Greece registered an average airport arrival ATFM delay of 5.46 minutes per flight in 2025, thus not achieving the local target of 1.5 minutes. Compared to 2024, average arrival ATFM delays in Greece were 2.00 minutes per flight higher in 2025.
+
+-   The main drivers of delays were ATC capacity, accounting for 4.94 of the total delays, and other non-ATC causes, responsible for 0.22.
+

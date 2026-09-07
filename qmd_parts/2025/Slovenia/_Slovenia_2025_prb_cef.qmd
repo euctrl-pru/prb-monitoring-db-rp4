@@ -1,0 +1,12 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Slovenia was 52.93€2022, -4.1% lower than the determined unit cost (55.22€2022). Slovenia does not have a terminal charging zone.
+
+-   The en route 2025 actual service units (0.8M) were +8.0% higher than the determined service units (0.7M).
+
+-   The en route 2025 actual total costs were +1.4M€2022 (+3.5%) higher than determined with all cost categories registering lower-than-planned costs, except exceptional items. This is mainly due to higher other operating costs (+0.8M€2022, or +16.8%) and cost of capital (+0.5M€2022, or +32.4%) for Slovenia Control. According to the NSA, the rise in other operating costs is due to the conclusion of more expensive contracts and unplanned costs, including training, upgrades and maintenance of the cybersecurity system, etc. The increase in cost of capital is due to changes in capital structure following debt repayment.
+
+-   Slovenia Control costs of investments were 4.45M€2022 in 2025, +1.6% more than determined (4.38M€2022). According to the NSA, this increase is due to a higher cost of capital resulting from repayment of debt leading to a higher share of financing through equity, which is more costly than debt financing.
+
+-   The en route actual unit cost incurred by users in 2025 was 58.61€ (-3.6% below the 2025 DUC). The difference between the AUCU and the DUC is mainly driven by the traffic adjustments.
+

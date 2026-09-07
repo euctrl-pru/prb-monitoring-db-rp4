@@ -1,0 +1,14 @@
+## PRB1.4. Environment
+
+-   Portugal registered a KEA performance of 1.71%. Their target of 1.48% was not achieved and Portugal did not contribute positively to Union-wide performance. The NSA states that the deviation from the target may be linked to the new Point Merge system, whose impact was not fully anticipated at the time the performance plan was established.
+
+-   Both KEP and KES deteriorated in comparison with 2024.
+
+-   VFE of the actual en route trajectory was at 76.08%, which was similar to the average Union-wide performance.
+
+-   The average time in level flight during descent deteriorated and during climb remained stable with minor deterioration compared to 2024.
+
+-   Additional taxi-out time was 4.19 min/flight which deteriorated marginally from 4.00 min/flight in 2024, and additional taxi-in time was 1.76 min/flight which deteriorated from 1.62 min/flight in 2024.
+
+-   Additional time in the arrival sequencing and metering area deteriorated to 4.70 min/flight from 4.27min/flight in 2024.
+

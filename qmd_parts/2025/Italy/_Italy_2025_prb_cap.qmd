@@ -1,0 +1,18 @@
+## PRB1.5. Capacity
+
+-   Italy registered 0.08 minutes of average en route ATFM delay per flight during 2025, which has been adjusted to 0.07 during the post-ops adjustment process, thus achieving the local target value of 0.28. Delays in Italy decreased by -0.65 minutes per flight year-on-year.
+
+-   Delays were highest in June, July and August, mostly driven by weather.
+
+-   The share of delayed flights with delays longer than 15 minutes in Italy increased by 17 percentage points compared to 2024.
+
+-   Italy did not provide information on the actual number of ATCO in OPS.
+
+-   The yearly total of sector opening hours in Brindisi ACC was 19,975, showing a -16% decrease compared to 2024. For Milano ACC, the yearly total of sector opening hours increased by 50%, from 69,074 in 2024 to 103,518 in 2025. The yearly total of sector opening hours in Padova ACC was 64,545, in line with the 2024 value. Finally, the total sector opening hours in Rome ACC increased to 121,415, +4% compared to 2024.
+
+-   Brindisi ACC registered 19.22 IFR movements per sector opening hour in 2025 +13% above the value recorded in 2024. For Milano ACC the number of IFR movements per sector opening hour in 2025 (10.41) reduced by -29% compared to 2024. Padova ACC registered 13.85 IFR movements per sector opening hour in 2025 while Rome ACC registered 9.37 IFR movements per sector opening hour in 2025. For both ACCs the ratio of IFR movements per sector opening hour increased compared to 2024 (+6% and+4% respectively).
+
+-   Italy registered an average airport arrival ATFM delay of 0.29 minutes per flight in 2025, thus achieving the local target of 0.35 minutes. Compared to 2024, average arrival ATFM delays in Italy were 0.01 minutes per flight higher in 2025.
+
+-   The main drivers of delays were other non-ATC causes, accounting for 0,15 of the total delays, and weather, responsible for 0.09.
+

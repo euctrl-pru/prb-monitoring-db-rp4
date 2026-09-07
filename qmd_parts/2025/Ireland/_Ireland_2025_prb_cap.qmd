@@ -1,0 +1,16 @@
+## PRB1.5. Capacity
+
+-   Ireland registered 0.01 minutes of average en route ATFM delay per flight during 2025, which remained 0.01 after the post-ops adjustment process, thus achieving the local target value of 0.03. Delays in Ireland increased by 0.01 minutes per flight year-on-year.
+
+-   The share of delayed flights with delays longer than 15 minutes in Ireland increased by 10 percentage points compared to 2024 and was lower than 2019 values.
+
+-   The actual number of ATCOs in OPS was 240 FTEs, -15 FTEs below the planed level (255 FTEs). For Dublin ACC, Ireland report 50 FTEs above the plan (+9%), while for Shannon ACC it reports 134 FTEs, -66 below the plan.
+
+-   The yearly total of sector opening hours in Dublin ACC was 21,841, while in Shannon ACC these was 42,354. Both ACCs showed a -1% reduction compared to the sector opening hours in 2024
+
+-   Dublin and Shannon ACC registered some 12 IFR movements per sector opening hour in 2025, 6% above the 2024 level.
+
+-   Ireland registered an average airport arrival ATFM delay of 0.28 minutes per flight in 2025, thus not achieving the local target of 0.2 minutes. Compared to 2024, average arrival ATFM delays in Ireland were -0.04 minutes per flight lower in 2025.
+
+-   The main drivers of delays were weather, accounting for 0.20 of the total delays, and other non-ATC causes, responsible for 0.08.
+

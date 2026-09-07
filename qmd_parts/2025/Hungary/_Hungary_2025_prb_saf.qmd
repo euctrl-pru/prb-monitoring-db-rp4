@@ -1,0 +1,8 @@
+## PRB1.3. Safety
+
+-   In 2025, HungaroControl achieved the planned maturity levels set out in its performance plan for all five components of the EoSM.
+
+-   The rate of runway incursions (RI) was 1.45 and equal to the RIs with ANS contribution, with the former indicator below the Union-wide average while the latter above. The rate of runway incursions at both levels has increased compared to 2024, when Hungary reported 0 RIs.
+
+-   The rate of separation minima infringements (SMI) was 2.00 at State level and equal to the SMIs at ANSP level, with both indicators below Union-wide average. The rates of SMIs was stable compared to 2024.
+

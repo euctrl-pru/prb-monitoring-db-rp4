@@ -1,0 +1,6 @@
+## PRB1.5. Capacity
+
+-   Luxembourg registered an average airport arrival ATFM delay of 0.15 minutes per flight in 2025, thus achieving the local target of 0.2 minutes. Compared to 2024, average arrival ATFM delays in Luxembourg were -0.40 minutes per flight lower in 2025.
+
+-   The main drivers of delays were weather, accounting for 0.13 of the total delays, and other non-ATC causes, responsible for 0.02.
+

@@ -1,0 +1,12 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Belgium-Luxembourg was 91.28€2022, -5.9% lower than the determined unit cost (97.00€2022). The terminal 2025 actual unit cost of Luxembourg was 325.95€2022, +7.6% higher than the determined unit cost (302.88€2022).
+
+-   The en route 2025 actual service units (2.73M) were +1.5% higher than the determined service units (2.69M).
+
+-   The en route 2025 actual total costs were -11.7M€2022 (-4.5%) lower than determined with all cost categories registering lower-than-planned costs, except staff costs. The gap is mainly due to lower other operating costs of Skeyes (-9.2M€2022, or -27.6%). The NSA attributed this decrease to lower maintenance and external support costs compared to planned.
+
+-   A deviation from the criteria to achieve capacity targets was considered justified for Belgium-Luxembourg. Actual costs for the measures necessary to achieve those targets were lower than determined (-1.8M€2022, or -9.7%), mainly due to lower depreciation (-1.8M€2022, or -83.5%) than planned.
+
+-   The en route actual unit cost incurred by users in 2025 was 102.12€ (-3.2% below the 2025 DUC). The terminal actual unit cost incurred by users was 215.63€ (-25.1% below the 2025 DUC) for Belgium and 277.46€ (-14.2% below the 2025 DUC) for Luxembourg. The difference between the AUCU and the DUC for the terminal charging zones is mainly driven by other revenues.
+

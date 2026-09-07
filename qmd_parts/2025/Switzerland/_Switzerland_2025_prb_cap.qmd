@@ -1,0 +1,18 @@
+## PRB1.5. Capacity
+
+-   Switzerland registered 0.30 minutes of average en route ATFM delay per flight during 2025, which has been adjusted to 0.25 during the post-ops adjustment process, thus achieving the local target value of 0.36. Delays in Switzerland decreased by -0.15 minutes per flight year-on-year.
+
+-   Delays were highest in June and July, mostly driven by weather.
+
+-   The share of delayed flights with delays longer than 15 minutes in Switzerland increased by 4 percentage points compared to 2024 and was higher than 2019 values.
+
+-   The number of ATCOs in OPS is 86 being below the 2025 plan in Geneva ACC by -7 FTE. The number of ATCOs in OPS is 98 being below the 2025 plan in Zurich ACC by -8 FTE.
+
+-   The yearly total of sector opening hours in Geneva ACC was 29.287, showing a -4% decrease compared to 2024. The yearly total of sector opening hours in Zurich ACC was 32.404, showing a -9% decrease compared to 2024.
+
+-   Geneva ACC registered 23.20 IFR movements per sector opening hour in 2025. Zurich ACC registered 25.53 IFR movements per sector opening hour in 2025. This is an increase of resp. +6% and +8% compared to 2024.
+
+-   Switzerland registered an average airport arrival ATFM delay of 2.07 minutes per flight in 2025, thus not achieving the local target of 1.6 minutes. Compared to 2024, average arrival ATFM delays in Switzerland were 0.29 minutes per flight higher in 2025.
+
+-   The main drivers of delays were weather, accounting for 1.01 of the total delays, and other non-ATC causes, responsible for 0.92.
+

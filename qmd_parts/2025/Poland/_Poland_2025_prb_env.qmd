@@ -1,0 +1,14 @@
+## PRB1.4. Environment
+
+-   Poland registered a KEA performance of 4.71% compared to its target of 4.51% and contributed negatively towards achieving the Union-wide target. The NSA states that the main reason for not meeting the target is due to Russia's war of aggression against Ukraine, an increase in drone and balloon incursions in Polish airspace, weather and airspace users\' decisions.
+
+-   KEP deteriorated and KES deteriorated marginally in comparison with 2024, and the levels are still significantly worse compared to previous years.
+
+-   VFE of the actual trajectory was at 74.75%, which was worse than the average Union-wide performance.
+
+-   The average time in level flight during descent deteriorated and during climb improved compared to 2024.
+
+-   Additional taxi-out time was 3.15 min/flight which deteriorated marginally compared to 3.0 min/flight in 2024, and additional taxi-in time was 1.36 min/flight which also deteriorated marginally compared to 1.30 min/flight in 2024.
+
+-   Additional time in the arrival sequencing and metering area deteriorated marginally to 2.98 min/flight.
+

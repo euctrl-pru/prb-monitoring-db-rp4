@@ -1,0 +1,6 @@
+## PRB1.3. Safety
+
+-   In 2025, MUAC achieved the planned maturity levels set out in its performance plan for all five components of the EoSM.
+
+-   The rate of separation minima infringements (SMIs) at ANSP level was 0.31, below the Union-wide average. When comparing to 2024, the rate of separation minima infringements has decreased (0.31 vs 2.2).
+

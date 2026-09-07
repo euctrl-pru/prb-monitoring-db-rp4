@@ -1,0 +1,14 @@
+## PRB1.4. Environment
+
+-   Spain registered a KEA performance of 3.23%. Their target of 2.86% was not achieved and Spain did not contribute positively to Union-wide performance. The NSA states that KEA improved monthly in 2025 despite strong traffic growth, with growing adverse weather conditions frequently requiring deviations from the planned route.
+
+-   Both KEP and KES remained stable in comparison with 2024 with a minor improvement in both indicators.
+
+-   VFE of the actual en route trajectory was at 74.6%, which was worse than the average Union-wide performance.
+
+-   The average time in level flight during descent improved marginally and during climb deteriorated compared to 2024.
+
+-   Additional taxi-out time was 3.56 min/flight and additional taxi-in time was 1.50 min/flight which both remained stable compared to 2024.
+
+-   Additional time in the arrival sequencing and metering area remained stable at 3.06 min/flight, with a minor improvement compared to 2024.
+

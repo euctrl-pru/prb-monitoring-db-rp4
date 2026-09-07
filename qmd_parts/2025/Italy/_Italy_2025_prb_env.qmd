@@ -1,0 +1,14 @@
+## PRB1.4. Environment
+
+-   Italy registered a KEA performance of 3.03%. Their target of 2.75% was not achieved and Italy did not contribute positively to Union-wide performance. The NSA states the main reason for not meeting the target is due to the mismatch between the target's expectation and the measured output by the PRU. The mismatch has already been demonstrated to the NM and the PRU.
+
+-   KEP and KES remained stable in comparison with 2024.
+
+-   VFE of the actual trajectory was at 73.53%, which was below the union-wide performance.
+
+-   The average time in level flight during descent remained stable and during climb marginally improved.
+
+-   Additional taxi-out time was 5.26 min/flight which improved compared to 2024, and additional taxi-in time was 2.45 min/flight which deteriorated compared to 2.32 min/flight in 2024.
+
+-   Additional time in the arrival sequencing and metering area remained stable in 2025.
+

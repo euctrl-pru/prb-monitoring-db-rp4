@@ -1,0 +1,10 @@
+## PRB1.4. Environment
+
+-   Malta registered a KEA performance of 1.67%. Their target of 1.56% was not achieved and Malta did not contribute positively to Union-wide performance. The NSA states that environmental performance at local level was affected mainly by the wider network context, including traffic growth above forecast and changes in traffic patterns linked to geopolitical developments affecting route choices across the network.
+
+-   KEP and KES both deteriorated in comparison with 2024.
+
+-   VFE of the actual trajectory was at 79.28%, which was better than the Union-wide average.
+
+-   No airports are included in the performance plan for monitoring.
+

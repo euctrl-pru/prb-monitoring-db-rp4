@@ -1,0 +1,14 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Estonia was 42.51€2022, -8.2% lower than the determined unit cost (46.29€2022). Estonia does not have a terminal charging zone.
+
+-   The en route 2025 actual service units (0.65M) were +5.7% higher than the determined service units (0.61M).
+
+-   The en route 2025 actual total costs were -0.8M€2022 (-2.9%) lower than determined. This is mainly due to lower other operating costs for the NSA (-0.9M€2022, or -20.1%) and lower staff costs of EANS (-0.7M€2022, or -5.4%). According to the NSA the reduction in NSA other operating costs is mainly due to public sector cost containment measures and the optimisation of property-related costs, while the reduction in EANS staff costs results from a higher share of costs being allocated to terminal.
+
+-   EANS costs of investments were 4.3M€2022 in 2025, +15.7% more than determined (3.7M€2022). According to the NSA, this increase is attributed to a revision of the phasing of investment costs and depreciation reflecting earlier cost recognition.
+
+-   The en route actual unit cost incurred by users in 2025 was 49.47€ (-4.1% below the 2025 DUC). The difference between the AUCU and the DUC is mainly driven by traffic adjustments.
+
+-   The en route regulatory result for EANS amounted to +2.7M€, or 10.9% of the 2025 revenue. This may indicate that the airspace users are charged for costs which have not materialised in 2025.
+

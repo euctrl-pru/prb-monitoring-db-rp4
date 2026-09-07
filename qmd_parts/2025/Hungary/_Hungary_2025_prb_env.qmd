@@ -1,0 +1,14 @@
+## PRB1.4. Environment
+
+-   Hungary registered a KEA performance of 2.10% compared to its target of 2.10% and contributed positively towards achieving the Union-wide target.
+
+-   KEP and KES improved marginally in comparison with 2024.
+
+-   The average time in level flight during descent remained stable and during climb deteriorated (from 47.9s in 2024 to 52.6s in 2025).
+
+-   VFE of the actual trajectory was 77.47%, which was better than the Union-wide average.
+
+-   Additional taxi-out time was 2.53 min/flight and additional taxi-in time was 1.31 min/flight, and both remained stable compared to 2024.
+
+-   Additional time in the arrival sequencing and metering area deteriorated marginally from 2.21 min/flight in 2024 to 2.30 min/flight in 2025.
+

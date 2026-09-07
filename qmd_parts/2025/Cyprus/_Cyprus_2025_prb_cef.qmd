@@ -1,0 +1,14 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Cyprus was 26.57€2022, -12.6% lower than the determined unit cost (30.41€2022). Cyprus does not have a terminal charging zone.
+
+-   The en route 2025 actual service units (2.1M) were +12.2% higher than the determined service units (1.9M).
+
+-   The en route 2025 actual total costs were -1.1M€2022 (-1.9%) lower than determined with all cost categories registering lower-than-planned costs, except exceptional items. In particular, other operating costs (-0.4M€2022, or -2.5%) and depreciation (-0.3M€2022, or -8.4%) for DCAC Cyprus were lower than planned. This was mainly due to the postponement of certain CNS costs and security-related costs for the new ACC that have not been materialised, and delays in projects implementation.
+
+-   DCAC Cyprus costs of investments were 5.3M€2022 in 2025, -4.9% less than determined (5.6M€2022). According to the NSA, it is due to delays in the implementation of the secondary radar in Horteri, the upgrade of "AEROMED WEB" and "DME-DME infrastructure".
+
+-   The en route actual unit cost incurred by users in 2025 was 29.19€ (-9.3% below the 2025 DUC). The difference between the AUCU and the DUC is mainly driven by the traffic adjustments.
+
+-   The en route regulatory result for DCAC Cyprus amounted to +4.5M€, or 9.8% of the 2025 revenue. This may indicate that the airspace users are charged for costs which have not materialised in 2025.
+

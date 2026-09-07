@@ -1,0 +1,10 @@
+## PRB1.3. Safety
+
+-   In 2025, DSNA did not meet the planned maturity levels set out in its performance plan for any of the components of the EoSM.
+
+-   In more detail, DSNA scored A in all management objectives. Significant improvements are needed from DSNA to reach the EoSM targets by the end of RP4.
+
+-   The rate of runway incursions (RI) was 1.73 at airport level, lower than the Union-wide average, but slightly higher than the rate of RIs in 2024. The rate of RIs with ANS contribution was 0.69, lower than the Union-wide average, and stable rate compared to 2024.
+
+-   The rate of separation minima infringements (SMIs) at State level was 17.54, and at ANSP level 14.16. Both indicators were significantly above the Union-wide average. Compared to 2024, rate of SMI has increased slightly at State level and decreased slightly at ANSP level.
+

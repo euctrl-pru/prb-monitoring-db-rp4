@@ -1,0 +1,8 @@
+## PRB1.3. Safety
+
+-   In 2025, AirNav Ireland achieved the planned maturity levels set out in its performance plan for all five components of the EoSM.
+
+-   The rate of runway incursions (RI) was 0.29 and equal to the RIs with ANS contribution, with both indicators below the Union-wide average. The rate of RIs has decreased significantly compared to 2024 at both indicators.
+
+-   The rate of separation minima infringements (SMIs) at State level was 1.43, and at ANSP level 1.15. Both indicators were below the Union-wide average. The rate of SMIs has decreased compared to 2024 at both indicators.
+

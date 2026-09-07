@@ -1,0 +1,14 @@
+## PRB1.4. Environment
+
+-   Denmark registered a KEA performance of 1.44% compared to its target of 1.43%. The target was nearly achieved despite KEA deteriorating from 1.24% in 2024. The NSA states the main reason for not meeting the target is linked to the fact that new military training areas were implemented and the unstable situation across the European network.
+
+-   Both KEP and KES deteriorated compared to 2024. The decline indicates that Denmark's environmental efficiency has worsened.
+
+-   VFE of the actual trajectory was at 78.23%, which was better than the Union-wide average.
+
+-   The average time in level flight during descent degraded, and during climb improved marginally compared to 2024.
+
+-   Additional taxi-out time was 3.36 min/flight which degraded marginally compared to 2024, and additional taxi-in time was 1.46 min/flight and improved compared to 2024.
+
+-   Additional time in the arrival sequencing and metering area degraded to 2.58 min/flight.
+

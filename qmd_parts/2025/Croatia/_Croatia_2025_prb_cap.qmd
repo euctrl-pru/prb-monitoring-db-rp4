@@ -1,0 +1,12 @@
+## PRB1.5. Capacity
+
+-   Croatia registered 0.38 minutes of average en route ATFM delay per flight during 2025, which has been adjusted to 0.42 during the post-ops adjustment process, thus not achieving the local target value of 0.29. Delays in Croatia decreased by -1.09 minutes per flight year-on-year. Delays were highest in July and August, mostly driven by weather and ATC capacity.
+
+-   The share of delayed flights with delays longer than 15 minutes in Croatia decreased by -9 percentage points compared to 2024 and was higher than 2019 values.
+
+-   The number of ATCOs in OPS is 108, being below the 2025 plan in Zagreb ACC by -7 FTE.
+
+-   The yearly total of sector opening hours in Zagreb ACC was 40,409, showing a 6% increase compared to 2024.
+
+-   Zagreb ACC registered 23.61IFR movements per sector opening hour in 2025, 2% above the 2024 level.
+

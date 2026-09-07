@@ -1,0 +1,14 @@
+## PRB1.5. Capacity
+
+-   Romania registered 0.06 minutes of average en route ATFM delay per flight during 2025, which has been adjusted to 0.04 during the post-ops adjustment process, thus achieving the local target value of 0.24. Delays in Romania decreased by -0.09 minutes per flight year-on-year.
+
+-   The number of ATCOs in OPS in Bucharest ACC is 261 FTEs, -2 FTEs below the 2025 plan .
+
+-   The yearly total of sector opening hours in Bucharest ACC was 65,601, showing a 5% decrease compared to 2024.
+
+-   Bucharest ACC registered 13.57 IFR movements per sector opening hour in 2025, which is 16% above the recorded level in 2024.
+
+-   Romania registered an average airport arrival ATFM delay of 0.17 minutes per flight in 2025, thus achieving the local target of 0.4 minutes. Compared to 2024, average arrival ATFM delays in Romania were 0.05 minutes per flight higher in 2025.
+
+-   The main driver of delays was other non-ATC causes, accounting for 0.17 of the total delays.
+

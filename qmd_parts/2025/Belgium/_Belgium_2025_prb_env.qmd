@@ -1,0 +1,14 @@
+## PRB1.4. Environment
+
+-   Belgium registered a KEA performance of 3.35% compared to its local breakdown value of 3.50%. Whilst the local target for FABEC was not achieved, Belgium contributed positively towards Union-wide performance. The NSA states that the target was achieved mainly due to the implementation of FRA.
+
+-   Both KEP and KES improved in comparison with 2024. The improvement shows that Belgium has improved environmental efficiency.
+
+-   The average time in level flight during climb and descent remained stable with minor variations compared to 2024.
+
+-   VFE of the actual trajectory was at 75.90%, which was below the average Union-wide average.
+
+-   Additional taxi-out time was 2.98 min/flight, and additional taxi-in time was 1.28 min/flight, with both stable compared to 2024.
+
+-   Additional time in the arrival sequencing and metering area was at 2.47 min/flight, which degraded compared to 2.27 min/flight in 2024.
+

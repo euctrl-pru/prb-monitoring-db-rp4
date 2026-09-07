@@ -1,0 +1,14 @@
+## PRB1.4. Environment
+
+-   Greece registered a KEA performance of 2.15%. Their target of 2.11% was not achieved and Greece did not contribute positively to Union-wide performance. The NSA states the main reason for not meeting the target can be mainly attributed to factors beyond the ANSPs direct influence, like activation of military areas, weather, and high levels of traffic above STATFOR forecast.
+
+-   KEP and KES remained stable in 2025, with marginal improvements compared to 2024.
+
+-   VFE of the actual trajectory was at 72.39%, which was worse than the Union-wide average.
+
+-   The average time in level flight during descent was stable and during climb degraded marginally.
+
+-   Additional taxi-out time and additional taxi-in time remained stable compared to 2024.
+
+-   Additional time in the arrival sequencing and metering area remained stable at 3.37 min/flight.
+

@@ -1,0 +1,10 @@
+## PRB1.4. Environment
+
+-   Croatia registered a KEA performance of 1.47% compared to its target of 1.46%. KEA improved from 1.56% in 2024 and the target was nearly achieved. The NSA states the main reason for not meeting the target can be mainly attributed to factors beyond the ANSPs direct influence, like airline route adjustments in response to adverse weather conditions and constraints in congested airspace.
+
+-   Both KEP and KES improved in comparison to 2024. The improvement in KES shows that Croatia has improved the element of horizontal flight efficiency that is under its control.
+
+-   VFE of the actual trajectory was at 74.70%, which was below the average Union-wide average.
+
+-   No airports are included in the performance plan for monitoring.
+

@@ -1,0 +1,14 @@
+## PRB1.6. Cost-efficiency
+
+-   The en route 2025 actual unit cost of Austria was 47.70€2022, -12.3% lower than the determined unit cost (54.40€2022). The terminal 2025 actual unit cost was 252.77€2022, +3.7% higher than the determined unit cost (243.83€2022).
+
+-   The en route 2025 actual service units (4.5M) were +9.2% higher than the determined service units (4.2M).
+
+-   The en route 2025 actual total costs were -9.5M€2022 (-4.2%) lower than determined. This is mainly due to lower other operating costs for Austro Control (-7.4M€2022, or -30.4%), partially compensated by higher staff costs than planned (+5.3M€2022, or 3.7%). The NSA explained that the decrease in other operating costs is attributable to renegotiation of contracts, lower energy and external support costs, and delays in the investment plan.
+
+-   Austro Control spent 26.1M€2022 in 2025 related to costs of investments for both en route and terminal charging zones, -14.5% less than determined (30.5M€2022). According to the NSA, this reduction is due to delayed investments resulting from the prolonged impact of the COVID-19 pandemic, as well as supplier issues affecting some projects, which led to a later than planned operational readiness.
+
+-   The en route actual unit cost incurred by users in 2025 was 60.56€ (in line with the 2025 DUC), while the terminal actual unit cost incurred by users was 297.62€ (+9.2% above the 2025 DUC). The difference between the AUCU and the DUC for the terminal charging zone is mainly driven by pension costs in cost exempt from cost sharing.
+
+-   The en route regulatory result for Austro Control amounted to +33.1M€, or 13.3% of the 2025 revenue. This may indicate that the airspace users are charged for costs which have not materialised in 2025.
+

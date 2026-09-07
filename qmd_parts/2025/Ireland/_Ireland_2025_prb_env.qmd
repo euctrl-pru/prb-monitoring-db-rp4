@@ -1,0 +1,14 @@
+## PRB1.4. Environment
+
+-   Ireland registered a KEA performance of 1.63%. Their target of 1.42% was not achieved and Ireland did not contribute positively to Union-wide performance. The NSA states the main reasons for not meeting the target are changes outside of the control of AirNav Ireland. The changes include free route airspace implementation in the London FIR, changes in flight planning behaviour and traffic levels in the north Atlantic and the inclusion of Reykjavik FIR within the Eurocontrol reference area.
+
+-   Both KEP and KES degraded in comparison to 2024.
+
+-   VFE of the actual en route trajectory was 80.77%, which was better than the average Union-wide performance.
+
+-   The average time in level flight during descent deteriorated and during climb was stable compared to 2024.
+
+-   Additional taxi-out time and taxi in time were stable in 2025 compared to 2024.
+
+-   Additional time in the arrival sequencing and metering area deteriorated to 3.98 min/flight from 3.46 min/flight in 2024.
+

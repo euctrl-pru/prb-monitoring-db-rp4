@@ -1,0 +1,10 @@
+## PRB1.3. Safety
+
+-   In 2025, ANA LUX achieved the planned maturity levels set out in its performance plan for three out of five components of the EoSM. The components where ANA LUX missed the planned levels were Safety Policy and Objectives and Safety Risk Management. ANA LUX scored A for the Safety Policy and Objectives and Safety Risk Management and needs significant improvement in order to reach the targets by the end of RP4.
+
+-   Luxembourg reported zero runway incursions (RI) during 2025, whereas in 2024, 1 RI was reported. Luxembourg is below the Union-wide average.
+
+-   The rate of separation minima infringements (SMIs) at State level was 8.76 and equal to the SMIs at ANSP level. Both indicators were above the Union-wide average.
+
+-   When comparing to 2024, the rate of SMIs has decreased significantly at both State level and at ANSP level.
+
