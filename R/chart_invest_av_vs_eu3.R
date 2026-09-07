@@ -88,7 +88,7 @@ data_prep_ansp <- data_pre_prep |>
   ) |>
   select(xlabel, type, mymetric)
 
-if (nrow(data_prep_ansp) != 0) {
+if (nrow(data_prep_ansp) != 0 | country == rp_full) {
   data_prep <- rbind(data_prep_ansp, data_prep_uw) %>%
     mutate(xlabel = factor(xlabel, levels = c("ANSP", "Union-wide")))
 

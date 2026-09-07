@@ -9,9 +9,14 @@ if (!exists("data_funding_rt")) {
 
 
 # process data  ----
-data_prep1 <- data_funding_rt |>
-  filter(member_state == .env$country) |>
-  group_by(member_state) |>
+if (country == rp_full) {
+  data_filtered <- data_funding_rt
+} else {
+  data_filtered <- data_funding_rt |>
+    filter(member_state == .env$country)
+}
+
+data_prep1 <- data_filtered |>
   summarise(
     across(
       where(is.numeric),
@@ -20,12 +25,11 @@ data_prep1 <- data_funding_rt |>
     .groups = "drop"
   ) |>
   pivot_longer(
-    cols = -member_state,
+    cols = everything(),
     names_to = c("year"),
     names_pattern = "^x(\\d{4})",
     values_to = "value"
-  ) |>
-  select(-member_state)
+  )
 
 data_prep_total <- data_prep1 |>
   summarise(value = sum(value, na.rm = TRUE)) |>

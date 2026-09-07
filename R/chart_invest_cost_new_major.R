@@ -61,9 +61,9 @@ if (knitr::is_latex_output()) {
   local_legend_xanchor <- 'left'
   local_legend_fontsize <- myfont - 1
 } else {
-  local_legend_y <- 0.5
-  local_legend_x <- 1.1
-  local_legend_xanchor <- 'center'
+  local_legend_y <- 1.3
+  local_legend_x <- 0
+  local_legend_xanchor <- 'left'
   local_legend_fontsize <- myfont - 1
 }
 
@@ -81,7 +81,7 @@ myplot <- mybarchart2(
   hovertemplate = local_hovertemplate,
   hovermode = "x unified",
 
-  textangle = 0,
+  textangle = if_else(country == "Spain", -90, 0),
   textposition = "outside",
   textfont_color = 'black',
   insidetextanchor = 'middle',
@@ -112,9 +112,18 @@ myplot <- mybarchart2(
   legend_x = local_legend_x,
   legend_xanchor = local_legend_xanchor,
   legend_fontsize = local_legend_fontsize,
-  legend_orientation = "v",
+  legend_orientation = "h",
 
-  margin = list(t = 40, r = 80)
+  margin = list(t = 60)
 )
 
-myplot
+if (country == "Spain") {
+  myplot |>
+    layout(
+      yaxis = list(
+        range = c(0, 400)
+      )
+    )
+} else {
+  myplot
+}
