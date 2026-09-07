@@ -51,7 +51,7 @@ c_textposition <- "bottom"
 c_insidetextanchor <- NA
 
 #### title
-c_title_text <- paste0("AXOT, ASMA & AXIT")
+c_title_text <- paste0("AXOT, ASMA & AXIT - State level")
 
 #### yaxis
 c_yaxis_title <- "AXOT, ASMA & AXIT (min/flight)"

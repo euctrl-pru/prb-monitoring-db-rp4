@@ -87,7 +87,7 @@ website:
       - text: "Investments"
         menu:
           - text: rp_full
-            href: home_address/investments/rp_summary_year/ses-rp_summary_year
+            href: home_address/investments/rp_summary_year/ses-rp4
           - text: "---"
           - text: "Austria"
             href: home_address/investments/rp_summary_year/austria

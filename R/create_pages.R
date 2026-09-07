@@ -340,7 +340,8 @@ if (out_format == 'web') {
           "-",
           country_lower,
           "-",
-          str_replace_all(tolower(main_ansp), " ", "-")
+          str_replace_all(tolower(main_ansp), " ", "-"),
+          "-and-comparison-with-union-wide"
         )
       )
 

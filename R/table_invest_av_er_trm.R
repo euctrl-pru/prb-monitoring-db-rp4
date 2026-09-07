@@ -109,6 +109,10 @@ if (nrow(data_pre_prep) != 0) {
       locations = cells_body(
         columns = 1
       )
+    ) |>
+    tab_footnote(
+      footnote = "For investments where the allocation has not been clearly provided, an allocation has been assumed based on available information.",
+      locations = cells_column_labels(columns = type)
     )
 
   table1

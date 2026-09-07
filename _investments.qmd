@@ -271,7 +271,7 @@ if(table_exists) {
 `r if (params$country == params$rp_full) "::: {.content-hidden}"`
 ### Costs by new major investments
 
-```{r}
+```{r, eval=(params$country != params$rp_full)}
 #| label: table_invest_cost_new_major
 #| out.width: "100%"
 #| echo: false
@@ -280,25 +280,30 @@ source("R/table_invest_cost_new_major.R")
 table1
 ```
 
-```{r}
+```{r, eval=(params$country != params$rp_full)}
 #| echo: false
 table2
 ```
 
-```{r}
+```{r, eval=(params$country != params$rp_full)}
 #| echo: false
 table3
 ```
 
 <br>
 
-```{r no_investment, include=FALSE}
+```{r no_investment, include=FALSE, eval=(params$country != params$rp_full)}
 source("R/chart_invest_cost_new_major.R")
 no_investments <- no_investments
 ```
 
+```{r no_investment_ses, include=FALSE, eval=(params$country == params$rp_full)}
+no_investments <- 0
+```
+
+
 `r if (no_investments <= 6)"::: {.content-hidden}"`
-```{r chart_invest_cost_new_major_many, eval=(no_investments > 6)}
+```{r chart_invest_cost_new_major_many, eval=(no_investments > 6) & (params$country != params$rp_full)}
 #| file: R/chart_invest_cost_new_major.R
 #| out.width: "100%"
 ```
@@ -312,7 +317,7 @@ no_investments <- no_investments
 ::::
 
 :::: {.chart-container}
-```{r chart_invest_cost_new_major_few, eval=(no_investments <= 6)}
+```{r chart_invest_cost_new_major_few, eval=(no_investments <= 6) & (params$country != params$rp_full)}
 #| file: R/chart_invest_cost_new_major.R
 #| out.width: "100%"
 ```
@@ -408,42 +413,15 @@ if (identical(table3, "")) {
 
 ## Expected benefit and impact per new major investment `r country` | `r if_else(params$country == params$rp_full, "all ANSPs", main_ansp)`
 
-`r if (params$country == params$rp_full) "::: {.content-hidden}"`
 
 ```{r table_invest_type, eval=!(params$country == params$rp_full)}
 #| file: R/table_invest_type.R
 #| out.width: "100%"
 ```
 
-`r if (params$country == params$rp_full) ":::"`
-
-<br>
-
-::: {layout="[ 50, 0, 50 ]"}
-:::: {.chart-container}
-```{r chart_invest_type_eu}
-#| file: R/chart_invest_type_eu.R
-#| out.width: "100%"
-```
-::::
-
-::::{#empty_div}
-::::
-
-:::: {.chart-container}
-```{r chart_invest_type}
-#| file: R/chart_invest_type.R
-#| out.width: "100%"
-```
-::::
-:::
-
 
 ## Public funding granted for total CAPEX (CEF/TEN-T)
 
-
-
-`r if (params$country == params$rp_full) "::: {.content-hidden}"`
 ::: {layout="[ 50, 0, 50 ]"}
 :::: {.chart-container}
 ```{r chart_invest_funding_year}
@@ -462,25 +440,5 @@ if (identical(table3, "")) {
 ```
 ::::
 :::
-`r if (params$country == params$rp_full) ":::"`
 
 
-`r if (params$country != params$rp_full) "::: {.content-hidden}"`
-::: {layout="[ 10, 80, 10 ]"}
-
-::::{#empty_div}
-::::
-
-:::: {.chart-container}
-```{r chart_invest_funding_year_ses}
-#| file: R/chart_invest_funding_year.R
-#| out.width: "100%"
-```
-::::
-
-::::{#empty_div}
-::::
-
-:::
-
-`r if (params$country != params$rp_full) ":::"`
