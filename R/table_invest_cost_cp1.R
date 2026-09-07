@@ -10,10 +10,17 @@ if (!exists("data_costs_cp1")) {
 
 # process data  ----
 
-data_pre_calc <- data_costs_cp1 |>
-  filter(
-    member_state == .env$country
-  ) |>
+if (country != rp_full) {
+  data_calc_filtered <- data_costs_cp1 |>
+    filter(
+      member_state == .env$country
+    )
+} else {
+  data_calc_filtered <- data_costs_cp1
+}
+
+
+data_pre_calc <- data_calc_filtered |>
   select(
     category = cp1_atm_functionality_cp1_af_sub_functionality_cp1_s_af,
     contains("20"),

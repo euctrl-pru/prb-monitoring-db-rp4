@@ -42,7 +42,7 @@ replace_headings(path, character(0))
 ::::
 
 :::: {.chart-container}
-```{r chart_invest_av_vs_eu1, eval=(params$country != params$rp_full)}
+```{r chart_invest_av_vs_eu1}
 #| file: R/chart_invest_av_vs_eu1.R
 #| out.width: "100%"
 ```
@@ -78,7 +78,7 @@ replace_headings(path, character(0))
 ::::
 
 :::: {.chart-container}
-```{r chart_invest_av_vs_eu3, eval=(params$country != params$rp_full)}
+```{r chart_invest_av_vs_eu3}
 #| file: R/chart_invest_av_vs_eu3.R
 #| out.width: "100%"
 ```
@@ -411,6 +411,8 @@ if (identical(table3, "")) {
 
 <br>
 
+`r if (params$country == params$rp_full) "::: {.content-hidden}"`
+
 ## Expected benefit and impact per new major investment `r country` | `r if_else(params$country == params$rp_full, "all ANSPs", main_ansp)`
 
 
@@ -419,12 +421,28 @@ if (identical(table3, "")) {
 #| out.width: "100%"
 ```
 
+`r if (params$country == params$rp_full) ":::"`
+
 
 ## Public funding granted for total CAPEX (CEF/TEN-T)
 
+`r if (params$country != params$rp_full) "::: {.content-hidden}"`
+::: {.chart-container}
+
+```{r chart_invest_funding_year_ses, eval = (params$country == params$rp_full)}
+#| file: R/chart_invest_funding_year.R
+#| out.width: "50%"
+```
+
+:::
+`r if (params$country != params$rp_full) ":::"`
+
+
+`r if (params$country == params$rp_full) "::: {.content-hidden}"`
+
 ::: {layout="[ 50, 0, 50 ]"}
 :::: {.chart-container}
-```{r chart_invest_funding_year}
+```{r chart_invest_funding_year, eval = (params$country != params$rp_full) }
 #| file: R/chart_invest_funding_year.R
 #| out.width: "100%"
 ```
@@ -434,11 +452,13 @@ if (identical(table3, "")) {
 ::::
 
 :::: {.chart-container}
-```{r chart_invest_funding_vs_eu}
+```{r chart_invest_funding_vs_eu, eval = (params$country != params$rp_full) }
 #| file: R/chart_invest_funding_vs_eu.R
 #| out.width: "100%"
 ```
 ::::
 :::
+
+`r if (params$country == params$rp_full) ":::}"`
 
 

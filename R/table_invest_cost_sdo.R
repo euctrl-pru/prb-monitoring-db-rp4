@@ -10,10 +10,17 @@ if (!exists("data_costs_sdo")) {
 
 # process data  ----
 
-data_pre_calc <- data_costs_sdo |>
-  filter(
-    member_state == .env$country
-  ) |>
+if (country != rp_full) {
+  data_calc_filtered <- data_costs_sdo |>
+    filter(
+      member_state == .env$country
+    )
+} else {
+  data_calc_filtered <- data_costs_sdo
+}
+
+
+data_pre_calc <- data_calc_filtered |>
   select(
     category = sdo,
     contains("20"),
