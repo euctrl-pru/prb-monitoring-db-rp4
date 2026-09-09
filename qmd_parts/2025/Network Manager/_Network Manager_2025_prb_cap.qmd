@@ -1,0 +1,18 @@
+## PRB1.5. Capacity
+
+-   The NM met the 10% target on en route ATFM delay savings by achieving 10.6% savings, equivalent to over 2.2 million minutes of avoided delay. The NM also achieved the 5% target for airport arrival ATFM delay savings, with actual savings of 8.8%, corresponding to more than 700,000 minutes of avoided delay. While the targets were met, both delay savings are slightly lower than those in 2024.
+
+-   Key measures included stronger NOP commitments monitoring, introduction of the new Capacity and Weather Based Operations procedure during summer 2025, improved integration of airports into the NOP plans and measures, and improved discipline in flight plan delivery.
+
+-   Total en route ATFM delay minutes decreased over 2024 in the network by -18%, from 22.7 to 18.6 million minutes, while the number of flights managed in the network grew by 4.3%, from 10.7 to 11.1 million IFR flights. This resulted in a -21.2% decrease in average en route ATFM delay per flight, from 2.12 to 1.67 minutes per flight.
+
+-   There was a reduction in the percentage of IFR flights with ATFM delays above 15 minutes compared to 2024, from 6.4% to 5.3%, while the proportion of IFR flights with ATFM delays above 30 minutes also decreased from 2.5% to 1.8% in 2024 and 2025, respectively.
+
+-   The average daily number of ATFM regulations producing less than 200 minutes of ATFM delay increased compared to 2024, from 69 to 80 regulations, corresponding to a four percentage point increase in the share of such regulations, from 45% in 2024 to 49% in 2025.
+
+-   The average weekend en route ATFM delay per flight in 2025 was 2.16 minutes per flight, 0.41 minutes lower than in 2024, despite an increase in the share of weekend delays to 36% compared to 33% in 2024 and a 5.1% increase in the number of IFR flights during the weekend.
+
+-   The annual percentage of all first rotation ATFM delays for a pre-selection of area control centres/airports with the most significant potential delay reduction was 25.6% in 2025, with a focus on Greek island airports during the summer period. The NM introduced new tools and products to help further reduce reactionary delays in the coming years.
+
+-   There were contradictory changes in network volatility in 2025 compared to 2024. Capacity and staffing volatility, as well as weather-related volatility, decreased; however, volatility caused by ATC industrial action increased and returned to the same level as in 2023.
+

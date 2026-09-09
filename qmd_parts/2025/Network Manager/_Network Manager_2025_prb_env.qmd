@@ -1,0 +1,10 @@
+## PRB1.4. Environment
+
+-   The KEP target in 2025 was not achieved, with a value of 4.63% compared to a target of 4.59% and an increase of 0.04 p.p compared to 2024. However, the NM reports that 0.09pp of the KEP 2025 value is due to a change in the LTAI arrival procedures (the KEP algorithm captured part of the new arrival trajectory in the en route segment considered for calculation). Without this change KEP would have registered a value of 4.54% an improvement of 0.05pp over 2024 and achieving the target.
+
+-   The inefficiency of the route network design (RTE-DES) improved to 1.59% with a reduction of 0.05 percentage points compared to 2024. This continued improvement demonstrates that progress is being made to make the overall network more efficient.
+
+-   The NM notes that the KES for the NM area remained at 4.43%, not achieving the value of 4.31% within the NPP for 2025.
+
+-   The inefficiency of the flight plan (KEP) and shortest constrained routes (KES) remained much higher than the actual inefficiency of flights (KEA). This suggests that route constraints remain in the planning of flights that are mitigated during the flight. The NM should continue to work with ANSPs, airspace users and flight planning service providers to enable airspace users to plan and fly shorter routes and make best use of the route network design.
+

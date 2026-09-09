@@ -1,0 +1,10 @@
+## PRB1.6. Cost-efficiency
+
+-   The cost-efficiency performance indicator for monitoring is the actual unit cost for the execution of the NM tasks. The indicator is calculated as the ratio of actual costs to service units at the level of the geographical area where the Network Manager executes its tasks.
+
+-   The NM's approved 2025 budget (201.0€) is -2.1M€ (-1.0%) lower than the planned costs (203.1M€). The actual en route service units for the Network area in 2025 (193.1M) is +7.0M (+3.8%) higher than the planned services units (186.1M) (based on STATFOR May 2024 base forecast). The actual inflation index has not been reported by the NM.
+
+-   As a result, the actual unit cost in 2025 for the Network Manager was 1.04€, which is -4.5% lower than the determined unit cost (1.09€).
+
+-   Regarding the investments, the NM noted that a detailed overview would be provided following the audit of the 2025 financial statements.
+

@@ -2,5 +2,19 @@
 
 ### **What initiatives were implemented or are planned that will improve this PI and how does the NSA intend on monitoring their effectiveness on performance?**
 
-Please refer to the description below for ACC.
+On strategic airspace management level all significant exercises and permanent areas are evaluated and analysed considering historic civil traffic flows and civil traffic predictions.
+
+The impact, depending on the scale, is consulted with the key stakeholders including neighboring states, aerodrome and aircraft operators, ATS, military, EUROCONTROL NM.
+
+The lateral and vertical limits of the published airspace elements are designated considering the actual needs of users and nature of activities. All airspace elements shall be planned only for the period necessary to perform the intended task. The user is required to precisely specify the period of activity of the selected element, as well as any temporary suspensions of activity between these periods.
+
+The locations of the activities are designed not to affect the main traffic flows, ATC routes, DCTs and FRA connectivity. Segmentation, time and level restrictions are imposed when necessary to mitigate the impact in high traffic periods of the day. If possible, class C TRA airspace is implemented to minimise the impact on civil routing.
+
+When the areas excess the defined scale they are always divided into smaller modules/segments. Each segment is designed to accommodate specific activities without the need to activate the entire area to perform specific assignments. The shape of these segments is always aligned with main civil traffic flows to minimise the horizontal flight inefficiency.
+
+Further measures include:
+
+• implementation of closer cooperation between AMC Poland and FMP Warszawa in order to minimise the negative impact of segregated areas on civil traffic as far as possible,
+
+• work on update of national aviation law to optimise the process for reserving segregated areas for military users.
 
