@@ -1,3 +1,15 @@
+
+```{r chart_eosm, include=FALSE}
+#| file: R/chart_level1_saf_nm.R
+#| out.width: "100%"
+```
+
+```{r chart_deliveries, include=FALSE}
+#| file: R/chart_level1_saf_deliveries_nm.R
+#| out.width: "100%"
+```
+
+
 ```{r chart_cap_er, include=FALSE}
 #| file: R/chart_level1_cap_er_nm.R
 #| out.width: "100%"
@@ -22,12 +34,7 @@
 
 ### Effectiveness of Safety Management (EoSM) (KPI#1) and ATFM overdeliveries (PI#1)
 
-```{r chart_eosm}
-#| file: R/chart_level1_saf_nm.R
-#| out.width: "52%"
-#| fig.align: "center"
-#| fig-pos: "H"
-```
+`r layout_2fig("chart_eosm", "chart_deliveries")`
 
 ```{r saf_prb}
 #| echo: false
@@ -39,14 +46,6 @@ replace_headings(path, character(0))
 
 ``` 
 
-```{r chart_deliveries}
-#| file: R/chart_level1_saf_deliveries_nm.R
-#| out.width: "52%"
-#| fig.align: "center"
-#| fig-pos: "H"
-```
-
-<!-- placeholder -->
 
 \needspace{2\baselineskip}
 

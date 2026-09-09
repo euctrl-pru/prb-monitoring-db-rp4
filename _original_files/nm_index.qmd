@@ -16,8 +16,23 @@
 
 ::: {#container-saf1}
 :::: {#chart-eosm class="mychart"}
+
+::::: {layout="[ 99, 1 ]"}
+:::::: {.chart-container}  
+
 ```{r chart-eosm}
 #| file: R/chart_level1_saf_nm.R
+#| out.width: "99%"
+```
+::::::
+
+:::::: {#empty-div}
+::::::
+:::::
+<br>
+
+```{r chart-deliveries}
+#| file: R/chart_level1_saf_deliveries_nm.R
 #| out.width: "99%"
 ```
 ::::
@@ -33,35 +48,14 @@ path <- sprintf("./qmd_parts/%s/%s/_%s_%s_prb_saf.qmd", as.character(year_report
 replace_headings(path, character(0))
 
 ``` 
-
 ::::
 :::
-
-::: {#container-saf2 style="clear: both"}
-<!-- empty line to ensure next heading leaves enough space -->
-<div style="height: 1px"></div>
-
-:::: {#chart-deliveries class="mychart"}
-```{r chart-deliveries}
-#| file: R/chart_level1_saf_deliveries_nm.R
-#| out.width: "99%"
-```
-::::
-
-:::: {#concl-deliveries}
-
-<!-- placeholder -->
-
-::::
-:::
-
-::: {#container-env style="clear: both"}
-<!-- empty line to ensure next heading leaves enough space -->
-<div style="height: 1px"></div>
 
 ## Environment (Network Manager - `r rp_full` area)
 
 ### The en route flight efficiency improvement (KPI#1) and Route extension (PI#1)
+
+::: {#container-env style="clear: both"}
 
 :::: {#chart-env class="mychart"}
 ```{r chart-env-kea, options = (doclevel=c("level1"))}
@@ -108,10 +102,19 @@ replace_headings(path, character(0))
 
 ### Other performance indicators (PIs#1-3)
 
+::::: {layout="[ 98, 2 ]"}
+:::::: {.chart-container}  
+
 ```{r table-cap-pis-nm}
 #| file: R/table_level2_cap_pis_nm.R
 #| out.width: "99%"
 ```
+::::::
+
+:::::: {#empty-div}
+::::::
+:::::
+
 ::::
 
 :::: {#concl-cap}
